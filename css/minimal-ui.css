@@ -1,0 +1,115 @@
+html {
+  line-height: 1.4;
+  font-size: 18px;
+  color: htmlColor;
+}
+@media screen and (max-width: desktopWidth) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: tableWidth) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: phoneWidth) {
+  html {
+    font-size: 12px;
+  }
+}
+body {
+  font-family: mainFont;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin: 0;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: blackColor;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+textarea {
+  resize: none;
+}
+input,
+select,
+button {
+  outline: none;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.section,
+section {
+  position: relative;
+  padding: 60px 0;
+}
+@media screen and (max-width: desktopWidth) {
+  .section,
+  section {
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: tableWidth) {
+  .section,
+  section {
+    padding: 30px 0;
+  }
+}
+@media screen and (max-width: phoneWidth) {
+  .section,
+  section {
+    padding: 20px 0;
+  }
+}
+.container {
+  width: 100%;
+  max-width: desktopWidth;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+}
+@media screen and (max-width: smDesktopWidth) {
+  .container {
+    max-width: tableWidth;
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: tableWidth) {
+  .container {
+    max-width: phoneWidth;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: phoneWidth) {
+  .container {
+    max-width: smPhoneWidth;
+    padding: 0 10px;
+  }
+}
