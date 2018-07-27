@@ -1,8 +1,7 @@
-//Settings
 html
-	line-height 1.4
-	font-size 18px
-	color htmlColor
+	line-height mainLineHeight
+	font-size mainFontSize
+	color #333
 
 	@media screen and (max-width desktopWidth)
 		font-size 16px
@@ -14,33 +13,14 @@ html
 		font-size 12px
 
 body
-	font-family mainFont
-
-h1,h2,h3,h4,h5,h6
-	font-weight 600
-	margin 0
-
-ul,li
-	margin 0
-	padding 0
-	list-style-type none
-
-p
-	margin 0
+	font-family mainFontSize
 
 a
 	text-decoration none
-	color blackColor
+	color linkColor
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video
-	vertical-align middle
-
-section
+section,
+.section
 	position relative
 	padding 60px 0
 
@@ -53,24 +33,12 @@ section
 	@media screen and (max-width phoneWidth)
 		padding 20px 0
 
-textarea
-	resize none
-
-input,
-select,
-button
-	outline none
-
-*, *:before, *:after
-	box-sizing border-box
-
-//Main
 .container
-	width 100%
+	// width 100%
 	max-width desktopWidth
 	margin 0 auto
 	position relative
-	padding 0 40px
+	padding 0 60px
 
 	@media screen and (max-width smDesktopWidth)
 		max-width tableWidth
@@ -83,41 +51,3 @@ button
 	@media screen and (max-width phoneWidth)
 		max-width smPhoneWidth
 		padding 0 10px
-
-
-.wrapper
-	display: flex
-	flex-direction column
-	min-height 100vh
-
-.content-wrapper
-	display flex
-	flex-direction column
-	flex 1
-
-
-//GLOBAL STYL
-
-// //Title
-// @import 'global/titles.styl'
-
-// //Buttons
-// @import 'global/buttons.styl'
-
-// //Forms
-// @import 'global/forms.styl'
-
-
-// //MODULES
-
-// //Header
-// @import 'modules/header.styl'
-
-// //Footer
-// @import 'modules/footer.styl'
-
-
-// //PAGES
-
-// //Index
-// @import 'pages/index.styl'

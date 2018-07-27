@@ -28,21 +28,6 @@ var config = {
 
 };
 
-
-//PUG FOR DOCS
-gulp.task('pug', function () {
-    return gulp
-        .src(config.devFolder +'/pug/pages/**/*.pug')
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(pug({
-                pretty: true
-            }
-        ))
-        .pipe(gulp.dest(config.buildFolder))
-        .on('end', browserSync.reload)
-});
-
-
 //STYLUS MINIMAL-UI --DEV
 gulp.task('style:dev', function(){
     return gulp
@@ -67,8 +52,7 @@ gulp.task('style:dev', function(){
         
         //Dest min v for docs
         .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/css/'))
-        
-        // .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({stream: true}))
 });
 
 
@@ -92,6 +76,19 @@ gulp.task('styleDOCS:dev', function(){
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/css/'))
         .pipe(browserSync.reload({stream: true}))
+});
+
+//PUG FOR DOCS
+gulp.task('pug', function () {
+    return gulp
+        .src(config.devFolder +'/pug/pages/**/*.pug')
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(pug({
+                pretty: true
+            }
+        ))
+        .pipe(gulp.dest(config.buildFolder))
+        .on('end', browserSync.reload)
 });
 
 //JS DOCS
@@ -155,7 +152,7 @@ gulp.task('clean', function() {
 gulp.task('watch', function(){
 
     //MINIMAL-UI
-    // gulp.watch(config.stylusFolder +'/**/*.styl', ['style:dev']);
+    gulp.watch(config.stylusFolder +'/**/*.styl', ['style:dev']);
 
     //DOCS
     gulp.watch(config.devFolder +'/pug/**/*.pug', ['pug']);

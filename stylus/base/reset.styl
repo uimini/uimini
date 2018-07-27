@@ -1,36 +1,33 @@
-//Settings
-html
-	line-height 1.4
-	font-size 18px
-	color htmlColor
+/*! minimal-ui.css v0.0.1 | MIT License | github.com/vedees/minimal-ui.css */
 
-	@media screen and (max-width desktopWidth)
-		font-size 16px
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure,
+fieldset, legend, textarea, pre, iframe, hr,
+h1, h2, h3, h4, h5, h6
+  margin 0
+  padding 0
 
-	@media screen and (max-width tableWidth)
-		font-size 14px
-
-	@media screen and (max-width phoneWidth)
-		font-size 12px
-
-body
-	font-family mainFont
-
-h1,h2,h3,h4,h5,h6
-	font-weight 600
-	margin 0
+h1, h2, h3, h4, h5, h6
+  font-size: 100%
+  font-weight: normal
 
 ul,li
 	margin 0
 	padding 0
 	list-style-type none
 
-p
+button, input,
+select, textarea
+  margin: 0
 	margin 0
 
-a
-	text-decoration none
-	color blackColor
+html
+  box-sizing: border-box
+
+img,
+audio,
+video
+  height: auto
+  max-width: 100%
 
 audio,
 canvas,
@@ -39,19 +36,6 @@ img,
 svg,
 video
 	vertical-align middle
-
-section
-	position relative
-	padding 60px 0
-
-	@media screen and (max-width desktopWidth)
-		padding 40px 0
-
-	@media screen and (max-width tableWidth)
-		padding 30px 0
-
-	@media screen and (max-width phoneWidth)
-		padding 20px 0
 
 textarea
 	resize none
@@ -62,62 +46,15 @@ button
 	outline none
 
 *, *:before, *:after
-	box-sizing border-box
+	box-sizing: inherit
 
-//Main
-.container
-	width 100%
-	max-width desktopWidth
-	margin 0 auto
-	position relative
-	padding 0 40px
+iframe
+  border: 0
 
-	@media screen and (max-width smDesktopWidth)
-		max-width tableWidth
-		padding 0 30px
+table
+  border-collapse: collapse
+  border-spacing: 0
 
-	@media screen and (max-width tableWidth)
-		max-width phoneWidth
-		padding 0 20px
-
-	@media screen and (max-width phoneWidth)
-		max-width smPhoneWidth
-		padding 0 10px
-
-
-.wrapper
-	display: flex
-	flex-direction column
-	min-height 100vh
-
-.content-wrapper
-	display flex
-	flex-direction column
-	flex 1
-
-
-//GLOBAL STYL
-
-// //Title
-// @import 'global/titles.styl'
-
-// //Buttons
-// @import 'global/buttons.styl'
-
-// //Forms
-// @import 'global/forms.styl'
-
-
-// //MODULES
-
-// //Header
-// @import 'modules/header.styl'
-
-// //Footer
-// @import 'modules/footer.styl'
-
-
-// //PAGES
-
-// //Index
-// @import 'pages/index.styl'
+td, th
+  padding: 0
+  text-align: left

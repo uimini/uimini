@@ -1,25 +1,29 @@
-html {
-  line-height: 1.4;
-  font-size: 18px;
-  color: htmlColor;
-}
-@media screen and (max-width: desktopWidth) {
-  html {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: tableWidth) {
-  html {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: phoneWidth) {
-  html {
-    font-size: 12px;
-  }
-}
-body {
-  font-family: mainFont;
+/* minimal-ui.css v0.0.1 | MIT License | github.com/vedees/minimal-ui.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 h1,
 h2,
@@ -27,8 +31,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
-  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
 }
 ul,
 li {
@@ -36,12 +40,22 @@ li {
   padding: 0;
   list-style-type: none;
 }
-p {
+button,
+input,
+select,
+textarea {
   margin: 0;
 }
-a {
-  text-decoration: none;
-  color: blackColor;
+margin 0,
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+img,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
 }
 audio,
 canvas,
@@ -62,54 +76,92 @@ button {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
-.section,
-section {
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+html {
+  line-height: 1.4;
+  font-size: 18px;
+  color: #333;
+}
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+body {
+  font-family: 18px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+section,
+.section {
   position: relative;
   padding: 60px 0;
 }
-@media screen and (max-width: desktopWidth) {
-  .section,
-  section {
+@media screen and (max-width: 1280px) {
+  section,
+  .section {
     padding: 40px 0;
   }
 }
-@media screen and (max-width: tableWidth) {
-  .section,
-  section {
+@media screen and (max-width: 768px) {
+  section,
+  .section {
     padding: 30px 0;
   }
 }
-@media screen and (max-width: phoneWidth) {
-  .section,
-  section {
+@media screen and (max-width: 480px) {
+  section,
+  .section {
     padding: 20px 0;
   }
 }
 .container {
-  width: 100%;
-  max-width: desktopWidth;
+  max-width: 1280px;
   margin: 0 auto;
   position: relative;
-  padding: 0 40px;
+  padding: 0 60px;
 }
-@media screen and (max-width: smDesktopWidth) {
+@media screen and (max-width: 980px) {
   .container {
-    max-width: tableWidth;
+    max-width: 768px;
     padding: 0 30px;
   }
 }
-@media screen and (max-width: tableWidth) {
+@media screen and (max-width: 768px) {
   .container {
-    max-width: phoneWidth;
+    max-width: 480px;
     padding: 0 20px;
   }
 }
-@media screen and (max-width: phoneWidth) {
+@media screen and (max-width: 480px) {
   .container {
-    max-width: smPhoneWidth;
+    max-width: 320px;
     padding: 0 10px;
   }
 }
