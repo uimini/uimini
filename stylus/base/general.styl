@@ -1,6 +1,6 @@
 html
-	line-height mainLineHeight
-	font-size mainFontSize
+	line-height 1.4
+	font-size 18px
 	color #333
 
 	@media screen and (max-width desktopWidth)
@@ -13,7 +13,7 @@ html
 		font-size 12px
 
 body
-	font-family mainFontSize
+	font-family 18px
 
 a
 	text-decoration none
@@ -34,20 +34,21 @@ section,
 		padding 20px 0
 
 .container
-	// width 100%
+	width 100%
+	flex: 0 0 auto;
+	position relative
 	max-width desktopWidth
 	margin 0 auto
-	position relative
-	padding 0 60px
+	padding 0 rem(40)
 
 	@media screen and (max-width smDesktopWidth)
 		max-width tableWidth
-		padding 0 30px
+		padding 0 rem(20)
 
 	@media screen and (max-width tableWidth)
 		max-width phoneWidth
-		padding 0 20px
+		padding 0 rem(16)
 
 	@media screen and (max-width phoneWidth)
 		max-width smPhoneWidth
-		padding 0 10px
+		padding 0 rem(10)
