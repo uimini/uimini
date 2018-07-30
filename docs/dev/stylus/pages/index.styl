@@ -1,0 +1,34 @@
+.index-slider
+  // min-height: 700px
+
+.index-slider__content
+  display flex
+  justify-content center
+  align-items: center
+  flex-direction column
+  width 100%
+  height 700px
+  padding 0 1rem
+  text-align center
+
+  @media screen and (max-width: smDesktopWidth)
+    height 460px
+
+  @media screen and (max-width: phoneWidth)
+    height 300px
+
+
+.index-slider__img
+  background: linear-gradient(to bottom right,rgba(97,32,203,.8),rgba(56,118,245,.8)), url('../img/index-slider__img.jpg') center no-repeat
+  background-size: cover
+
+.index-slider__text
+  display block
+  font-size rem(32)
+
+  @media screen and (max-width: smDesktopWidth)
+    font-size rem(22)
+  @media screen and (max-width: phoneWidth)
+    font-size rem(18)
+
+
