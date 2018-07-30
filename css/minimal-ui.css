@@ -169,6 +169,35 @@ section,
     padding: 0 0.555555555555556rem;
   }
 }
+.container.container--small {
+  max-width: 768px;
+}
+@media screen and (max-width: 980px) {
+  .container.container--small {
+    max-width: 480px;
+  }
+}
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+.main-title,
+.second-title {
+  font-weight: normal;
+  color: #222;
+  text-transform: none;
+}
+.main-title {
+  margin-bottom: 1.777777777777778rem;
+  font-size: 2.555555555555555rem;
+}
+.second-title {
+  font-size: 2rem;
+  margin-bottom: 1.333333333333333rem;
+}
+.text-hide {
+  color: #999;
+}
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,7 +219,7 @@ section,
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 320px) {
   .col-xs-1 {
     -ms-flex-preferred-size: 8.3333333333%;
         flex-basis: 8.3333333333%;
@@ -414,13 +443,21 @@ section,
 .col-xs-9 {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 .navbar {
   background-color: #fff;
   min-height: 80px;
   position: relative;
+}
+.navbar.navbar--black {
+  background-color: #222;
+}
+.navbar.navbar--black .navbar-item,
+.navbar.navbar--black .navbar-link {
+  color: #fff;
+}
+.navbar.navbar--transparent {
+  background-color: transparent;
 }
 .navbar-fixed {
   position: fixed;
@@ -447,10 +484,52 @@ section,
   color: #333;
   cursor: pointer;
 }
+.navbar-item.navbar-item--white,
+.navbar-link.navbar-item--white,
+.navbar-item.navbar-link--white,
+.navbar-link.navbar-link--white {
+  color: #fff;
+}
 .navbar-item:hover,
 .navbar-link:hover,
 .navbar-item.active,
 .navbar-link.active {
   background-color: transparent;
   color: #000;
+}
+.mi-card {
+  padding: 1.666666666666667rem;
+  -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.mi-card-default {
+  background-color: #fff;
+  color: #666;
+  -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.06);
+          box-shadow: 0 20px 20px rgba(0,0,0,0.06);
+}
+.label {
+  font-size: 1rem;
+  padding: 0.2rem 1.4rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #fff;
+}
+.label--primary {
+  background-color: #444ce0;
+}
+.label--success {
+  background-color: #26de81;
+}
+.label--danger {
+  background-color: #fc5c65;
+}
+.label--warning {
+  background-color: #fed330;
+}
+.label--light {
+  background-color: #999;
+}
+.label--purple {
+  background-color: #8854d0;
 }

@@ -52,3 +52,31 @@ section,
 	@media screen and (max-width phoneWidth)
 		max-width smPhoneWidth
 		padding 0 rem(10)
+
+	&.container--small
+		max-width tableWidth
+	
+		@media screen and (max-width smDesktopWidth)
+			max-width phoneWidth
+
+.center
+	text-align center
+	//todo fix?
+	margin: 0 auto
+
+.main-title,
+.second-title
+	font-weight normal
+	color #222
+	text-transform: none;
+
+.main-title
+	margin-bottom rem(32)
+	font-size rem(46)
+
+.second-title
+	font-size rem(36)
+	margin-bottom rem(24)
+
+.text-hide
+	color #999

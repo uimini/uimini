@@ -1,16 +1,19 @@
-navbar-background-color = #fff
-navbar-height = 80px
-navbar-item-color = #333
-navbar-item-hover-color = #000
-navbar-item-hover-background-color = transparent
-
-navbar-fixed-z = 2
-
 .navbar
   background-color: navbar-background-color
   min-height: navbar-height
   position: relative
 
+  &.navbar--black
+    background-color: #222
+
+    .navbar-item,
+    .navbar-link
+      color #fff
+
+  &.navbar--transparent
+    background-color: transparent
+  
+    
 .navbar-fixed
   position: fixed
   left: 0
@@ -29,6 +32,10 @@ navbar-fixed-z = 2
   padding: 0.5rem 0.75rem
   color: navbar-item-color
   cursor: pointer
+
+  &.navbar-item--white,
+  &.navbar-link--white
+    color #fff
 
   &:hover,
   &.active

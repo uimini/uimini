@@ -1,0 +1,35 @@
+extends ../../layout/main
+
+block variables
+	- var pageClass        = 'changelog-page';
+	- var title            = 'Changelog for Minimal-ui CSS framework based on Flexbox';
+	- var description      = 'Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+
+
+block content
+	section.changelog-card
+		.container.container--small
+			.mi-card.mi-card-default
+				h1.main-title.center Changelog
+				.changelog-item
+					.second-title 
+						span 1.0.0 
+						span.text-hide - 31 July 2018
+					.changelog-item__log
+						.row
+							.col-xs-3
+								span.label.label--success Add 
+							.col-xs-9
+								span Changelog Page
+					.changelog-item__log
+						.row
+							.col-xs-3
+								span.label.label--danger Fixed 
+							.col-xs-9
+								span Navbar
+				
+
+
+							
+block script
+	//script(src='')
