@@ -1,0 +1,8 @@
+header
+  .container
+    .navbar.navbar--transparent.navbar-menu
+      a(href="/").header-logo.header-logo--white Minimal UI
+      ul.navbar-menu
+        each item in nav
+          +menuItem(item["title"], item["url"])(class="navbar-link--white")
+          

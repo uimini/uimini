@@ -1,0 +1,14 @@
+{
+  "documetation": {
+    "title" : "Documetation",
+    "url" : "documetation.html"
+  },
+  "changelog": {
+    "title" : "Changelog",
+    "url": "changelog.html"
+  },
+  "download": {
+    "title" : "Download",
+    "url" : "#"
+  }
+}

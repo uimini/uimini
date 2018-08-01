@@ -1,4 +1,4 @@
-extends ../../layout/main
+extends ../layout/main--white
 
 block variables
   - var pageClass        = 'changelog-page';
@@ -22,8 +22,6 @@ mixin logItem(label,text)
       .col-xs-9
         span= text
 
-
-
 block content
   section.changelog-card
     .container.container--small
@@ -36,7 +34,7 @@ block content
               span.text-hide= log['date']
             
             //Todo fix object to array
-            if    (log.action5)
+            if     (log.action5)
               +logItem(log.action1['label'],log.action1['text'])
               +logItem(log.action2['label'],log.action2['text'])
               +logItem(log.action3['label'],log.action3['text'])
@@ -57,6 +55,4 @@ block content
             else if(log.action1)
               +logItem(log.action1['label'],log.action1['text'])
 
-
-              
 block script

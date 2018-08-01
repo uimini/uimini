@@ -1,11 +1,8 @@
 header
   .container
     .navbar.navbar-menu
+      a(href="/").header-logo Minimal UI
       ul.navbar-menu
-        li.navbar-item
-          a.navbar-link(href="/documetation") Documetation
-        li.navbar-item
-          a.navbar-link(href="/changelog") Changelog
-        li.navbar-item
-          a.navbar-link(href="#") Download
+        each item in nav
+          +menuItem(item["title"], item["url"])
           

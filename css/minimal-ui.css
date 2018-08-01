@@ -497,6 +497,10 @@ section,
   background-color: transparent;
   color: #000;
 }
+.navbar-item:last-child,
+.navbar-link:last-child {
+  padding-right: 0;
+}
 .mi-card {
   padding: 1.666666666666667rem;
   -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.08);
