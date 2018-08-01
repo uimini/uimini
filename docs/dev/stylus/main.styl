@@ -14,8 +14,13 @@ body
 	min-height 100vh
 
 .content-wrapper
-	flex 1
-	flex-direction column
+	display flex
+	flex-direction: column
+	min-height: 100vh
+
+	&.content-wrapper--sidebar
+		margin-left 400px
+
 
 
 //MODULES
@@ -25,11 +30,16 @@ body
 //Footer
 @import 'modules/footer.styl'
 
+//Sidebar
+@import 'modules/sidebar.styl'
+
 
 //PAGES
 //Index
 @import 'pages/index.styl'
 
-//changelog-page
+//Changelog-page
 @import 'pages/changelog.styl'
 
+//Documetation
+@import 'pages/documentation.styl'

@@ -2,6 +2,7 @@
   background-color: navbar-background-color
   min-height: navbar-height
   position: relative
+  border-bottom 1px solid #ccc
 
   &.navbar--black
     background-color: #222
@@ -14,11 +15,11 @@
     background-color: transparent
   
     
-.navbar-fixed
-  position: fixed
-  left: 0
-  right: 0
-  z-index: navbar-fixed-z
+  &.navbar-fixed
+    position: fixed
+    left: 0
+    right: 0
+    z-index: navbar-fixed-z
 
 .navbar-menu
   display flex
@@ -44,5 +45,3 @@
 
   &:last-child
     padding-right: 0
-
-

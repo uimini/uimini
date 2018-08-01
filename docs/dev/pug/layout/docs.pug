@@ -14,15 +14,18 @@ html
 		title #{title}
 		meta(name='description', content=description)
 
-		link(rel='stylesheet', href='static/css/minimal-ui.min.css')
-		link(rel='stylesheet', href='static/css/main.min.css')
+		link(rel='stylesheet', href='../static/css/minimal-ui.min.css')
+		link(rel='stylesheet', href='../static/css/main.min.css')
 
 	body(class=pageClass)
 		.wrapper
-			include ../modules/header--white
-			.content-wrapper
+			include ../modules/header
+			include ../modules/sidebar
+
+			.content-wrapper.content-wrapper--sidebar
 				block content
+			
 			include ../modules/footer
 
-		script(src='static/js/main.js')
+		script(src='../static/js/main.js')
 		block script

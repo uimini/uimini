@@ -87,6 +87,7 @@ gulp.task('pug', function () {
                 locals: {
                     changelog: JSON.parse(fs.readFileSync('./docs/data/changelog/changelog.json', 'utf8')),
                     nav: JSON.parse(fs.readFileSync('./docs/data/nav.json', 'utf8')),
+                    navSidebar: JSON.parse(fs.readFileSync('./docs/data/documentation/nav.json', 'utf8')),
                 },
                 pretty: true
             }

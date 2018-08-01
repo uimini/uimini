@@ -141,6 +141,9 @@ section,
     padding: 20px 0;
   }
 }
+.wrapper {
+  position: relative;
+}
 .container {
   width: 100%;
   -webkit-box-flex: 0;
@@ -448,6 +451,7 @@ section,
   background-color: #fff;
   min-height: 80px;
   position: relative;
+  border-bottom: 1px solid #ccc;
 }
 .navbar.navbar--black {
   background-color: #222;
@@ -459,7 +463,7 @@ section,
 .navbar.navbar--transparent {
   background-color: transparent;
 }
-.navbar-fixed {
+.navbar.navbar-fixed {
   position: fixed;
   left: 0;
   right: 0;

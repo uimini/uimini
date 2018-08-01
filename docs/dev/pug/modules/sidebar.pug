@@ -1,0 +1,10 @@
+mixin menuItemSidebar(title,url)
+  li.sidebar-item
+    a.sidebar-link(href= url)= title
+
+.sidebar-nav
+  .container
+    .sidebar#sidebar
+      ul.sidebar-list
+        each item in navSidebar
+          +menuItemSidebar(item["title"], item["url"])
