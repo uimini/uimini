@@ -1,35 +1,62 @@
 extends ../../layout/main
 
 block variables
-	- var pageClass        = 'changelog-page';
-	- var title            = 'Changelog for Minimal-ui CSS framework based on Flexbox';
-	- var description      = 'Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+  - var pageClass        = 'changelog-page';
+  - var title            = 'Changelog for Minimal-ui CSS framework based on Flexbox';
+  - var description      = 'Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+
+mixin logItem(label,text)
+  .changelog-item__log
+    .row
+      .col-xs-3
+        if(label == 'Add')
+          span.label.label--success Add
+        else if(label == 'Fix')
+          span.label.label--danger Fix
+        else if(label == 'Change')
+          span.label.label--primary Change
+        else if(label == 'Remove')
+          span.label.label--warning Remove
+        else
+          span.label.label--light Other
+      .col-xs-9
+        span= text
+
 
 
 block content
-	section.changelog-card
-		.container.container--small
-			.mi-card.mi-card-default
-				h1.main-title.center Changelog
-				.changelog-item
-					.second-title 
-						span 1.0.0 
-						span.text-hide - 31 July 2018
-					.changelog-item__log
-						.row
-							.col-xs-3
-								span.label.label--success Add 
-							.col-xs-9
-								span Changelog Page
-					.changelog-item__log
-						.row
-							.col-xs-3
-								span.label.label--danger Fixed 
-							.col-xs-9
-								span Navbar
-				
+  section.changelog-card
+    .container.container--small
+      .mi-card.mi-card-default
+        h1.main-title.center Changelog
+        each log in changelog
+          .changelog-item
+            .second-title 
+              span= log['ver']
+              span.text-hide= log['date']
+            
+            //Todo fix object to array
+            if    (log.action5)
+              +logItem(log.action1['label'],log.action1['text'])
+              +logItem(log.action2['label'],log.action2['text'])
+              +logItem(log.action3['label'],log.action3['text'])
+              +logItem(log.action4['label'],log.action4['text'])
+              +logItem(log.action5['label'],log.action5['text'])
+            else if(log.action4)
+              +logItem(log.action1['label'],log.action1['text'])
+              +logItem(log.action2['label'],log.action2['text'])
+              +logItem(log.action3['label'],log.action3['text'])
+              +logItem(log.action4['label'],log.action4['text'])
+            else if(log.action3)
+              +logItem(log.action1['label'],log.action1['text'])
+              +logItem(log.action2['label'],log.action2['text'])
+              +logItem(log.action3['label'],log.action3['text'])
+            else if(log.action2)
+              +logItem(log.action1['label'],log.action1['text'])
+              +logItem(log.action2['label'],log.action2['text'])
+            else if(log.action1)
+              +logItem(log.action1['label'],log.action1['text'])
 
 
-							
+              
 block script
-	//script(src='')

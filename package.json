@@ -23,6 +23,7 @@
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "del": "^3.0.0",
+    "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cache": "^1.0.2",

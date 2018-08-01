@@ -13,8 +13,8 @@ var     gulp         =       require('gulp'),
         cache        =       require('gulp-cache'),
         gutil        =       require('gulp-util'),
         rename       =       require("gulp-rename"),
-        del          =       require('del');
-
+        del          =       require('del'),
+        fs           =       require('fs');
 var config = {
         
         //DOCS
@@ -84,6 +84,9 @@ gulp.task('pug', function () {
         .src(config.devFolder +'/pug/pages/**/*.pug')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(pug({
+                locals: {
+                    changelog: JSON.parse(fs.readFileSync('./docs/data/changelog/changelog.json', 'utf8')),
+                },
                 pretty: true
             }
         ))

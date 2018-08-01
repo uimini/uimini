@@ -1,0 +1,26 @@
+{
+  "log2": {
+    "ver" : "1.0.0",
+    "date" : " - 1 July 2018",
+    "action1" : {
+        "label" : "Change",
+        "text" : "Changelog Page"
+    },
+    "action2" : {
+        "label" : "Add",
+        "text" : "Data Changelog json"
+    }
+  },
+  "log1": {
+    "ver" : "1.0.0",
+    "date" : " - 31 July 2018",
+    "action1" : {
+        "label" : "Add",
+        "text" : "Changelog Page"
+    },
+    "action2" : {
+        "label" : "Fix",
+        "text" : "Navbar"
+    }
+  }
+}
