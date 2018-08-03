@@ -1,14 +1,18 @@
 {
   "Getting Started": {
     "title" : "Getting Started",
-    "url" : "/get-started"
+    "url" : "get-started.html"
   },
   "Typography": {
     "title" : "Typography",
-    "url": "/typography"
+    "url": "typography.html"
   },
   "Buttons": {
     "title" : "Buttons",
-    "url" : "/buttons"
+    "url" : "buttons.html"
+  },
+  "color": {
+    "title" : "Color",
+    "url" : "color.html"
   }
 }

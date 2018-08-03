@@ -16,6 +16,7 @@ textarea,
 pre,
 iframe,
 hr,
+code,
 h1,
 h2,
 h3,
@@ -197,9 +198,6 @@ section,
 .second-title {
   font-size: 2rem;
   margin-bottom: 1.333333333333333rem;
-}
-.text-hide {
-  color: #999;
 }
 .row {
   display: -webkit-box;
@@ -553,9 +551,15 @@ section,
 .ui-title-4 {
   font-size: 1.444444444444444rem;
 }
-.ui-title-5 {
-  font-size: 1.222222222222222rem;
-}
-.ui-title-6 {
+.ui-text-regular {
   font-size: 1rem;
+}
+.ui-text-small {
+  font-size: 0.888888888888889rem;
+}
+.ui-text-smaller {
+  font-size: 0.777777777777778rem;
+}
+.text-hide {
+  color: #999;
 }

@@ -1,11 +1,11 @@
 {
   "documetation": {
     "title" : "Documetation",
-    "url" : "documentation"
+    "url" : "get-started.html"
   },
   "changelog": {
     "title" : "Changelog",
-    "url": "/changelog"
+    "url": "changelog.html"
   },
   "download": {
     "title" : "Download",

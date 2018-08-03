@@ -14,21 +14,28 @@ block content
           h1.ui-title-1 Typography
           span.docs-descr 
             | The rem unit is relative to the font-size of the root element html . That means that we can define a single font size on the root element, and define all rem units to be a percentage of that.
-          span.docs-descr
-            | 
-            storong Minimal ui 
-            | use standart 
-            <pre><code>
-              | body { font-family: 'Avenir', Helvetica, Arial, sans-serif;}
-            </pre></code>
-        
+        .content-docs_header
+          span.ui-title-2 Font:
+          include example/typography.html
+        .content-docs_header
+          span.ui-title-2 Font Size:
+          include example/typography2.html
+
         .example
-          h1.ui-title-1 Heading h1
-          h2.ui-title-2 Heading h2
+          h1.ui-title-1 Heading h1 
+            span.ui-text-small text-hide 2.7rem - 50px
+          h2.ui-title-2 Heading h2 
+            span.ui-text-small 2.2rem - 40px
           h3.ui-title-3 Heading h3
-          h4.ui-title-4 Heading h4
-          h5.ui-title-4 Heading h5
-          h6.ui-title-4 Heading h6
+            span.ui-text-small 1.6rem - 30px
+          p.ui-text-regular Body
+            span.ui-text-small text-hide 1rem - 18px
+          p.ui-text-small Small
+            span.ui-text-small text-hide 1rem - 16px
+          p.ui-text-smaller Extra small
+            span.ui-text-small text-hide 1rem - 14px
+
+          include example/typography3.html
 
  
 block script

@@ -14,10 +14,10 @@
     <div class="wrapper">
       <header>
         <div class="container">
-          <div class="navbar navbar navbar-menu"><a class="header-logo" href="/index.html">Minimal UI</a>
+          <div class="navbar navbar navbar-menu"><a class="header-logo" href="index.html">Minimal UI</a>
             <ul class="navbar-menu">
-              <li class="navbar-item"><a class="navbar-link" href="documentation">Documetation</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="/changelog">Changelog</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="get-started.html">Documetation</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="changelog.html">Changelog</a></li>
               <li class="navbar-item"><a class="navbar-link" href="#">Download</a></li>
             </ul>
           </div>
@@ -28,24 +28,47 @@
           <div class="container">
             <div class="sidebar">
               <ul class="sidebar-list">
-                            <li class="sidebar-item"><a class="sidebar-link" href="/get-started">Getting Started</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="/typography">Typography</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="/buttons">Buttons</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="get-started.html">Getting Started</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="typography.html">Typography</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="buttons.html">Buttons</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="color.html">Color</a></li>
               </ul>
             </div>
             <div class="content-sidebar">
               <div class="content-docs_header">
                 <h1 class="ui-title-1">Typography</h1><span class="docs-descr">
-                   The rem unit is relative to the font-size of the root element html . That means that we can define a single font size on the root element, and define all rem units to be a percentage of that.</span><span class="docs-descr"> 
-                  <storong>Minimal ui </storong>use standart <pre><code>body { font-family: 'Avenir', Helvetica, Arial, sans-serif;}</pre></code></span>
+                   The rem unit is relative to the font-size of the root element html . That means that we can define a single font size on the root element, and define all rem units to be a percentage of that.</span>
+              </div>
+              <div class="content-docs_header"><span class="ui-title-2">Font:</span><pre><code>
+body
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  font-weight normal
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+</pre></code>
+              </div>
+              <div class="content-docs_header"><span class="ui-title-2">Font Size:</span><pre><code>
+html
+  font-size 18px
+</pre></code>
               </div>
               <div class="example">
-                <h1 class="ui-title-1">Heading h1</h1>
-                <h2 class="ui-title-2">Heading h2</h2>
-                <h3 class="ui-title-3">Heading h3</h3>
-                <h4 class="ui-title-4">Heading h4</h4>
-                <h5 class="ui-title-4">Heading h5</h5>
-                <h6 class="ui-title-4">Heading h6</h6>
+                <h1 class="ui-title-1">Heading h1 <span class="ui-text-small">text-hide 2.7rem - 50px</span></h1>
+                <h2 class="ui-title-2">Heading h2 <span class="ui-text-small">2.2rem - 40px</span></h2>
+                <h3 class="ui-title-3">Heading h3<span class="ui-text-small">1.6rem - 30px</span></h3>
+                <p class="ui-text-regular">Body<span class="ui-text-small">text-hide 1rem - 18px</span></p>
+                <p class="ui-text-small">Small<span class="ui-text-small">text-hide 1rem - 16px</span></p>
+                <p class="ui-text-smaller">Extra small<span class="ui-text-small">text-hide 1rem - 14px</span></p><pre>
+  <code>
+    &lt;h1 class=&quot;ui-title-1&quot;&gt;Heading h1 &lt;/h1&gt;
+    &lt;h2 class=&quot;ui-title-2&quot;&gt;Heading h2 &lt;/h2&gt;
+    &lt;h3 class=&quot;ui-title-3&quot;&gt;Heading h3 &lt;/h3&gt;
+    &lt;p class=&quot;ui-text-regular&quot;&gt;Body &lt;/p&gt;
+    &lt;p class=&quot;ui-text-small&quot;&gt;Small &lt;/p&gt;
+    &lt;p class=&quot;ui-text-smaller&quot;&gt;Extra small &lt;/p&gt;
+  </code>
+</pre>
+
               </div>
             </div>
           </div>

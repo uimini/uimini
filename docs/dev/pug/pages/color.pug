@@ -6,11 +6,38 @@ block variables
   - var description      = 'FULL Documetation Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
 
 block content
-  section.get-started
+  section.color
     .container
       include ../modules/sidebar
       .content-sidebar
-        span color
+        .content-docs_header
+          h1.ui-title-1 Colors
+          span.docs-descr 
+            | Minimal UI uses a specific set of palettes to specify colors
+          
+        .content-docs_header
+          span.ui-title-2 Main color
+            ul.example-color__list
+              li.example-color__item.blue
+                p.example-color__box__title Blue
+                p.example-color__box__color #333
+
+        .content-docs_header
+          span.ui-title-2 Secondary Color
+            ul.example-color__list
+              li.example-color__item.green
+                p.example-color__box__title Green
+                p.example-color__box__color #333
+              li.example-color__item.yellow
+                p.example-color__box__title Yellow
+                p.example-color__box__color #333
+              li.example-color__item.red
+                p.example-color__box__title Red
+                p.example-color__box__color #333
+              li.example-color__item.light
+                p.example-color__box__title Light
+                p.example-color__box__color #333
+
 
       
  
