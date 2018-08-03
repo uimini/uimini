@@ -1,0 +1,34 @@
+extends ../layout/docs
+
+block variables
+  - var pageClass        = 'docs-page';
+  - var title            = 'Typography for Minimal-ui CSS framework based on Flexbox';
+  - var description      = 'Typography Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+
+block content
+  section.typography
+    .container
+      include ../modules/sidebar
+      .content-sidebar
+        .content-docs_header
+          h1.ui-title-1 Typography
+          span.docs-descr 
+            | The rem unit is relative to the font-size of the root element html . That means that we can define a single font size on the root element, and define all rem units to be a percentage of that.
+          span.docs-descr
+            | 
+            storong Minimal ui 
+            | use standart 
+            <pre><code>
+              | body { font-family: 'Avenir', Helvetica, Arial, sans-serif;}
+            </pre></code>
+        
+        .example
+          h1.ui-title-1 Heading h1
+          h2.ui-title-2 Heading h2
+          h3.ui-title-3 Heading h3
+          h4.ui-title-4 Heading h4
+          h5.ui-title-4 Heading h5
+          h6.ui-title-4 Heading h6
+
+ 
+block script

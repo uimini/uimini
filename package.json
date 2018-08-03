@@ -40,5 +40,8 @@
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {
+    "highlight.js": "^9.12.0"
   }
 }

@@ -35,8 +35,7 @@ gulp.task('style:dev', function(){
         // .pipe(sourcemaps.init())
         .pipe(plumber({ errorHandler: onError }))
         .pipe(stylus({
-            //Libs include here - 'devFolder' +'/sylus/libs.styl'
-            'include css': true
+            'include css': false
         }))
         .pipe(autoprefixer({
             //3v for Flex-box

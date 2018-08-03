@@ -541,3 +541,21 @@ section,
 .label--purple {
   background-color: #8854d0;
 }
+.ui-title-1 {
+  font-size: 2.777777777777778rem;
+}
+.ui-title-2 {
+  font-size: 2.222222222222222rem;
+}
+.ui-title-3 {
+  font-size: 1.666666666666667rem;
+}
+.ui-title-4 {
+  font-size: 1.444444444444444rem;
+}
+.ui-title-5 {
+  font-size: 1.222222222222222rem;
+}
+.ui-title-6 {
+  font-size: 1rem;
+}

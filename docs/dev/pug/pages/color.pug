@@ -1,4 +1,4 @@
-extends ../../layout/docs
+extends ../layout/docs
 
 block variables
   - var pageClass        = 'docs-page';
@@ -8,6 +8,10 @@ block variables
 block content
   section.get-started
     .container
-      span Start Here
+      include ../modules/sidebar
+      .content-sidebar
+        span color
+
+      
  
 block script
