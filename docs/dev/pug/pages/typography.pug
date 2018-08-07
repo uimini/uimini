@@ -8,7 +8,7 @@ block variables
 
 
 block content
-  section.typography
+  section.typography-doc
     .container
       include ../modules/sidebar
       .content-sidebar
@@ -16,10 +16,10 @@ block content
           h1.ui-title-1 Typography
           span.docs-descr 
             | The rem unit is relative to the font-size of the root element html . That means that we can define a single font size on the root element, and define all rem units to be a percentage of that.
-        .content-docs_header
+        .content-docs_help
           span.ui-title-2 Font:
           include typography/typography.html
-        .content-docs_header
+        .content-docs_help
           span.ui-title-2 Font Size:
           include typography/typography2.html
 
@@ -68,7 +68,10 @@ block content
                   span.ui-text-small 1 rem
                 td
                   span 14 px
-
+        
+        .content-docs_help
+          span.ui-title-2 Example:
+        
         include typography/typography3.html
 
  

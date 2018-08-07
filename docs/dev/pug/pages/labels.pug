@@ -6,7 +6,7 @@ block variables
   - var description      = 'Labels Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
 
 block content
-  section.table
+  section.labels-doc
     .container
       include ../modules/sidebar
       .content-sidebar
@@ -14,3 +14,15 @@ block content
           h1.ui-title-1 Labels
           span.docs-descr 
             | Simple and Modern
+  
+        .example
+            span.label.label--primary Primary
+            span.label.label--success Success
+            span.label.label--warning Warning
+            span.label.label--light Light
+        
+        .content-docs_help
+          span.ui-title-2 Example:
+        
+        include labels/labels.html
+      

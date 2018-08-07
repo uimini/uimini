@@ -1,13 +1,35 @@
 extends ../layout/docs
 
 block variables
-  - var pageClass        = 'docs-page';
+  - var pageClass        = 'buttons-page';
   - var title            = 'Buttons for Minimal-ui CSS framework based on Flexbox';
   - var description      = 'Buttons Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
 
 block content
-  section.buttons
+  section.buttons-doc
     .container
-      span Start Here
+      include ../modules/sidebar
+      .content-sidebar
+        .content-docs_header
+          h1.ui-title-1 Buttons
+          span.docs-descr 
+            | Simple and Modern
+  
+
+        p.ui-title-3 Standart:
+          .example
+            .row
+              .button.button-primary Primary
+              .button.button-success Success
+              .button.button-warning Warning
+              .button.button-light Light
+
+        p.ui-title-3 Big:
+          .example
+            .row
+              .button.button--big.button-primary Primary
+              .button.button--big.button-success Success
+              .button.button--big.button-warning Warning
+              .button.button--big.button-light Light
  
 block script

@@ -113,7 +113,11 @@ html {
   }
 }
 body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: 18px;
+  font-weight: normal;
 }
 a {
   text-decoration: none;
@@ -535,6 +539,12 @@ section,
 .label--purple {
   background-color: #8854d0;
 }
+.ui-title-1,
+.ui-title-2,
+.ui-title-3 {
+  display: block;
+  font-weight: normal;
+}
 .ui-title-1 {
   font-size: 2.777777777777778rem;
   margin-bottom: 30px;
@@ -588,4 +598,38 @@ section,
 }
 .ui-table thead:first-child {
   padding-left: 20px;
+}
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: calc(0.375em - 1px);
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-top: calc(0.375em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+}
+.button.button--big {
+  font-size: 1.333333333333333rem;
+}
+.button-primary {
+  background-color: #444ce0;
+}
+.button-success {
+  background-color: #26de81;
+}
+.button-danger {
+  background-color: #fc5c65;
+}
+.button-warning {
+  background-color: #fed330;
+}
+.button-light {
+  background-color: #999;
 }
