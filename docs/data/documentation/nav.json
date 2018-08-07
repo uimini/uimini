@@ -3,6 +3,10 @@
     "title" : "Getting Started",
     "url" : "get-started.html"
   },
+  "color": {
+    "title" : "Color",
+    "url" : "color.html"
+  },
   "Typography": {
     "title" : "Typography",
     "url": "typography.html"
@@ -11,8 +15,13 @@
     "title" : "Buttons",
     "url" : "buttons.html"
   },
-  "color": {
-    "title" : "Color",
-    "url" : "color.html"
+  "Labels": {
+    "title" : "Labels",
+    "url" : "labels.html"
+  },
+  "Table": {
+    "title" : "Table",
+    "url" : "table.html"
   }
+
 }

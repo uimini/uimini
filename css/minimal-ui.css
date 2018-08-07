@@ -503,13 +503,9 @@ section,
 .navbar-link:last-child {
   padding-right: 0;
 }
-.mi-card {
-  padding: 1.666666666666667rem;
-  -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-.mi-card-default {
+.ui-card {
   background-color: #fff;
+  padding: 1.666666666666667rem;
   color: #666;
   -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.06);
           box-shadow: 0 20px 20px rgba(0,0,0,0.06);
@@ -541,15 +537,19 @@ section,
 }
 .ui-title-1 {
   font-size: 2.777777777777778rem;
+  margin-bottom: 30px;
 }
 .ui-title-2 {
   font-size: 2.222222222222222rem;
+  margin-bottom: 24px;
 }
 .ui-title-3 {
   font-size: 1.666666666666667rem;
+  margin-bottom: 20px;
 }
 .ui-title-4 {
   font-size: 1.444444444444444rem;
+  margin-bottom: 16px;
 }
 .ui-text-regular {
   font-size: 1rem;
@@ -562,4 +562,30 @@ section,
 }
 .text-hide {
   color: #999;
+}
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  line-height: 1.5em;
+}
+.ui-table td {
+  padding: 14px;
+  border-bottom: 1px solid #ccc;
+}
+.ui-table td:first-child {
+  padding-right: 20px;
+}
+.ui-table thead th {
+  padding: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-bottom: 1px solid #ccc;
+}
+.ui-table thead:first-child {
+  padding-left: 20px;
 }

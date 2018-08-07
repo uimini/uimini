@@ -20,16 +20,18 @@ mixin logItem(label,text)
         else
           span.label.label--light Other
       .col-xs-9
-        span= text
+        span.ui-text-regular= text
+
 
 block content
-  section.changelog-card
+  section.changelog-cards
     .container.container--small
-      .mi-card.mi-card-default
-        h1.main-title.center Changelog
+      .ui-card
+        h1.ui-title-1.center Changelog
+        
         each log in changelog
           .changelog-item
-            .second-title 
+            .ui-title-3
               span= log['ver']
               span.text-hide= log['date']
             
