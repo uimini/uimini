@@ -1,4 +1,10 @@
 // Main
+
+hr
+  border: 1px solid #ccc;
+  border-width: .6px;
+  margin: 40px 0;
+
 .content-docs_header
   margin-bottom 60px
 
@@ -14,6 +20,14 @@
 .content-docs_help
   margin-bottom 30px
 
+.example
+  padding: 20px
+  border 1px solid #cccccc
+  border-radius: 8px
+  margin-bottom 40px
+
+.example-empty
+  margin-bottom 40px
 
 // Typography
 .typography-doc
@@ -22,6 +36,8 @@
     .ui-title-1, .ui-title-2, .ui-title-3,
     .ui-text-regular, .ui-text-small, .ui-text-smaller
       margin-bottom 0
+  
+
   
 
 // Colors
@@ -55,15 +71,22 @@
 
 // Labels
 .labels-doc
-  .label
-    margin-right 10px
+  
+  .example,
+  .example-empty
 
-    &:last-child
-      margin-right 0
+    .label
+      margin-right 10px
+
+      &:last-child
+        margin-right 0
 
 // Button
 .buttons-doc
-  .example
+  
+  .example,
+  .example-empty
+  
     .button
       margin-right 10px
       

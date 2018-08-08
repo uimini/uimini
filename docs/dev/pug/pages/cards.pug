@@ -1,0 +1,17 @@
+extends ../layout/docs
+
+block variables
+  - var pageClass        = 'card-page';
+  - var title            = 'Card for Minimal-ui CSS framework based on Flexbox';
+  - var description      = 'Card Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+
+block content
+  section.card-doc
+    .container
+      include ../modules/sidebar
+      .content-sidebar
+        .content-docs_header
+          h1.ui-title-1 Cards
+          span.docs-descr 
+            | Simple and Modern
+  

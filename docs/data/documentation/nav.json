@@ -22,6 +22,10 @@
   "Table": {
     "title" : "Table",
     "url" : "table.html"
+  },
+  "Card": {
+    "title" : "Card",
+    "url" : "cards.html"
   }
 
 }
