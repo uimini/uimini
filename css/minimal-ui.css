@@ -511,8 +511,21 @@ section,
   background-color: #fff;
   padding: 1.666666666666667rem;
   color: #666;
-  -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.06);
-          box-shadow: 0 20px 20px rgba(0,0,0,0.06);
+  border: 1px solid #ebeef5;
+  border-radius: 4px;
+}
+.ui-card.ui-card--shadow-always {
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+          box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+}
+.ui-card.ui-card--shadow {
+  -webkit-transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+  -o-transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+.ui-card.ui-card--shadow:hover {
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+          box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
 }
 .label {
   font-size: 1rem;
