@@ -8,21 +8,19 @@ block variables
 block content
   section.labels-doc
     .container
-      include ../modules/sidebar
-      .content-sidebar
-        .content-docs_header
-          h1.ui-title-1 Labels
-          span.docs-descr 
-            | Simple and Modern
-  
-        .example-empty
-            span.label.label--primary Primary
-            span.label.label--success Success
-            span.label.label--warning Warning
-            span.label.label--light Light
+      .content-docs_header
+        h1.ui-title-1 Labels
+        span.docs-descr 
+          | Simple and Modern
+
+      .example-empty
+          span.label.label--primary Primary
+          span.label.label--success Success
+          span.label.label--warning Warning
+          span.label.label--light Light
+      
+      .content-docs_help
+        span.ui-title-2 Example:
         
-        .content-docs_help
-          span.ui-title-2 Example:
-        
-        include labels/labels.html
+      include labels/labels.html
       

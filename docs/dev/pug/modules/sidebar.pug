@@ -3,6 +3,8 @@ mixin menuItemSidebar(title,url)
     a.sidebar-link(href= url)= title
 
 .sidebar
-  ul.sidebar-list
-    each item in navSidebar
-      +menuItemSidebar(item["title"], item["url"])
+  .container
+    .sidebar-content
+      ul.sidebar-list
+        each item in navSidebar
+          +menuItemSidebar(item["title"], item["url"])

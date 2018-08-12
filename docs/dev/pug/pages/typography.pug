@@ -10,69 +10,64 @@ block variables
 block content
   section.typography-doc
     .container
-      include ../modules/sidebar
-      .content-sidebar
-        .content-docs_header
-          h1.ui-title-1 Typography
-          span.docs-descr 
-            | The rem unit is relative to the font-size of the root element html . That means that we can define a single font size on the root element, and define all rem units to be a percentage of that.
-        .content-docs_help
-          span.ui-title-2 Font:
-          include typography/typography.html
-        .content-docs_help
-          span.ui-title-2 Font Size:
-          include typography/typography2.html
+      .content-docs_header
+        h1.ui-title-1 Typography
+        span.docs-descr 
+          | The rem unit is relative to the font-size of the root element html . That means that we can define a single font size on the root element, and define all rem units to be a percentage of that.
+      .content-docs_help
+        span.ui-title-2 Font:
+        include typography/typography.html
+      .content-docs_help
+        span.ui-title-2 Font Size:
+        include typography/typography2.html
 
-        .example
-          table.ui-table
-            tbody
-              tr
-                td
-                  h1.ui-title-1 Heading h1 
-                td
-                  span.ui-text-small 2.7 rem 
-                td
-                  span 50 px
-              tr
-                td
-                  h2.ui-title-2 Heading h2 
-                td
-                  span.ui-text-small 2.2 rem
-                td
-                  span 40 px
-              tr
-                td
-                  h3.ui-title-3 Heading h3
-                td
-                  span.ui-text-small 1.6 rem
-                td
-                  span 30 px
-              tr
-                td
-                  p.ui-text-regular Body
-                td
-                  span.ui-text-small 1 rem 
-                td
-                  span 18 px
-              tr
-                td
-                  p.ui-text-small Small
-                td
-                  span.ui-text-small 1 rem
-                td
-                  span 16 px
-              tr
-                td
-                  p.ui-text-smaller Extra small
-                td
-                  span.ui-text-small 1 rem
-                td
-                  span 14 px
-        
-        .content-docs_help
-          span.ui-title-2 Example:
-        
-        include typography/typography3.html
-
- 
-block script
+      .example
+        table.ui-table
+          tbody
+            tr
+              td
+                h1.ui-title-1 Heading h1 
+              td
+                span.ui-text-small 2.7 rem 
+              td
+                span 50 px
+            tr
+              td
+                h2.ui-title-2 Heading h2 
+              td
+                span.ui-text-small 2.2 rem
+              td
+                span 40 px
+            tr
+              td
+                h3.ui-title-3 Heading h3
+              td
+                span.ui-text-small 1.6 rem
+              td
+                span 30 px
+            tr
+              td
+                p.ui-text-regular Body
+              td
+                span.ui-text-small 1 rem 
+              td
+                span 18 px
+            tr
+              td
+                p.ui-text-small Small
+              td
+                span.ui-text-small 1 rem
+              td
+                span 16 px
+            tr
+              td
+                p.ui-text-smaller Extra small
+              td
+                span.ui-text-small 1 rem
+              td
+                span 14 px
+      
+      .content-docs_help
+        span.ui-title-2 Example:
+      
+      include typography/typography3.html

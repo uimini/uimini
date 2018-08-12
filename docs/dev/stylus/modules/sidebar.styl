@@ -2,19 +2,21 @@
 .sidebar
   position fixed
   width 240px
+  height: 100%;
+
   top 0
   bottom 0
   margin-top 80px
-  
-.content-sidebar
-  padding-left: 270px;
-  padding-bottom: 100px;
-  box-sizing: border-box;
+  overflow-x: scroll;
+  height: 100vh;
 
 .sidebar-content
-  display flex
-  border-right 1px solid #ccc
-  overflow: auto;
+  padding-bottom: 80px
+  opacity .5
+  transition: all .25s cubic-bezier(.02,.01,.47,1);
+  
+  &:hover
+    opacity 1
 
 .sidebar-list
   display flex
@@ -23,6 +25,13 @@
 
 .sidebar-item
   font-size rem(20)
+  line-height 2.1
+  opacity .7
+  transition: all .25s cubic-bezier(.02,.01,.47,1);
+
+
+  &:hover
+    opacity 1
 
 .sidebar-link
   color #777

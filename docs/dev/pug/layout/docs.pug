@@ -23,11 +23,11 @@ html
 
 	body(class=pageClass)
 		.wrapper
-			include ../modules/header
-			
 
-			.content-wrapper
-				
+			include ../modules/header
+			include ../modules/sidebar
+
+			.content-wrapper.content-wrapper--sidebar
 				block content
 			
 			include ../modules/footer
