@@ -1,8 +1,9 @@
 header
-  .container
-    .navbar.navbar-menu
-      a(href="index.html").header-logo Minimal UI
-      ul.navbar-menu
-        each item in mainNav
-          +menuItem(item["title"], item["url"])
+  .navbar.navbar-fixed
+    .container
+      .navbar-content.navbar-menu
+        a(href="index.html").header-logo Minimal UI
+        ul.navbar-menu
+          each item in mainNav
+            +menuItem(item["title"], item["url"])
           
