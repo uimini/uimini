@@ -84,9 +84,12 @@ gulp.task('pug', function () {
         .pipe(plumber({ errorHandler: onError }))
         .pipe(pug({
                 locals: {
-                    changelog: JSON.parse(fs.readFileSync('./docs/data/changelog/changelog.json', 'utf8')),
-                    nav: JSON.parse(fs.readFileSync('./docs/data/nav.json', 'utf8')),
-                    navSidebar: JSON.parse(fs.readFileSync('./docs/data/documentation/nav.json', 'utf8')),
+                    mainNav: JSON.parse(fs.readFileSync('./docs/data/main-navigation.json', 'utf8')),
+                    
+                    docNavDev: JSON.parse(fs.readFileSync('./docs/data/documentation/development.json', 'utf8')),
+                    docNavComp: JSON.parse(fs.readFileSync('./docs/data/documentation/components.json', 'utf8')),
+                    
+                    logs: JSON.parse(fs.readFileSync('./docs/data/changelog/logs.json', 'utf8')),
                 },
                 pretty: true
             }

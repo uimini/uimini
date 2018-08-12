@@ -3,6 +3,6 @@ header
     .navbar.navbar--transparent.navbar-menu
       a(href="index.html").header-logo.header-logo--white Minimal UI
       ul.navbar-menu
-        each item in nav
+        each item in mainNav
           +menuItem(item["title"], item["url"])(class="navbar-link--white")
           

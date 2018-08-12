@@ -5,6 +5,19 @@ mixin menuItemSidebar(title,url)
 .sidebar
   .container
     .sidebar-content
-      ul.sidebar-list
-        each item in navSidebar
+
+      // Development
+      .ui-title-3 Development
+      ul.sidebar-list          
+        each item in docNavDev
           +menuItemSidebar(item["title"], item["url"])
+      
+      // Components
+      .ui-title-3 Components
+      ul.sidebar-list
+        each item in docNavComp
+          if(item['prefix'])
+            p.ui-text-small(style="margin:16px 0 6px 0;")= item['prefix']
+            +menuItemSidebar(item["title"], item["url"])
+          else
+            +menuItemSidebar(item["title"], item["url"])
