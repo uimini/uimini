@@ -5,8 +5,8 @@
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge, chrome = 1"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Color for Minimal-ui CSS framework based on Flexbox</title>
-    <meta name="description" content="Color Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free">
+    <title>Form for Minimal-ui CSS framework based on Flexbox</title>
+    <meta name="description" content="Form Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free">
     <link rel="stylesheet" href="static/css/minimal-ui.min.css">
     <link rel="stylesheet" href="static/css/main.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -24,7 +24,7 @@
         </div>
       </header>
       <div class="content-wrapper">
-        <section class="color-doc">
+        <section class="form-doc">
           <div class="container">
             <div class="sidebar">
               <ul class="sidebar-list">
@@ -40,35 +40,31 @@
             </div>
             <div class="content-sidebar">
               <div class="content-docs_header">
-                <h1 class="ui-title-1">Colors</h1><span class="docs-descr">
-                   Minimal UI uses a specific set of palettes to specify colors</span>
+                <h1 class="ui-title-1">Form</h1><span class="docs-descr">
+                   Minimal UI Form</span>
               </div>
-              <div class="content-docs_header"><span class="ui-title-2">Main color
-                  <ul class="example-color__list">
-                    <li class="example-color__item blue">
-                      <p class="example-color__box__title">Blue</p>
-                      <p class="example-color__box__color">#333</p>
-                    </li>
-                  </ul></span></div>
-              <div class="content-docs_header"><span class="ui-title-2">Secondary Color
-                  <ul class="example-color__list">
-                    <li class="example-color__item green">
-                      <p class="example-color__box__title">Green</p>
-                      <p class="example-color__box__color">#333</p>
-                    </li>
-                    <li class="example-color__item yellow">
-                      <p class="example-color__box__title">Yellow</p>
-                      <p class="example-color__box__color">#333</p>
-                    </li>
-                    <li class="example-color__item red">
-                      <p class="example-color__box__title">Red</p>
-                      <p class="example-color__box__color">#333</p>
-                    </li>
-                    <li class="example-color__item light">
-                      <p class="example-color__box__title">Light</p>
-                      <p class="example-color__box__color">#333</p>
-                    </li>
-                  </ul></span></div>
+              <div class="example-empty">
+                <form action="javascript: void(0)">
+                  <label for="nameField">Name</label>
+                  <input id="nameField" type="text" placeholder="CJ Patoilo">
+                  <label for="ageRangeField">Age Range</label>
+                  <select id="ageRangeField">
+                    <option value="0-13">0-13</option>
+                    <option value="14-17">14-17</option>
+                    <option value="18-23">18-23</option>
+                    <option value="24+">24+</option>
+                  </select>
+                  <label for="commentField">Comment</label>
+                  <textarea id="commentField" placeholder="Hi CJ …"></textarea>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <input id="confirmField" type="checkbox">
+                      <label class="label--inline" for="confirmField">Confirm</label>
+                    </div>
+                    <div class="col-xs-6"><a class="button--round button--big button button-primary" type="submit">Send</a></div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </section>

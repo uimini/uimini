@@ -1,0 +1,35 @@
+extends ../layout/docs
+
+block variables
+  - var pageClass        = 'docs-page';
+  - var title            = 'Form for Minimal-ui CSS framework based on Flexbox';
+  - var description      = 'Form Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+
+block content
+  section.form-doc
+    .container
+      include ../modules/sidebar
+      .content-sidebar
+        .content-docs_header
+          h1.ui-title-1 Form
+          span.docs-descr 
+            | Minimal UI Form
+          
+        .example-empty
+          form(action='javascript: void(0)')
+            label(for='nameField') Name
+            input#nameField(type='text', placeholder='CJ Patoilo')
+            label(for='ageRangeField') Age Range
+            select#ageRangeField
+              option(value='0-13') 0-13
+              option(value='14-17') 14-17
+              option(value='18-23') 18-23
+              option(value='24+') 24+
+            label(for='commentField') Comment
+            textarea#commentField(placeholder='Hi CJ …')
+            .row
+              .col-xs-6
+                input#confirmField(type='checkbox')
+                label.label--inline(for='confirmField') Confirm
+              .col-xs-6
+                a.button--round.button--big.button.button-primary(type='submit') Send
