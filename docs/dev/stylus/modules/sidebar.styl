@@ -3,12 +3,31 @@
   position fixed
   width 240px
   height: 100%;
-
   top 0
   bottom 0
   margin-top 80px
   overflow-x: scroll;
   height: 96vh;
+  transition: all .25s cubic-bezier(.02,.01,.47,1);
+  z-index 1
+
+  @media screen and (max-width: phoneWidth)
+    left: -240px;
+  
+  &.full
+    width 100%
+    background-color: #fff
+
+
+.sidebar__open-buttom
+  display none
+  position fixed
+  top 90px
+  left 10px
+  z-index 2
+  
+  @media screen and (max-width: phoneWidth)
+    display block
 
 .sidebar-content
   padding: 40px 0

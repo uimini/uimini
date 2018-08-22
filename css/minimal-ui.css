@@ -708,6 +708,104 @@ section,
 .button-light.button--plain:hover {
   background-color: #999;
 }
+.button-close {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+  -o-transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+.button-close:hover {
+  opacity: 1;
+}
+.button-close:before,
+.button-close:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #000;
+}
+.button-close:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.button-close:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.button-burger {
+  position: relative;
+  width: 34px;
+  height: 16px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.button-burger:hover .line-1,
+.button-burger:focus .line-1 {
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+.button-burger:hover .line-3,
+.button-burger:focus .line-3 {
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
+}
+.button-burger.active .line-1 {
+  -webkit-transform: translateY(8.33px) translateX(0) rotate(45deg);
+      -ms-transform: translateY(8.33px) translateX(0) rotate(45deg);
+          transform: translateY(8.33px) translateX(0) rotate(45deg);
+}
+.button-burger.active .line-2 {
+  opacity: 0;
+}
+.button-burger.active .line-3 {
+  -webkit-transform: translateY(-8.33px) translateX(0) rotate(-45deg);
+      -ms-transform: translateY(-8.33px) translateX(0) rotate(-45deg);
+          transform: translateY(-8.33px) translateX(0) rotate(-45deg);
+}
+.button-burger .line {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 4px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.button-burger .line-1 {
+  top: 0%;
+}
+.button-burger .line-2 {
+  top: 50%;
+}
+.button-burger .line-3 {
+  top: 100%;
+}
 label,
 legend {
   display: block;

@@ -1,11 +1,11 @@
 .button
-	padding-bottom: calc(0.375em - 1px);
-	padding-left: 0.75em;
-	padding-right: 0.75em;
-	padding-top: calc(0.375em - 1px);
+	padding-bottom: calc(0.375em - 1px)
+	padding-left: 0.75em
+	padding-right: 0.75em
+	padding-top: calc(0.375em - 1px)
 	color #fff
-	text-align: center;
-	white-space: nowrap;
+	text-align: center
+	white-space: nowrap
 	cursor pointer
 	&:hover
 		opacity .8
@@ -25,14 +25,14 @@
 	
 
 	&.button--round
-		border-radius: 1em;
-		padding-left: 1em;
-		padding-right: 1em;
+		border-radius: 1em
+		padding-left: 1em
+		padding-right: 1em
 	
 	&.button--disable
 		opacity .6
-		cursor: not-allowed;
-		background-image: none;
+		cursor: not-allowed
+		background-image: none
 
 .button-default
 	color #333
@@ -97,3 +97,79 @@
 
 		&:hover
 			background-color light-color
+
+
+// Another buttons:
+
+.button-close
+	display: inline-block
+	position: relative
+	width: 30px
+	height @width
+	overflow: hidden
+	cursor: pointer
+	opacity: .7
+	transition: all .25s cubic-bezier(.02,.01,.47,1)
+
+	&:hover
+		opacity: 1
+
+	&:before, &:after 
+		content: ''
+		position: absolute
+		height: 1px
+		width: 100%
+		top: 50%
+		left: 0
+		margin-top: -1px
+		background: #000
+
+	&:before 
+		transform: rotate(45deg)
+
+	&:after 
+		transform: rotate(-45deg)
+
+.button-burger
+	position: relative
+	width: 34px
+	height: 16px
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	cursor: pointer;
+
+	&:hover,
+	&:focus
+		.line-1
+			transform: translateY(-1px);
+		.line-3
+			transform: translateY(1px);
+	
+	&.active
+		.line-1
+			transform: translateY(8.33px) translateX(0) rotate(45deg);
+		.line-2
+			opacity: 0;
+		.line-3
+			transform: translateY(-8.33px) translateX(0) rotate(-45deg);
+
+	.line 
+		display: block
+		position: absolute
+		height: 2px
+		width: 100%
+		background-color: #333
+		border-radius: 4px;
+		opacity 1
+		left: 0
+		transform: rotate(0deg)
+		transition: all 0.4s;
+
+	.line-1 
+		top: 0%
+
+	.line-2
+		top: 50%
+
+	.line-3
+		top: 100%
