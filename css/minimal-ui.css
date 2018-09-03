@@ -203,6 +203,58 @@ section,
   font-size: 2rem;
   margin-bottom: 1.333333333333333rem;
 }
+.fadeInDown {
+  -webkit-animation: fadeInDown 0.3s;
+          animation: fadeInDown 0.3s;
+}
+.fadeOutUp {
+  -webkit-animation: fadeOutUp 0.3s;
+          animation: fadeOutUp 0.3s;
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -942,4 +994,38 @@ textarea {
 }
 .ui-alert--purple {
   background-color: #8854d0;
+}
+.ui-message {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 20px;
+  right: 10%;
+  padding: 10px 14px;
+  background-color: #edf2fc;
+  border: 1px solid #ebeef5;
+  border-radius: 8px;
+  z-index: 2000;
+  overflow: hidden;
+}
+.ui-message.ui-message--primary {
+  color: #fff;
+  background-color: #444ce0;
+}
+.ui-message.ui-message--success {
+  color: #fff;
+  background-color: #26de81;
+}
+.ui-message.ui-message--warning {
+  color: #fff;
+  background-color: #fed330;
+}
+.ui-message.ui-message--danger {
+  color: #fff;
+  background-color: #fc5c65;
 }

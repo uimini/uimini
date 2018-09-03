@@ -41,3 +41,50 @@ if(alertUi){
   }
 
 }
+
+// Message
+function showMessage(message, messageBtn){
+  var message = document.querySelectorAll(message),
+      messageBtn = document.querySelectorAll(messageBtn),
+      timeOut = 2000,
+      // Becouse animation: fadeOutUp .3s
+      timeOutUp = timeOut - 1700;
+  console.log(messageBtn)
+  // Only Message without button
+  if(messageBtn.length === 0){
+    for (var i = 0; i < message.length; i++) {
+      var message = message[i];
+      showAndHideMessage();
+    }
+  }
+
+
+  // Message with button
+  for (var i = 0; i < message.length; i++) {
+    var message = message[i],
+        messageBtn = messageBtn[i];
+
+    messageBtn.onclick = function(){
+      showAndHideMessage()
+    }
+  }
+
+  function showAndHideMessage(){
+    message.style.display = 'flex';
+      
+    // Animation
+    message.classList.add('fadeInDown');
+    message.classList.remove('fadeOutUp');
+    
+    setTimeout(function() {
+      setTimeout(function(){
+        message.style.display = 'none';
+      }, timeOutUp);
+      
+      // Animation
+      message.classList.add('fadeOutUp');
+      message.classList.remove('fadeInDown');
+    }, timeOut);
+  }
+
+}

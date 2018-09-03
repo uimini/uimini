@@ -1,0 +1,48 @@
+extends ../layout/docs
+
+block variables
+  - var pageClass        = 'message-page';
+  - var title            = 'Message for Minimal-ui CSS framework based on Flexbox';
+  - var description      = 'Message Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+
+block content
+  section.message-doc
+    .container
+      h1.ui-title-1 Message
+      span
+        | Used to show feedback after an activity
+
+  section.message-doc
+    .container
+      span.ui-title-2 Standart Message:
+      .example-empty
+        .ui-message#exampleMessage
+          span.message-title Standart Message is here
+        .button.button-light#exampleMessageBtn Standart
+        
+        .ui-message.ui-message--primary#exampleMessage2
+          span.message-title Primary Message is here
+        .button.button-primary#exampleMessageBtn2 Primary
+        
+        .ui-message.ui-message--success#exampleMessage3
+          span.message-title Success Message is here
+        .button.button-success#exampleMessageBtn3 Success
+        
+        .ui-message.ui-message--danger#exampleMessage4
+          span.message-title Danger Message is here
+        .button.button-danger#exampleMessageBtn4 Danger
+        
+        .ui-message.ui-message--warning#exampleMessage5
+          span.message-title Warning Message is here
+        .button.button-warning#exampleMessageBtn5 Warning
+
+block script
+  script(type='text/javascript').
+    showMessage('#exampleMessage', '#exampleMessageBtn') 
+    showMessage('#exampleMessage2', '#exampleMessageBtn2') 
+    showMessage('#exampleMessage3', '#exampleMessageBtn3') 
+    showMessage('#exampleMessage4', '#exampleMessageBtn4') 
+    showMessage('#exampleMessage5', '#exampleMessageBtn5') 
+
+    // Only Message without button
+    showMessage('#exampleMessage2') 
