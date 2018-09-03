@@ -5,12 +5,12 @@
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge, chrome = 1"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Color for Minimal-ui CSS framework based on Flexbox</title>
-    <meta name="description" content="Color Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free">
+    <title>Buttons for Minimal-ui CSS framework based on Flexbox</title>
+    <meta name="description" content="Buttons Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free">
     <link rel="stylesheet" href="static/css/minimal-ui.min.css">
     <link rel="stylesheet" href="static/css/main.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
-  <body class="docs-page">
+  <body class="layout-page">
     <div class="wrapper">
       <header>
         <div class="navbar navbar-fixed">
@@ -74,38 +74,44 @@
         </div>
       </div>
       <div class="content-wrapper content-wrapper--sidebar content-wrapper--fix-header">
-        <section class="color-doc">
+        <section class="layout-doc">
           <div class="container">
             <div class="content-docs_header">
-              <h1 class="ui-title-1">Colors</h1><span class="docs-descr">
-                 Minimal UI uses a specific set of palettes to specify colors</span>
+              <h1 class="ui-title-1">Layouts</h1><span class="docs-descr">
+                 Simple and Modern Layouts</span>
             </div>
-            <div class="content-docs_header"><span class="ui-title-2">Main color
-                <ul class="example-color__list">
-                  <li class="example-color__item blue">
-                    <p class="example-color__box__title">Blue</p>
-                    <p class="example-color__box__color">#333</p>
-                  </li>
-                </ul></span></div>
-            <div class="content-docs_header"><span class="ui-title-2">Secondary Color
-                <ul class="example-color__list">
-                  <li class="example-color__item green">
-                    <p class="example-color__box__title">Green</p>
-                    <p class="example-color__box__color">#333</p>
-                  </li>
-                  <li class="example-color__item yellow">
-                    <p class="example-color__box__title">Yellow</p>
-                    <p class="example-color__box__color">#333</p>
-                  </li>
-                  <li class="example-color__item red">
-                    <p class="example-color__box__title">Red</p>
-                    <p class="example-color__box__color">#333</p>
-                  </li>
-                  <li class="example-color__item light">
-                    <p class="example-color__box__title">Light</p>
-                    <p class="example-color__box__color">#333</p>
-                  </li>
-                </ul></span></div>
+            <p class="ui-title-2">Standart:
+              <div class="example-empty">
+                <div class="layout-block" style="text-align: center; height: 80px; line-height: 80px; background-color: #b3c0d1;"><span>Header</span></div>
+                <div class="layout-block" style="text-align: center; height: 160px; line-height: 160px; background-color: #e9eef3;"><span>Content</span></div>
+              </div>
+            </p>
+            <p class="ui-title-2">With Footer:
+              <div class="example-empty">
+                <div class="layout-block" style="text-align: center; height: 80px; line-height: 80px; background-color: #b3c0d1;"><span>Header</span></div>
+                <div class="layout-block" style="text-align: center; height: 160px; line-height: 160px; background-color: #e9eef3;"><span>Content</span></div>
+                <div class="layout-block" style="text-align: center; height: 80px; line-height: 80px; background-color: #b3c0d1;"><span>Footer</span></div>
+              </div>
+            </p>
+            <p class="ui-title-2">With Sidebar:
+              <div class="example-empty">
+                <div class="layout-block" style="text-align: center; height: 80px; line-height: 80px; background-color: #b3c0d1;"><span>Header</span></div>
+                <div class="layout-block-content" style="display:flex; justify-content: space-between;">
+                  <div class="layout-block" style="text-align: center; height: 160px; width:40%; line-height: 160px; background-color: #d3dce6;"><span>Sidebar</span></div>
+                  <div class="layout-block" style="text-align: center; height: 160px; width:100%; line-height: 160px; background-color: #e9eef3;"><span>Content</span></div>
+                </div>
+              </div>
+            </p>
+            <p class="ui-title-2">With Sidebar + Footer:
+              <div class="example-empty">
+                <div class="layout-block" style="text-align: center; height: 80px; line-height: 80px; background-color: #b3c0d1;"><span>Header</span></div>
+                <div class="layout-block-content" style="display:flex; justify-content: space-between;">
+                  <div class="layout-block" style="text-align: center; height: 160px; width:40%; line-height: 160px; background-color: #d3dce6;"><span>Sidebar</span></div>
+                  <div class="layout-block" style="text-align: center; height: 160px; width:100%; line-height: 160px; background-color: #e9eef3;"><span>Content</span></div>
+                </div>
+                <div class="layout-block" style="text-align: center; height: 80px; line-height: 80px; background-color: #b3c0d1;"><span>Footer</span></div>
+              </div>
+            </p>
           </div>
         </section>
       </div>

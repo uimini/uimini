@@ -1,0 +1,36 @@
+.ui-alert
+  display flex
+  justify-content space-between
+  padding: 10px 8px
+  margin-bottom 16px
+  border-radius: 8px
+  opacity .7
+  color #fff
+  z-index 1
+  
+  .button-close
+    z-index 2
+
+    width 20px
+    height @width
+
+    &:before, &:after
+      background-color: #fff
+
+.ui-alert--primary
+  background-color: primary-color
+
+.ui-alert--success
+  background-color: success-color
+
+.ui-alert--danger
+  background-color: danger-color
+
+.ui-alert--warning
+  background-color: warning-color
+
+.ui-alert--light
+  background-color: light-color
+
+.ui-alert--purple
+  background-color: purple-color

@@ -2,7 +2,7 @@ mixin menuItemSidebar(title,url)
   li.sidebar-item
     a.sidebar-link(href= url)= title
 
-.sidebar__open-buttom
+.sidebar-open-button
   .button-burger
     span.line.line-1
     span.line.line-2
@@ -13,7 +13,7 @@ mixin menuItemSidebar(title,url)
 
       // Development
       .ui-title-3 Development
-      ul.sidebar-list          
+      ul.sidebar-list
         each item in docNavDev
           +menuItemSidebar(item["title"], item["url"])
       

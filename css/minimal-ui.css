@@ -471,7 +471,31 @@ section,
   right: 0;
   z-index: 2;
 }
-.navbar-menu {
+.navbar-open-button {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .navbar-open-button {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+.navbar-menu--mobile {
+  display: none;
+}
+.navbar-menu--mobile .button-burger {
+  z-index: 44;
+}
+@media screen and (max-width: 480px) {
+  .navbar-menu--mobile {
+    display: block;
+  }
+}
+.navbar-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,6 +505,29 @@ section,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.navbar-list--mobile {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  background-color: #fff;
+}
+.navbar-list--mobile .navbar-item {
+  padding-right: 20px;
+}
+.navbar-list--mobile .navbar-item:last-child {
+  padding-right: 20px;
 }
 .navbar-item,
 .navbar-link {
@@ -613,6 +660,7 @@ section,
   padding-left: 20px;
 }
 .button {
+  display: inline-block;
   padding-bottom: calc(0.375em - 1px);
   padding-left: 0.75em;
   padding-right: 0.75em;
@@ -797,6 +845,9 @@ section,
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
+.button-burger .line.line--white {
+  background-color: #fff;
+}
 .button-burger .line-1 {
   top: 0%;
 }
@@ -850,4 +901,45 @@ select {
 }
 textarea {
   min-height: 3.888888888888889rem;
+}
+.ui-alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 8px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  opacity: 0.7;
+  color: #fff;
+  z-index: 1;
+}
+.ui-alert .button-close {
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+}
+.ui-alert .button-close:before,
+.ui-alert .button-close:after {
+  background-color: #fff;
+}
+.ui-alert--primary {
+  background-color: #444ce0;
+}
+.ui-alert--success {
+  background-color: #26de81;
+}
+.ui-alert--danger {
+  background-color: #fc5c65;
+}
+.ui-alert--warning {
+  background-color: #fed330;
+}
+.ui-alert--light {
+  background-color: #999;
+}
+.ui-alert--purple {
+  background-color: #8854d0;
 }

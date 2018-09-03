@@ -21,10 +21,52 @@
     right: 0
     z-index: navbar-fixed-z
 
+.navbar-open-button
+  display none
+
+  @media screen and (max-width: phoneWidth)
+    display block
+
 .navbar-menu
+  @media screen and (max-width: phoneWidth)
+    display none
+
+.navbar-menu--mobile
+  display none
+  
+  .button-burger
+    z-index 44
+
+  @media screen and (max-width: phoneWidth)
+    display block
+
+.navbar-list
   display flex
   justify-content space-between
   align-items: center
+
+.navbar-list--mobile
+  display none
+  flex-direction column
+  align-items: flex-end
+  position fixed
+  top 80px
+  left 0
+  width 100%
+  height 100%
+  z-index 30
+  background-color #fff
+
+  .navbar-item
+    padding-right 20px
+    &:last-child
+      padding-right 20px
+
+  @media screen and (max-width: phoneWidth)
+    // display flex
+
+
+
 
 .navbar-item,
 .navbar-link
