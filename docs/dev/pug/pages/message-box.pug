@@ -1,0 +1,45 @@
+extends ../layout/docs
+
+block variables
+  - var pageClass        = 'message-box-page';
+  - var title            = 'Message-Box for Minimal-ui CSS framework based on Flexbox';
+  - var description      = 'Message-Box Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+
+block content
+  section.message-box-doc
+    .container
+      h1.ui-title-1 Message-Box
+      span
+        | A set of modal boxes simulating system message box, mainly for alerting information
+
+  section.message-box-doc
+    .container
+      span.ui-title-2 Standart Message-box:
+      .example-empty
+
+        .ui-message-box__wrapper
+          .ui-message-box.fadeInDown
+            .ui-message-box__header
+              span.message-box-title Title
+              span.button-close.ui-message-box-close
+            .ui-message-box__content
+              span Message is here
+            .ui-message-box__footer
+              .button.button-light.ui-message-box-cancel Cancel
+              .button.button-primary.ui-message-box-ok OK
+        .button.button-light.ui-message-box-show Show
+        
+        .ui-message-box__wrapper
+          .ui-message-box.fadeInDown
+            .ui-message-box__header
+              span.message-box-title Another Title
+              span.button-close.ui-message-box-close
+            .ui-message-box__content
+              span Another Message is here
+            .ui-message-box__footer
+              //- .button.button-light.ui-message-box-cancel Cancel
+              .button.button-primary.ui-message-box-ok OK
+        .button.button-light.ui-message-box-show Show
+
+block script
+  //- script(type='text/javascript')

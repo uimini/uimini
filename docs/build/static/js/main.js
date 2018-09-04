@@ -58,7 +58,6 @@ function showMessage(message, messageBtn){
     }
   }
 
-
   // Message with button
   for (var i = 0; i < message.length; i++) {
     var message = message[i],
@@ -87,4 +86,64 @@ function showMessage(message, messageBtn){
     }, timeOut);
   }
 
+}
+
+// Message Dialog
+
+// [i] for forEach
+// var messageDialog = document.getElementsByClassName('ui-message-box__wrapper');
+var messageDialogBtnShow = document.getElementsByClassName('ui-message-box-show');
+var messageDialogBtnOk = document.getElementsByClassName('ui-message-box-ok');
+var messageDialogBtnCancel = document.getElementsByClassName('ui-message-box-cancel');
+var messageDialogBtnClose = document.getElementsByClassName('ui-message-box-close');
+
+// Event for Show
+[].forEach.call(messageDialogBtnShow, function(element, i) {       
+  element.addEventListener('click', function(){
+    showMessageDialog(i);
+  });
+});
+
+// Event for Close
+[].forEach.call(messageDialogBtnClose, function(element, i) {       
+  element.addEventListener('click', function(){
+    closeMessageDialog(i);
+  });
+  // Close click to window
+  window.addEventListener('click', function(e){
+    var messageDialog = document.getElementsByClassName('ui-message-box__wrapper')[i];
+    if(e.target == messageDialog){
+      messageDialog.style.display = "none";
+    }
+  });
+});
+
+// Event for Close Cancel
+// TODO: bug
+// Если кенцел отсутвует на 1 модалке и есть на второq в i отправляется 0. 
+// закрывается 1. вторая без изменений
+[].forEach.call(messageDialogBtnCancel, function(element, i) {       
+  element.addEventListener('click', function(){
+    closeMessageDialog(i);
+    // messageDialogItCancel();
+  });
+});
+
+
+// Event for Close OK
+[].forEach.call(messageDialogBtnOk, function(element, i) {       
+  element.addEventListener('click', function(){
+    closeMessageDialog(i);
+    // messageDialogItOk();
+  });
+});
+
+function showMessageDialog(i){
+  var messageDialog = document.getElementsByClassName('ui-message-box__wrapper')[i];
+  messageDialog.style.display = "flex";
+}
+
+function closeMessageDialog(i){
+  var messageDialog = document.getElementsByClassName('ui-message-box__wrapper')[i];
+  messageDialog.style.display = "none";   
 }

@@ -1,0 +1,41 @@
+.ui-message-box__wrapper
+  display: none
+  justify-content center
+  align-items: center
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index 2002
+  background-color: rgba(39, 39, 39, 0.48)
+
+.ui-message-box
+  position relative
+  min-width 400px
+  padding: 12px 14px
+  background-color: #edf2fc
+  border: 1px solid #ebeef5
+  border-radius: 8px
+  z-index 2000
+  overflow: hidden;
+
+  .button-close
+    width 22px
+    height @width
+
+.ui-message-box__header
+  display: flex
+  align-items: center
+  justify-content space-between
+  padding-bottom: 8px
+  margin-bottom: @padding-bottom 
+
+.ui-message-box__content
+  margin-bottom: 16px
+
+.ui-message-box__footer
+  text-align: right
+
+.message-box-title
+  font-size: rem(24)
