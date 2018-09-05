@@ -15,17 +15,21 @@ var     gulp         =       require('gulp'),
         rename       =       require("gulp-rename"),
         del          =       require('del'),
         fs           =       require('fs');
-var config = {
-        
-        //DOCS
-        devFolder:           './docs/dev',
-        buildFolder:         './docs/build',
-        secondBuildFolder:   '/static',
-        
-        //MINIMAL-UI
-        cssFolder:           './css',
-        stylusFolder:        './stylus'
 
+var config = {        
+
+        // MINIMAL-UI
+        // Build
+        cssFolder:           './minimal-ui/dist/',
+        jsFolder:            './minimal-ui/dist/',
+        // Dev
+        stylusFolder:        './minimal-ui/dev/stylus',
+        jsDevFolder:         './minimal-ui/dev/js',
+
+        // DOCS
+        devFolder:           './docs-dev',
+        buildFolder:         './docs',
+        secondBuildFolder:   '/static'
 };
 
 //STYLUS MINIMAL-UI --DEV
@@ -84,12 +88,12 @@ gulp.task('pug', function () {
         .pipe(plumber({ errorHandler: onError }))
         .pipe(pug({
                 locals: {
-                    mainNav: JSON.parse(fs.readFileSync('./docs/data/main-navigation.json', 'utf8')),
+                    mainNav: JSON.parse(fs.readFileSync(config.devFolder +'/data/main-navigation.json', 'utf8')),
                     
-                    docNavDev: JSON.parse(fs.readFileSync('./docs/data/documentation/development.json', 'utf8')),
-                    docNavComp: JSON.parse(fs.readFileSync('./docs/data/documentation/components.json', 'utf8')),
+                    docNavDev: JSON.parse(fs.readFileSync(config.devFolder +'/data/documentation/development.json', 'utf8')),
+                    docNavComp: JSON.parse(fs.readFileSync(config.devFolder +'/data/documentation/components.json', 'utf8')),
                     
-                    logs: JSON.parse(fs.readFileSync('./docs/data/changelog/logs.json', 'utf8')),
+                    logs: JSON.parse(fs.readFileSync(config.devFolder +'/data/changelog/logs.json', 'utf8')),
                 },
                 pretty: true
             }
@@ -98,16 +102,11 @@ gulp.task('pug', function () {
         .on('end', browserSync.reload)
 });
 
-//JS DOCS
+//JS MINIMAL-UI
 gulp.task('script:dev', function() {
     return gulp
-
-        //Libs here:
         .src([
-         // EXAMPLE:
-         // './node_modules/jquery/dist/jquery.min.js',
-            config.devFolder +'/js/libs/*.js',
-            config.devFolder +'/js/common.js'
+            config.jsDevFolder +'/common.js'
         ])
         .pipe(plumber())
 
@@ -120,8 +119,12 @@ gulp.task('script:dev', function() {
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
         
-        .pipe(concat('main.js'))
+        .pipe(concat('minimal-ui.js'))
+        .pipe(gulp.dest(config.jsFolder))
         //TODO uglify
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest(config.jsFolder))
         .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/js'))
         .pipe(browserSync.reload({stream: true}))
 });
@@ -160,11 +163,11 @@ gulp.task('watch', function(){
 
     //MINIMAL-UI
     gulp.watch(config.stylusFolder +'/**/*.styl', ['style:dev']);
+    gulp.watch(config.jsDevFolder +'/**/*.js', ['script:dev']);
 
     //DOCS
     gulp.watch(config.devFolder +'/pug/**/*.pug', ['pug']);
     gulp.watch(config.devFolder +'/stylus/**/*.styl', ['styleDOCS:dev']);
-    gulp.watch(config.devFolder +'/js/**/*.js', ['script:dev']);
     gulp.watch(config.devFolder +'/img/**/*.img', ['img:dev']);
 
 });

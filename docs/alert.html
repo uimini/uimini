@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge, chrome = 1"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Alert for Minimal-ui CSS framework based on Flexbox</title>
+    <meta name="description" content="Alert Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free">
+    <link rel="stylesheet" href="static/css/minimal-ui.min.css">
+    <link rel="stylesheet" href="static/css/main.min.css">
+  </head>
+  <body class="alert-page">
+    <div class="wrapper">
+      <header>
+        <div class="navbar navbar-fixed">
+          <div class="container">
+            <div class="navbar-content navbar-list"><a class="header-logo" href="index.html">Minimal UI</a>
+              <div class="navbar-menu">
+                <ul class="navbar-list">
+                  <li class="navbar-item"><a class="navbar-link" href="get-started.html">Documetation</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="changelog.html">Changelog</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="#">Download</a></li>
+                </ul>
+              </div>
+              <div class="navbar-menu--mobile">
+                <div class="button-burger"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></div>
+                <ul class="navbar-list--mobile">
+                  <li class="navbar-item"><a class="navbar-link" href="get-started.html">Documetation</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="changelog.html">Changelog</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="#">Download</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="sidebar-open-button">
+        <div class="button-burger"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></div>
+      </div>
+      <div class="sidebar">
+        <div class="container">
+          <div class="sidebar-content">
+            <!-- Development-->
+            <div class="ui-title-3">Development</div>
+            <ul class="sidebar-list">
+                    <li class="sidebar-item"><a class="sidebar-link" href="get-started.html">Getting Started</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="color-customize.html">Color Customize</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="variables.html">Variables</a></li>
+            </ul>
+            <!-- Components-->
+            <div class="ui-title-3">Components</div>
+            <ul class="sidebar-list">
+              <p class="ui-text-small" style="margin:16px 0 6px 0;">Basic:</p>
+                    <li class="sidebar-item"><a class="sidebar-link" href="grid.html">Grid</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="layout.html">Layout</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="color.html">Color</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="typography.html">Typography</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="buttons.html">Buttons</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="labels.html">Labels</a></li>
+              <p class="ui-text-small" style="margin:16px 0 6px 0;">Data:</p>
+                    <li class="sidebar-item"><a class="sidebar-link" href="table.html">Table</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="form.html">Form</a></li>
+              <p class="ui-text-small" style="margin:16px 0 6px 0;">Notice:</p>
+                    <li class="sidebar-item"><a class="sidebar-link" href="alert.html">Alert</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="message.html">Message</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="message-box.html">MessageBox</a></li>
+              <p class="ui-text-small" style="margin:16px 0 6px 0;">Navigation:</p>
+                    <li class="sidebar-item"><a class="sidebar-link" href="navigation.html">Nav</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="sidebar.html">Sidebar</a></li>
+              <p class="ui-text-small" style="margin:16px 0 6px 0;">Other:</p>
+                    <li class="sidebar-item"><a class="sidebar-link" href="cards.html">Card</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="content-wrapper content-wrapper--sidebar content-wrapper--fix-header">
+        <section class="alert-doc">
+          <div class="container">
+            <h1 class="ui-title-1">Alert</h1><span>Displays important alert messages</span>
+          </div>
+        </section>
+        <section class="alert-doc__close-button">
+          <div class="container"><span class="ui-title-2">With close button:</span>
+            <div class="example-empty">
+              <div class="ui-alert ui-alert--primary"><span class="alert-title">Primary Text</span><span class="button-close"></span></div>
+              <div class="ui-alert ui-alert--success"><span class="alert-title">Primary Text</span><span class="button-close"></span></div>
+              <div class="ui-alert ui-alert--danger"><span class="alert-title">Primary Text</span><span class="button-close"></span></div>
+              <div class="ui-alert ui-alert--warning"><span class="alert-title">Primary Text</span><span class="button-close"></span></div>
+              <div class="ui-alert ui-alert--light"><span class="alert-title">Primary Text</span><span class="button-close"></span></div>
+              <div class="ui-alert ui-alert--purple"><span class="alert-title">Primary Text</span><span class="button-close"></span></div>
+            </div>
+          </div>
+        </section>
+        <section class="alert-doc__no-close-button">
+          <div class="container"><span class="ui-title-2">Simple:</span>
+            <div class="example-empty">
+              <div class="ui-alert ui-alert--primary"><span class="alert-title">Primary Text</span></div>
+              <div class="ui-alert ui-alert--success"><span class="alert-title">Primary Text</span></div>
+              <div class="ui-alert ui-alert--danger"><span class="alert-title">Primary Text</span></div>
+              <div class="ui-alert ui-alert--warning"><span class="alert-title">Primary Text</span></div>
+              <div class="ui-alert ui-alert--light"><span class="alert-title">Primary Text</span></div>
+              <div class="ui-alert ui-alert--purple"><span class="alert-title">Primary Text</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer></footer>
+    </div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    <script src="static/js/minimal-ui.min.js"></script>
+  </body>
+</html>
