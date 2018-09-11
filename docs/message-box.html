@@ -42,14 +42,14 @@
         <div class="container">
           <div class="sidebar-content">
             <!-- Development-->
-            <div class="ui-title-3">Development</div>
+            <div class="ui-title-4">Development</div>
             <ul class="sidebar-list">
                     <li class="sidebar-item"><a class="sidebar-link" href="get-started.html">Getting Started</a></li>
                     <li class="sidebar-item"><a class="sidebar-link" href="color-customize.html">Color Customize</a></li>
                     <li class="sidebar-item"><a class="sidebar-link" href="variables.html">Variables</a></li>
             </ul>
             <!-- Components-->
-            <div class="ui-title-3">Components</div>
+            <div class="ui-title-4">Components</div>
             <ul class="sidebar-list">
               <p class="ui-text-small" style="margin:16px 0 6px 0;">Basic:</p>
                     <li class="sidebar-item"><a class="sidebar-link" href="grid.html">Grid</a></li>
@@ -83,6 +83,8 @@
         <section class="message-box-doc">
           <div class="container"><span class="ui-title-2">Standart Message-box:</span>
             <div class="example-empty">
+              <div class="ui-message ui-message--danger" id="exampleMessage"><span class="message-title">Example message - Cancel</span></div>
+              <div class="ui-message ui-message--success" id="exampleMessage2"><span class="message-title">Example message - Done</span></div>
               <div class="ui-message-box__wrapper">
                 <div class="ui-message-box fadeInDown">
                   <div class="ui-message-box__header"><span class="message-box-title">Title</span><span class="button-close ui-message-box-close"></span></div>
@@ -93,7 +95,7 @@
                   </div>
                 </div>
               </div>
-              <div class="button button-light ui-message-box-show">Show</div>
+              <div class="button button-light ui-message-box-show">Show confirm message</div>
               <div class="ui-message-box__wrapper">
                 <div class="ui-message-box fadeInDown">
                   <div class="ui-message-box__header"><span class="message-box-title">Another Title</span><span class="button-close ui-message-box-close"></span></div>
@@ -103,14 +105,77 @@
                   </div>
                 </div>
               </div>
-              <div class="button button-light ui-message-box-show">Show</div>
+              <div class="button button-light ui-message-box-show">Show standart message</div>
             </div>
+            <div class="content-docs_help"><span class="ui-title-3">Example:</span></div><pre>
+    <code>
+&lt;!-- Example message for Cancel button --&gt;
+&lt;div class=&quot;ui-message ui-message--danger&quot; id=&quot;exampleMessage&quot;&gt;&lt;span class=&quot;message-title&quot;&gt;Example message - Cancel&lt;/span&gt;&lt;/div&gt;
+&lt;!-- Example message for OK button --&gt;
+&lt;div class=&quot;ui-message ui-message--success&quot; id=&quot;exampleMessage2&quot;&gt;&lt;span class=&quot;message-title&quot;&gt;Example message - Done&lt;/span&gt;&lt;/div&gt;
+
+&lt;!-- Wrapper for first message --&gt;
+&lt;div class=&quot;ui-message-box__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-message-box fadeInDown&quot;&gt;
+    &lt;div class=&quot;ui-message-box__header&quot;&gt;&lt;span class=&quot;message-box-title&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;button-close ui-message-box-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-message-box__content&quot;&gt;&lt;span&gt;Message is here&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-message-box__footer&quot;&gt;
+      &lt;div class=&quot;button button-light ui-message-box-cancel&quot;&gt;Cancel&lt;/div&gt;
+      &lt;div class=&quot;button button-primary ui-message-box-ok&quot;&gt;OK&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Button for first message --&gt;
+&lt;div class=&quot;button button-light ui-message-box-show&quot;&gt;Show confirm message&lt;/div&gt;
+
+&lt;!-- Wrapper for second message --&gt;
+&lt;div class=&quot;ui-message-box__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-message-box fadeInDown&quot;&gt;
+    &lt;div class=&quot;ui-message-box__header&quot;&gt;&lt;span class=&quot;message-box-title&quot;&gt;Another Title&lt;/span&gt;&lt;span class=&quot;button-close ui-message-box-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-message-box__content&quot;&gt;&lt;span&gt;Another Message is here&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-message-box__footer&quot;&gt;
+      &lt;div class=&quot;button button-primary ui-message-box-ok&quot;&gt;OK&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Button for second message --&gt;
+&lt;div class=&quot;button button-light ui-message-box-show&quot;&gt;Show standart message&lt;/div&gt;
+
+
+&lt;script&gt;
+  // Example message for Cancel button
+  function messageDialogItCancel(){
+    showMessage('#exampleMessage') 
+  }
+
+  // Example message for Ok button
+  function messageDialogItOk(){
+    showMessage('#exampleMessage2') 
+  }
+&lt;/script&gt;
+</code>
+  </pre>
           </div>
         </section>
+        <footer>
+          <!-- example-->
+        </footer>
       </div>
-      <footer></footer>
     </div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stylus.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
     <script src="static/js/minimal-ui.min.js"></script>
+    <script>
+      function messageDialogItCancel(){
+      showMessage('#exampleMessage') 
+      return console.log('Cancel');
+      }
+      function messageDialogItOk(){
+      showMessage('#exampleMessage2') 
+      return console.log('Ok');
+      }
+    </script>
   </body>
 </html>

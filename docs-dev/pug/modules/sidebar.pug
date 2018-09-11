@@ -12,13 +12,13 @@ mixin menuItemSidebar(title,url)
     .sidebar-content
 
       // Development
-      .ui-title-3 Development
+      .ui-title-4 Development
       ul.sidebar-list
         each item in docNavDev
           +menuItemSidebar(item["title"], item["url"])
       
       // Components
-      .ui-title-3 Components
+      .ui-title-4 Components
       ul.sidebar-list
         each item in docNavComp
           if(item['prefix'])

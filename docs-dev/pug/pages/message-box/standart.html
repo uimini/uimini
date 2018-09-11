@@ -1,0 +1,50 @@
+<pre>
+    <code>
+&lt;!-- Example message for Cancel button --&gt;
+&lt;div class=&quot;ui-message ui-message--danger&quot; id=&quot;exampleMessage&quot;&gt;&lt;span class=&quot;message-title&quot;&gt;Example message - Cancel&lt;/span&gt;&lt;/div&gt;
+&lt;!-- Example message for OK button --&gt;
+&lt;div class=&quot;ui-message ui-message--success&quot; id=&quot;exampleMessage2&quot;&gt;&lt;span class=&quot;message-title&quot;&gt;Example message - Done&lt;/span&gt;&lt;/div&gt;
+
+&lt;!-- Wrapper for first message --&gt;
+&lt;div class=&quot;ui-message-box__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-message-box fadeInDown&quot;&gt;
+    &lt;div class=&quot;ui-message-box__header&quot;&gt;&lt;span class=&quot;message-box-title&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;button-close ui-message-box-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-message-box__content&quot;&gt;&lt;span&gt;Message is here&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-message-box__footer&quot;&gt;
+      &lt;div class=&quot;button button-light ui-message-box-cancel&quot;&gt;Cancel&lt;/div&gt;
+      &lt;div class=&quot;button button-primary ui-message-box-ok&quot;&gt;OK&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Button for first message --&gt;
+&lt;div class=&quot;button button-light ui-message-box-show&quot;&gt;Show confirm message&lt;/div&gt;
+
+&lt;!-- Wrapper for second message --&gt;
+&lt;div class=&quot;ui-message-box__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-message-box fadeInDown&quot;&gt;
+    &lt;div class=&quot;ui-message-box__header&quot;&gt;&lt;span class=&quot;message-box-title&quot;&gt;Another Title&lt;/span&gt;&lt;span class=&quot;button-close ui-message-box-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-message-box__content&quot;&gt;&lt;span&gt;Another Message is here&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-message-box__footer&quot;&gt;
+      &lt;div class=&quot;button button-primary ui-message-box-ok&quot;&gt;OK&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Button for second message --&gt;
+&lt;div class=&quot;button button-light ui-message-box-show&quot;&gt;Show standart message&lt;/div&gt;
+
+
+&lt;script&gt;
+  // Example message for Cancel button
+  function messageDialogItCancel(){
+    showMessage('#exampleMessage') 
+  }
+
+  // Example message for Ok button
+  function messageDialogItOk(){
+    showMessage('#exampleMessage2') 
+  }
+&lt;/script&gt;
+</code>
+  </pre>

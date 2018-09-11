@@ -18,7 +18,7 @@ hr
   border: 1px solid #eaeefb;
 
 .content-docs_help
-  margin-bottom 30px
+  margin-bottom 8px
 
 .example
   padding: 20px
@@ -33,12 +33,9 @@ hr
 .typography-doc
 
   .example
-    .ui-title-1, .ui-title-2, .ui-title-3,
+    .ui-title-1, .ui-title-2, .ui-title-3, .ui-title-4,
     .ui-text-regular, .ui-text-small, .ui-text-smaller
       margin-bottom 0
-  
-
-  
 
 // Colors
 .example-color__list
@@ -47,27 +44,20 @@ hr
 .example-color__item
   display flex
   flex-direction: column
-  align-items center
-  width 140px
-  padding: 10px 0
+  width 160px
+  padding: 10px 12px
   margin: 0 4px 
-  color: #fff
-  font-size rem(18)
   border-radius: 4px
-
-  &.blue 
-    background-color #444ce0
-  &.green
-    background-color #26de81
-  &.red 
-    background-color #fc5c65
-  &.yellow
-    background-color #fed330
-  &.light
-    background-color #999
+  color #fff
 
 .example-color__box__title
   font-weight 600
+
+  &.small
+    padding: 10px 0
+    font-size rem(15)
+  &.black
+    color: neutral-primary
 
 // Labels
 .labels-doc
@@ -93,7 +83,7 @@ hr
       &:last-child
         margin-right 0
       
-//card
+// Card
 .card-doc
 
   .col-md-4

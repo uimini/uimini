@@ -29,7 +29,11 @@ block content
           //TODO: add row class
           .row
             .col-xs-6
-              input#confirmField(type='checkbox')
-              label.label--inline(for='confirmField') Confirm
+              ul
+                li
+                  .ui-checkbox-wrapper
+                    input#exampleCheckbox.ui-checkbox(type='checkbox') 
+                    label.label--inline(for="exampleCheckbox") Example Checkbox
+
             .col-xs-6
               a.button--round.button--big.button.button-primary(type='submit') Send

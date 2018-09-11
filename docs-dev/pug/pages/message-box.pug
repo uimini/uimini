@@ -15,7 +15,13 @@ block content
   section.message-box-doc
     .container
       span.ui-title-2 Standart Message-box:
+
       .example-empty
+        .ui-message.ui-message--danger#exampleMessage
+          span.message-title Example message - Cancel
+
+        .ui-message.ui-message--success#exampleMessage2
+          span.message-title Example message - Done
 
         .ui-message-box__wrapper
           .ui-message-box.fadeInDown
@@ -27,7 +33,7 @@ block content
             .ui-message-box__footer
               .button.button-light.ui-message-box-cancel Cancel
               .button.button-primary.ui-message-box-ok OK
-        .button.button-light.ui-message-box-show Show
+        .button.button-light.ui-message-box-show Show confirm message
         
         .ui-message-box__wrapper
           .ui-message-box.fadeInDown
@@ -39,7 +45,19 @@ block content
             .ui-message-box__footer
               //- .button.button-light.ui-message-box-cancel Cancel
               .button.button-primary.ui-message-box-ok OK
-        .button.button-light.ui-message-box-show Show
-
+        .button.button-light.ui-message-box-show Show standart message
+      
+      .content-docs_help
+        span.ui-title-3 Example:
+      include message-box/standart.html
+  
 block script
-  //- script(type='text/javascript')
+  script.
+    function messageDialogItCancel(){
+    showMessage('#exampleMessage') 
+    return console.log('Cancel');
+    }
+    function messageDialogItOk(){
+    showMessage('#exampleMessage2') 
+    return console.log('Ok');
+    }

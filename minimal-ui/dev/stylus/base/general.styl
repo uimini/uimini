@@ -1,7 +1,7 @@
 html
-	line-height 1.4
-	font-size 18px
-	color #333
+	line-height mainLineHeight
+	font-size mainFontSize
+	color mainFontColor
 
 	@media screen and (max-width desktopWidth)
 		font-size 16px
@@ -16,7 +16,7 @@ body
 	font-family 'Avenir', Helvetica, Arial, sans-serif
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
-	font-family 18px
+	font-family mainFontSize
 	font-weight normal
 
 a
@@ -26,19 +26,38 @@ a
 section,
 .section
 	position relative
-	padding 60px 0
+	padding 54px 0
 
 	@media screen and (max-width desktopWidth)
-		padding 40px 0
+		padding 36px 0
 
 	@media screen and (max-width tableWidth)
-		padding 30px 0
+		padding 22px 0
 
 	@media screen and (max-width phoneWidth)
-		padding 20px 0
+		padding 16px 0
 
 .wrapper
-	position relative
+	display: flex
+	flex-direction column
+	min-height 100vh
+
+.content-wrapper
+	display flex
+	flex-direction: column
+	min-height: 100vh
+	transition: all .25s cubic-bezier(.02,.01,.47,1);
+
+	&.content-wrapper--sidebar
+		padding-left: 240px;
+		padding-bottom: 100px;
+
+		@media screen and (max-width: phoneWidth)
+			padding-left 56px
+			padding-bottom: 0;
+
+	&.content-wrapper--fix-header
+		padding-top 80px
 
 .container
 	width 100%
@@ -66,25 +85,11 @@ section,
 		@media screen and (max-width smDesktopWidth)
 			max-width phoneWidth
 
+.container-fluid
+	width 100%
+	padding 0
+	margin-right auto
+	margin-left auto
+
 .center
 	text-align center
-	//todo fix?
-	margin: 0 auto
-
-
-//delete
-.main-title,
-.second-title
-	font-weight normal
-	color #222
-	text-transform: none;
-
-.main-title
-	margin-bottom rem(32)
-	font-size rem(46)
-
-.second-title
-	font-size rem(36)
-	margin-bottom rem(24)
-
-

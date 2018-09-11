@@ -1,14 +1,14 @@
 .ui-card
-  background-color: #fff
-  padding: rem(30)
-  color: #666
-  border 1px solid #ebeef5;
-  border-radius: 4px
+  background-color: card-background-color
+  padding: card-padding
+  color: neutral-primary
+  border 1px solid border-light;
+  border-radius: card-border-radius
 
   &.ui-card--shadow-always
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.1)
   
   &.ui-card--shadow
-    transition all .25s cubic-bezier(.02,.01,.47,1)
+    transition mainTransition
     &:hover
       box-shadow: 0 2px 12px 0 rgba(0,0,0,.1)

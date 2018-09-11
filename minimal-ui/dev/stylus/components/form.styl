@@ -11,14 +11,14 @@ input[type='email'], input[type='number'], input[type='password'],
 input[type='search'], input[type='tel'], input[type='text'], 
 input[type='url'], textarea, select
   appearance: none;
-  width: 100%;
-  height rem(40)
-  padding: rem(10) rem(14);
+  width: form-el-width
+  height form-el-height
+  padding: form-el-padding
   background-color: transparent;
-  border: 1px solid #d1d1d1;
+  border: 1px solid border-base;
   box-shadow: none;
   box-sizing: inherit;
-  border-radius: rem(4)
+  border-radius: form-el-border-radius
 
 fieldset, input, select, textarea
   margin-bottom: rem(20)
@@ -29,3 +29,44 @@ select
 
 textarea
   min-height: rem(70)
+
+
+.ui-checkbox-wrapper
+  position relative
+  cursor pointer
+
+.ui-checkbox
+  position: relative
+  top: rem(-6)
+  margin-right 10px
+  cursor: pointer
+
+  &:before 
+    width: 1rem
+    height: @width
+    content: ""
+    position: absolute
+    left: 0
+    z-index: 1
+    border: 1px solid border-base;
+    border-radius: 4px
+    transition mainTransition
+  
+  &:checked
+    &:before 
+      transform: rotate(-45deg);
+      height: 0.5rem;
+      border: 2px solid success-color;
+      border-radius: 0
+      border-top-style: none;
+      border-right-style: none;
+  
+  &:after 
+    width: 1.1rem;
+    height: @width
+    position: absolute;
+    top: rem(-2);
+    left: 0;
+    content: "";
+    background: #fff;
+    cursor: pointer;

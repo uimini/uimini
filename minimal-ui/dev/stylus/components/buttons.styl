@@ -38,15 +38,15 @@
 		background-image: none
 
 .button-default
-	color #333
-	border: 1px solid #333
+	color linkColor
+	border: 1px solid border-base
 	background-color default-color
 
 	&.button--plain
-		color #333
+		color linkColor
 
 		&:hover
-			background-color #333
+			background-color linkColor
 
 .button-primary
 	background-color primary-color
@@ -112,7 +112,7 @@
 	overflow: hidden
 	cursor: pointer
 	opacity: .7
-	transition: all .25s cubic-bezier(.02,.01,.47,1)
+	transition: mainTransition
 
 	&:hover
 		opacity: 1
@@ -166,7 +166,7 @@
 		opacity 1
 		left: 0
 		transform: rotate(0deg)
-		transition: all 0.4s;
+		transition: mainTransition
 		
 		&.line--white
 			background-color: #fff

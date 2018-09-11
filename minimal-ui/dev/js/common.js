@@ -1,6 +1,6 @@
-// Sidebar
+ // Sidebar
 var sidebar = document.querySelector('.sidebar');
-var sidebarBtn = document.querySelector('.sidebar-open-buttom .button-burger');
+var sidebarBtn = document.querySelector('.sidebar-open-button .button-burger');
 
 if(sidebarBtn){
   sidebarBtn.onclick = function(){
@@ -125,7 +125,7 @@ var messageDialogBtnClose = document.getElementsByClassName('ui-message-box-clos
 [].forEach.call(messageDialogBtnCancel, function(element, i) {       
   element.addEventListener('click', function(){
     closeMessageDialog(i);
-    // messageDialogItCancel();
+    messageDialogItCancel();
   });
 });
 
@@ -134,7 +134,7 @@ var messageDialogBtnClose = document.getElementsByClassName('ui-message-box-clos
 [].forEach.call(messageDialogBtnOk, function(element, i) {       
   element.addEventListener('click', function(){
     closeMessageDialog(i);
-    // messageDialogItOk();
+    messageDialogItOk();
   });
 });
 
@@ -146,4 +146,11 @@ function showMessageDialog(i){
 function closeMessageDialog(i){
   var messageDialog = document.getElementsByClassName('ui-message-box__wrapper')[i];
   messageDialog.style.display = "none";   
+}
+
+function messageDialogItCancel(){
+  return true
+}
+function messageDialogItOk(){
+  return true
 }

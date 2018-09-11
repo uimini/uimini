@@ -1,12 +1,13 @@
 .ui-table
   width 100%
-  border-collapse: collapse;
-  background-color #fff
-  line-height: 1.5em;
+  border-collapse collapse
+  background-color table-background-color
+  line-height: table-line-height
+  transition mainTransition
 
   td
-    padding 14px
-    border-bottom: 1px solid #ccc
+    padding table-td-padding
+    border-bottom: 1px solid border-lighter
 
     &:first-child
       padding-right: 20px
@@ -18,7 +19,18 @@
       overflow: hidden;
       white-space: nowrap;
       user-select: none;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid border-light
 
     &:first-child
       padding-left: 20px
+  
+  &.ui-table--hover
+
+    tbody
+      tr:hover
+        background-color: border-lightex
+
+      
+
+
+  

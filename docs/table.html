@@ -42,14 +42,14 @@
         <div class="container">
           <div class="sidebar-content">
             <!-- Development-->
-            <div class="ui-title-3">Development</div>
+            <div class="ui-title-4">Development</div>
             <ul class="sidebar-list">
                     <li class="sidebar-item"><a class="sidebar-link" href="get-started.html">Getting Started</a></li>
                     <li class="sidebar-item"><a class="sidebar-link" href="color-customize.html">Color Customize</a></li>
                     <li class="sidebar-item"><a class="sidebar-link" href="variables.html">Variables</a></li>
             </ul>
             <!-- Components-->
-            <div class="ui-title-3">Components</div>
+            <div class="ui-title-4">Components</div>
             <ul class="sidebar-list">
               <p class="ui-text-small" style="margin:16px 0 6px 0;">Basic:</p>
                     <li class="sidebar-item"><a class="sidebar-link" href="grid.html">Grid</a></li>
@@ -77,11 +77,14 @@
       <div class="content-wrapper content-wrapper--sidebar content-wrapper--fix-header">
         <section class="table">
           <div class="container">
-            <div class="content-docs_header">
-              <h1 class="ui-title-1">Table</h1><span class="docs-descr">
-                 Simple and Modern</span>
-            </div>
-            <div class="example">
+            <h1 class="ui-title-1">Table</h1><span class="docs-descr">
+               Simple and Modern</span>
+          </div>
+        </section>
+        <section class="table">
+          <div class="container">
+            <h2 class="ui-title-1">Standart</h2>
+            <div class="example-empty">
               <table class="ui-table">
                 <thead>
                   <tr>
@@ -149,9 +152,83 @@
 </pre></code>
           </div>
         </section>
+        <section class="table">
+          <div class="container">
+            <h2 class="ui-title-1">With hover</h2>
+            <div class="example-empty">
+              <table class="ui-table ui-table--hover">
+                <thead>
+                  <tr>
+                    <th><span>Name</span></th>
+                    <th> <span>Gender</span></th>
+                    <th><span>Age</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="ui-text-regular">Tomas</span></td>
+                    <td><span class="ui-text-regular">Male</span></td>
+                    <td><span class="ui-text-regular">26</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="ui-text-regular">Jack</span></td>
+                    <td><span class="ui-text-regular">Male</span></td>
+                    <td><span class="ui-text-regular">22</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="ui-text-regular">Anne</span></td>
+                    <td><span class="ui-text-regular">Female</span></td>
+                    <td><span class="ui-text-regular">23</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="ui-text-regular">Jane</span></td>
+                    <td><span class="ui-text-regular">Female</span></td>
+                    <td><span class="ui-text-regular">19</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content-docs_help"><span class="ui-title-2">Example:</span></div><pre><code>
+  &lt;table class=&quot;ui-table ui-table--hover&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;&lt;span&gt;Name&lt;/span&gt;&lt;/th&gt;
+        &lt;th&gt; &lt;span&gt;Gender&lt;/span&gt;&lt;/th&gt;
+        &lt;th&gt;&lt;span&gt;Age&lt;/span&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;Tomas&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;Male&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;26&lt;/span&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;Jack&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;Male&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;22&lt;/span&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;Anne&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;Female&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;23&lt;/span&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;Jane&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;Female&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;ui-text-regular&quot;&gt;19&lt;/span&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  </pre></code>
+          </div>
+        </section>
+        <footer>
+          <!-- example-->
+        </footer>
       </div>
-      <footer></footer>
     </div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stylus.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
     <script src="static/js/minimal-ui.min.js"></script>
   </body>
