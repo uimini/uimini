@@ -34,7 +34,7 @@ block content
               .button.button-light.ui-message-box-cancel Cancel
               .button.button-primary.ui-message-box-ok OK
         .button.button-light.ui-message-box-show Show confirm message
-        
+
         .ui-message-box__wrapper
           .ui-message-box.fadeInDown
             .ui-message-box__header
@@ -46,18 +46,18 @@ block content
               //- .button.button-light.ui-message-box-cancel Cancel
               .button.button-primary.ui-message-box-ok OK
         .button.button-light.ui-message-box-show Show standart message
-      
+
       .content-docs_help
         span.ui-title-3 Example:
       include message-box/standart.html
-  
+
 block script
   script.
     function messageDialogItCancel(){
-    showMessage('#exampleMessage') 
+    showMessage('#exampleMessage')
     return console.log('Cancel');
     }
     function messageDialogItOk(){
-    showMessage('#exampleMessage2') 
+    showMessage('#exampleMessage2')
     return console.log('Ok');
     }

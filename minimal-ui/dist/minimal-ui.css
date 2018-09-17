@@ -151,7 +151,7 @@ html {
 }
 @media screen and (max-width: 480px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 body {
@@ -279,16 +279,76 @@ section,
   margin-bottom: 0.4em;
 }
 .ui-title-1 {
-  font-size: 2.777777777777778rem;
+  font-size: 50px;
+}
+@media screen and (max-width: 980px) {
+  .ui-title-1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ui-title-1 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ui-title-1 {
+    font-size: 30px;
+  }
 }
 .ui-title-2 {
-  font-size: 2.222222222222222rem;
+  font-size: 40px;
+}
+@media screen and (max-width: 980px) {
+  .ui-title-2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ui-title-2 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ui-title-2 {
+    font-size: 24px;
+  }
 }
 .ui-title-3 {
-  font-size: 1.666666666666667rem;
+  font-size: 30px;
+}
+@media screen and (max-width: 980px) {
+  .ui-title-3 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ui-title-3 {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ui-title-3 {
+    font-size: 18px;
+  }
 }
 .ui-title-4 {
   font-size: 1.333333333333333rem;
+}
+@media screen and (max-width: 980px) {
+  .ui-title-4 {
+    font-size: 1.066666666666667rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ui-title-4 {
+    font-size: 0.933333333333333rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ui-title-4 {
+    font-size: 0.8rem;
+  }
 }
 .ui-text-regular {
   font-size: 1rem;
@@ -719,7 +779,7 @@ section,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 20px auto;
+  margin: 1.111111111111111rem auto;
 }
 .sidebar-item {
   line-height: 2.1;
@@ -849,7 +909,7 @@ section,
   padding: 1.666666666666667rem;
   color: #303133;
   border: 1px solid #e4e7ed;
-  border-radius: 4px;
+  border-radius: 0.333333333333333rem;
 }
 .ui-card.ui-card--shadow-always {
   -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
@@ -865,7 +925,7 @@ section,
           box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
 }
 .label {
-  padding: 0.2rem 1.4rem;
+  padding: 0.333333333333333rem 1rem;
   white-space: nowrap;
   text-transform: uppercase;
   color: #fff;
@@ -930,15 +990,46 @@ section,
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 15.120000000000001px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .button {
+    font-size: 13.68px;
+  }
 }
 .button:hover {
   opacity: 0.8;
 }
 .button.button--big {
-  font-size: 1.222222222222222rem;
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  .button.button--big {
+    font-size: 16.28px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .button.button--big {
+    font-size: 14.52px;
+  }
 }
 .button.button--large {
-  font-size: 1.555555555555556rem;
+  font-size: 26px;
+}
+@media screen and (max-width: 768px) {
+  .button.button--large {
+    font-size: 18.72px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .button.button--large {
+    font-size: 16.64px;
+  }
 }
 .button.button--plain {
   background-color: transparent;
@@ -1169,9 +1260,14 @@ textarea {
 }
 .ui-checkbox {
   position: relative;
-  top: -0.333333333333333rem;
+  top: -6px;
   margin-right: 10px;
   cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .ui-checkbox {
+    top: 2px;
+  }
 }
 .ui-checkbox:before {
   width: 1rem;
@@ -1213,17 +1309,31 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 8px;
-  margin-bottom: 16px;
-  border-radius: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.4em 0.6em;
+  margin-bottom: 1em;
+  border-radius: 0.4em;
   opacity: 0.7;
   color: #fff;
+  font-size: 18px;
   z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .ui-alert {
+    font-size: 15.120000000000001px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ui-alert {
+    font-size: 13.68px;
+  }
 }
 .ui-alert .button-close {
   z-index: 2;
-  width: 20px;
-  height: 20px;
+  width: 1.111111111111111rem;
+  height: 1.111111111111111rem;
 }
 .ui-alert .button-close:before,
 .ui-alert .button-close:after {
@@ -1266,16 +1376,26 @@ textarea {
 .ui-message-box {
   position: relative;
   min-width: 400px;
-  padding: 12px 14px;
+  padding: 0.666666666666667rem 0.777777777777778rem;
   background-color: #fff;
   border: 1px solid #dcdfe6;
-  border-radius: 8px;
+  border-radius: 0.444444444444444rem;
   z-index: 2000;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .ui-message-box {
+    min-width: 336px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ui-message-box {
+    min-width: 240px;
+  }
+}
 .ui-message-box .button-close {
-  width: 22px;
-  height: 22px;
+  width: 1.222222222222222rem;
+  height: 1.222222222222222rem;
 }
 .ui-message-box__header {
   display: -webkit-box;
@@ -1287,11 +1407,11 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
+  padding-bottom: 0.444444444444444rem;
+  margin-bottom: 0.444444444444444rem;
 }
 .ui-message-box__content {
-  margin-bottom: 16px;
+  margin-bottom: 0.888888888888889rem;
 }
 .ui-message-box__footer {
   text-align: right;
@@ -1308,12 +1428,12 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  top: 20px;
+  top: 1.111111111111111rem;
   right: 10%;
-  padding: 10px 14px;
+  padding: 0.555555555555556rem 0.777777777777778rem;
   background-color: #fff;
   border: 1px solid #ebeef5;
-  border-radius: 8px;
+  border-radius: 0.444444444444444rem;
   z-index: 2000;
   overflow: hidden;
 }

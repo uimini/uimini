@@ -13,26 +13,30 @@
 .ui-message-box
   position relative
   min-width 400px
-  padding: 12px 14px
+  padding: rem(12) rem(14)
   background-color: messageBox-background-color
   border: 1px solid border-base
   border-radius: messageBox-border-radius
   z-index 2000
   overflow: hidden;
+  @media screen and (max-width tableWidth)
+    min-width @min-width - 16%
+  @media screen and (max-width phoneWidth)
+    min-width @min-width - 40%
 
   .button-close
-    width 22px
+    width rem(22)
     height @width
 
 .ui-message-box__header
   display: flex
   align-items: center
   justify-content space-between
-  padding-bottom: 8px
-  margin-bottom: @padding-bottom 
+  padding-bottom: rem(8)
+  margin-bottom: @padding-bottom
 
 .ui-message-box__content
-  margin-bottom: 16px
+  margin-bottom: rem(16)
 
 .ui-message-box__footer
   text-align: right

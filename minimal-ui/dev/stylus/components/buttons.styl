@@ -1,7 +1,6 @@
 .button
-	// Becouse width 100%
 	display: inline-block
-	
+
 	padding-bottom: calc(0.375em - 1px)
 	padding-left: 0.75em
 	padding-right: 0.75em
@@ -10,28 +9,43 @@
 	text-align: center
 	white-space: nowrap
 	cursor pointer
+	font-size 18px
+	@media screen and (max-width tableWidth)
+		font-size @font-size - 16%
+	@media screen and (max-width phoneWidth)
+		font-size @font-size - 24%
+
 	&:hover
 		opacity .8
 
 	&.button--big
-		font-size rem(22)
-	
+		font-size 22px
+		@media screen and (max-width tableWidth)
+			font-size @font-size - 26%
+		@media screen and (max-width phoneWidth)
+			font-size @font-size - 34%
+
+
 	&.button--large
-		font-size rem(28)
-	
+		font-size 26px
+		@media screen and (max-width tableWidth)
+			font-size @font-size - 28%
+		@media screen and (max-width phoneWidth)
+			font-size @font-size - 36%
+
 
 	&.button--plain
 		background-color transparent
 
 		&:hover
 			color #fff
-	
+
 
 	&.button--round
 		border-radius: 1em
 		padding-left: 1em
 		padding-right: 1em
-	
+
 	&.button--disable
 		opacity .6
 		cursor: not-allowed
@@ -61,7 +75,7 @@
 
 .button-success
 	background-color success-color
-	
+
 	&.button--plain
 		color success-color
 		border: 1px solid success-color
@@ -73,7 +87,7 @@
 
 .button-danger
 	background-color danger-color
-	
+
 	&.button--plain
 		color danger-color
 		border: 1px solid danger-color
@@ -83,7 +97,7 @@
 
 .button-warning
 	background-color warning-color
-	
+
 	&.button--plain
 		color warning-color
 		border: 1px solid warning-color
@@ -93,7 +107,7 @@
 
 .button-light
 	background-color light-color
-	
+
 	&.button--plain
 		color: light-color
 		border: 1px solid light-color
@@ -117,7 +131,7 @@
 	&:hover
 		opacity: 1
 
-	&:before, &:after 
+	&:before, &:after
 		content: ''
 		position: absolute
 		height: 1px
@@ -127,10 +141,10 @@
 		margin-top: -1px
 		background: #000
 
-	&:before 
+	&:before
 		transform: rotate(45deg)
 
-	&:after 
+	&:after
 		transform: rotate(-45deg)
 
 .button-burger
@@ -147,7 +161,7 @@
 			transform: translateY(-1px);
 		.line-3
 			transform: translateY(1px);
-	
+
 	&.active
 		.line-1
 			transform: translateY(8.33px) translateX(0) rotate(45deg);
@@ -156,7 +170,7 @@
 		.line-3
 			transform: translateY(-8.33px) translateX(0) rotate(-45deg);
 
-	.line 
+	.line
 		display: block
 		position: absolute
 		height: 2px
@@ -167,11 +181,11 @@
 		left: 0
 		transform: rotate(0deg)
 		transition: mainTransition
-		
+
 		&.line--white
 			background-color: #fff
 
-	.line-1 
+	.line-1
 		top: 0%
 
 	.line-2

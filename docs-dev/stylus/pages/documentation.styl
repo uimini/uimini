@@ -46,7 +46,7 @@ hr
   flex-direction: column
   width 160px
   padding: 10px 12px
-  margin: 0 4px 
+  margin: 0 4px
   border-radius: 4px
   color #fff
 
@@ -61,7 +61,7 @@ hr
 
 // Labels
 .labels-doc
-  
+
   .example,
   .example-empty
 
@@ -79,9 +79,12 @@ hr
 
     .button
       margin-right 10px
+      @media screen and (max-width tableWidth)
+        margin-bottom: 10px
 
       &:last-child
         margin-right 0
+
 
 // Card
 .card-doc

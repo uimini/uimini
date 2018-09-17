@@ -78,8 +78,7 @@
         <section class="form-doc">
           <div class="container">
             <div class="content-docs_header">
-              <h1 class="ui-title-1">Form</h1><span class="docs-descr">
-                 Minimal UI Form</span>
+              <h1 class="ui-title-1">Form</h1><span class="docs-descr">Minimal UI Form</span>
             </div>
             <div class="example-empty">
               <form action="javascript: void(0)">
@@ -94,9 +93,8 @@
                 </select>
                 <label for="commentField">Comment</label>
                 <textarea id="commentField" placeholder="Hi CJ …"></textarea>
-                <!--TODO: add row class-->
                 <div class="row">
-                  <div class="col-xs-6">
+                  <div class="col-xs-6" style="margin-bottom: 16px;">
                     <ul>
                       <li>
                         <div class="ui-checkbox-wrapper">
@@ -106,10 +104,40 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="col-xs-6"><a class="button--round button--big button button-primary" type="submit">Send</a></div>
+                  <div class="col-xs-6 grid-end"><a class="button--round button--big button button-primary" type="submit">Send</a></div>
                 </div>
               </form>
             </div>
+            <div class="content-docs_help"><span class="ui-title-3">Example:</span></div><pre>
+    <code >
+&lt;form action=&quot;javascript: void(0)&quot;&gt;
+  &lt;label for=&quot;nameField&quot;&gt;Name&lt;/label&gt;
+  &lt;input id=&quot;nameField&quot; type=&quot;text&quot; placeholder=&quot;CJ Patoilo&quot;&gt;
+  &lt;label for=&quot;ageRangeField&quot;&gt;Age Range&lt;/label&gt;
+  &lt;select id=&quot;ageRangeField&quot;&gt;
+    &lt;option value=&quot;0-13&quot;&gt;0-13&lt;/option&gt;
+    &lt;option value=&quot;14-17&quot;&gt;14-17&lt;/option&gt;
+    &lt;option value=&quot;18-23&quot;&gt;18-23&lt;/option&gt;
+    &lt;option value=&quot;24+&quot;&gt;24+&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label for=&quot;commentField&quot;&gt;Comment&lt;/label&gt;
+  &lt;textarea id=&quot;commentField&quot; placeholder=&quot;Hi CJ …&quot;&gt;&lt;/textarea&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-6&quot; style=&quot;margin-bottom: 16px;&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;ui-checkbox-wrapper&quot;&gt;
+            &lt;input class=&quot;ui-checkbox&quot; id=&quot;exampleCheckbox&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label class=&quot;label--inline&quot; for=&quot;exampleCheckbox&quot;&gt;Example Checkbox&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-6 grid-end&quot;&gt;&lt;a class=&quot;button--round button--big button button-primary&quot; type=&quot;submit&quot;&gt;Send&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+    </code>
+  </pre>
           </div>
         </section>
         <footer>

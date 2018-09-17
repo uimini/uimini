@@ -7,8 +7,8 @@ legend
 .label--inline
   display: inline-block
 
-input[type='email'], input[type='number'], input[type='password'], 
-input[type='search'], input[type='tel'], input[type='text'], 
+input[type='email'], input[type='number'], input[type='password'],
+input[type='search'], input[type='tel'], input[type='text'],
 input[type='url'], textarea, select
   appearance: none;
   width: form-el-width
@@ -23,7 +23,7 @@ input[type='url'], textarea, select
 fieldset, input, select, textarea
   margin-bottom: rem(20)
 
-select 
+select
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='14' viewBox='0 0 29 14' width='29'><path fill='#d1d1d1' d='M9.37727 3.625l5.08154 6.93523L19.54036 3.625'/></svg>") center right no-repeat
   padding-right rem(14)
 
@@ -37,11 +37,14 @@ textarea
 
 .ui-checkbox
   position: relative
-  top: rem(-6)
+  top: -6px
   margin-right 10px
   cursor: pointer
+  @media screen and (max-width phoneWidth)
+    top: 2px
 
-  &:before 
+
+  &:before
     width: 1rem
     height: @width
     content: ""
@@ -51,17 +54,17 @@ textarea
     border: 1px solid border-base;
     border-radius: 4px
     transition mainTransition
-  
+
   &:checked
-    &:before 
+    &:before
       transform: rotate(-45deg);
       height: 0.5rem;
       border: 2px solid success-color;
       border-radius: 0
       border-top-style: none;
       border-right-style: none;
-  
-  &:after 
+
+  &:after
     width: 1.1rem;
     height: @width
     position: absolute;

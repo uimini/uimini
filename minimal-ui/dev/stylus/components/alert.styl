@@ -1,17 +1,23 @@
 .ui-alert
   display flex
   justify-content space-between
+  align-items: center
   padding: alert-padding
   margin-bottom alert-margin-bottom
   border-radius alert-border-radius
   opacity alert-opacity
   color #fff
+  font-size: 18px
   z-index 1
-  
+  @media screen and (max-width tableWidth)
+    font-size @font-size - 16%
+  @media screen and (max-width phoneWidth)
+    font-size @font-size - 24%
+
   .button-close
     z-index 2
 
-    width 20px
+    width rem(20)
     height @width
 
     &:before, &:after

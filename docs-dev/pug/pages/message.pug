@@ -19,34 +19,34 @@ block content
         .ui-message#exampleMessage
           span.message-title Standart Message is here
         .button.button-light#exampleMessageBtn Standart
-        
+
         .ui-message.ui-message--primary#exampleMessage2
           span.message-title Primary Message is here
         .button.button-primary#exampleMessageBtn2 Primary
-        
+
         .ui-message.ui-message--success#exampleMessage3
           span.message-title Success Message is here
         .button.button-success#exampleMessageBtn3 Success
-        
+
         .ui-message.ui-message--danger#exampleMessage4
           span.message-title Danger Message is here
         .button.button-danger#exampleMessageBtn4 Danger
-        
+
         .ui-message.ui-message--warning#exampleMessage5
           span.message-title Warning Message is here
         .button.button-warning#exampleMessageBtn5 Warning
-      
+
       .content-docs_help
         span.ui-title-3 Example:
       include message/standart.html
 
 block script
   script(type='text/javascript').
-    showMessage('#exampleMessage', '#exampleMessageBtn') 
-    showMessage('#exampleMessage2', '#exampleMessageBtn2') 
-    showMessage('#exampleMessage3', '#exampleMessageBtn3') 
-    showMessage('#exampleMessage4', '#exampleMessageBtn4') 
-    showMessage('#exampleMessage5', '#exampleMessageBtn5') 
+    showMessage('#exampleMessage', '#exampleMessageBtn')
+    showMessage('#exampleMessage2', '#exampleMessageBtn2')
+    showMessage('#exampleMessage3', '#exampleMessageBtn3')
+    showMessage('#exampleMessage4', '#exampleMessageBtn4')
+    showMessage('#exampleMessage5', '#exampleMessageBtn5')
 
     // Only Message without button
-    //- showMessage('#exampleMessage2') 
+    //- showMessage('#exampleMessage2')
