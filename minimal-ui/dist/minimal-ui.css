@@ -196,7 +196,9 @@ section,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 1280px;
   min-height: 100vh;
+  margin: 0 auto;
 }
 .content-wrapper {
   display: -webkit-box;
