@@ -73,16 +73,16 @@ hr
 
 // Button
 .buttons-doc
-  
+
   .example,
   .example-empty
-  
+
     .button
       margin-right 10px
-      
+
       &:last-child
         margin-right 0
-      
+
 // Card
 .card-doc
 
@@ -91,3 +91,20 @@ hr
 
     &:last-child
       padding-right 0
+
+// Grid
+.grid-example-block
+  border-radius: 6px
+  padding: 10px 16px
+
+  @media screen and (max-width phoneWidth)
+    padding: 2px
+    font-size rem(14)
+
+
+.grid-page
+  .row
+    margin-bottom: 20px
+
+    @media screen and (max-width phoneWidth)
+      margin-bottom: 10px

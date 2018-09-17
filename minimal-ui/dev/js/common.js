@@ -70,16 +70,16 @@ function showMessage(message, messageBtn){
 
   function showAndHideMessage(){
     message.style.display = 'flex';
-      
+
     // Animation
     message.classList.add('fadeInDown');
     message.classList.remove('fadeOutUp');
-    
+
     setTimeout(function() {
       setTimeout(function(){
         message.style.display = 'none';
       }, timeOutUp);
-      
+
       // Animation
       message.classList.add('fadeOutUp');
       message.classList.remove('fadeInDown');
@@ -98,14 +98,14 @@ var messageDialogBtnCancel = document.getElementsByClassName('ui-message-box-can
 var messageDialogBtnClose = document.getElementsByClassName('ui-message-box-close');
 
 // Event for Show
-[].forEach.call(messageDialogBtnShow, function(element, i) {       
+[].forEach.call(messageDialogBtnShow, function(element, i) {
   element.addEventListener('click', function(){
     showMessageDialog(i);
   });
 });
 
 // Event for Close
-[].forEach.call(messageDialogBtnClose, function(element, i) {       
+[].forEach.call(messageDialogBtnClose, function(element, i) {
   element.addEventListener('click', function(){
     closeMessageDialog(i);
   });
@@ -120,9 +120,9 @@ var messageDialogBtnClose = document.getElementsByClassName('ui-message-box-clos
 
 // Event for Close Cancel
 // TODO: bug
-// Если кенцел отсутвует на 1 модалке и есть на второq в i отправляется 0. 
+// Если кенцел отсутвует на 1 модалке и есть на второq в i отправляется 0.
 // закрывается 1. вторая без изменений
-[].forEach.call(messageDialogBtnCancel, function(element, i) {       
+[].forEach.call(messageDialogBtnCancel, function(element, i) {
   element.addEventListener('click', function(){
     closeMessageDialog(i);
     messageDialogItCancel();
@@ -131,7 +131,7 @@ var messageDialogBtnClose = document.getElementsByClassName('ui-message-box-clos
 
 
 // Event for Close OK
-[].forEach.call(messageDialogBtnOk, function(element, i) {       
+[].forEach.call(messageDialogBtnOk, function(element, i) {
   element.addEventListener('click', function(){
     closeMessageDialog(i);
     messageDialogItOk();
@@ -145,7 +145,7 @@ function showMessageDialog(i){
 
 function closeMessageDialog(i){
   var messageDialog = document.getElementsByClassName('ui-message-box__wrapper')[i];
-  messageDialog.style.display = "none";   
+  messageDialog.style.display = "none";
 }
 
 function messageDialogItCancel(){

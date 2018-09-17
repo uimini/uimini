@@ -28,14 +28,14 @@ block content
     .container.container--small
       .ui-card
         h1.ui-title-1.center Changelog
-        
+
         // Todo: fix object to array
         each log in logs
           .changelog-item
             .ui-title-3
               span= log['ver']
               span.ui-text-hide= log['date']
-            
+
             if (log.action5)
               +logItem(log.action1['label'],log.action1['text'])
               +logItem(log.action2['label'],log.action2['text'])
