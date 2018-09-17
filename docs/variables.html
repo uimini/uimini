@@ -5,12 +5,12 @@
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge, chrome = 1"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Variables for Minimal-ui CSS framework based on Flexbox</title>
-    <meta name="description" content="Variables Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free">
+    <title>Variables customize for Minimal-ui CSS framework based on Flexbox</title>
+    <meta name="description" content="Variables customize Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free">
     <link rel="stylesheet" href="static/css/minimal-ui.min.css">
     <link rel="stylesheet" href="static/css/main.min.css">
   </head>
-  <body class="variables-page">
+  <body class="variables-customize-page">
     <div class="wrapper">
       <header>
         <div class="navbar navbar-fixed">
@@ -20,7 +20,7 @@
                 <ul class="navbar-list">
                   <li class="navbar-item"><a class="navbar-link" href="get-started.html">Documetation</a></li>
                   <li class="navbar-item"><a class="navbar-link" href="changelog.html">Changelog</a></li>
-                  <li class="navbar-item"><a class="navbar-link" href="#">Download</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="get-started.html">Download</a></li>
                 </ul>
               </div>
               <div class="navbar-menu--mobile">
@@ -28,7 +28,7 @@
                 <ul class="navbar-list--mobile">
                   <li class="navbar-item"><a class="navbar-link" href="get-started.html">Documetation</a></li>
                   <li class="navbar-item"><a class="navbar-link" href="changelog.html">Changelog</a></li>
-                  <li class="navbar-item"><a class="navbar-link" href="#">Download</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="get-started.html">Download</a></li>
                 </ul>
               </div>
             </div>
@@ -75,11 +75,101 @@
         </div>
       </div>
       <div class="content-wrapper content-wrapper--sidebar content-wrapper--fix-header">
-        <section class="variables-doc">
+        <section id="header">
           <div class="container">
             <div class="content-docs_header">
-              <h1 class="ui-title-1">Variables</h1>
+              <h1 class="ui-title-1">Variables customize</h1><span class="docs-descr">Minimal UI uses BEM-styled CSS so that you can override styles easily.</span>
             </div>
+          </div>
+        </section>
+        <section id="update-css">
+          <div class="container">
+            <div class="content-docs_header">
+              <h2 class="ui-title-1">Update STYLUS variables in your project</h2><span class="docs-descr">Follow to stylus/utils/vars.styl</span>
+            </div><pre>
+  <code class="stylus">
+// Colors
+@import 'colors.styl'
+
+// Fonts
+lightFont               = Arial, sans-serif
+regularFont             = Arial, sans-serif
+boldFont                = Arial, sans-serif
+
+mainFont                = Arial, sans-serif
+
+
+// Size
+mainFontSize            = 18px
+mainLineHeight          = 1.4
+
+desktopWidth            = 1280px
+smDesktopWidth          = 980px
+tableWidth              = 768px
+phoneWidth              = 480px
+smPhoneWidth            = 320px
+
+// Animation
+mainTransition  = all .25s cubic-bezier(.02,.01,.47,1)
+
+// Alert
+alert-padding = .4em .6em
+alert-margin-bottom = 1em
+alert-border-radius = .4em
+alert-opacity = .7
+
+// Card
+card-border-radius = rem(6)
+card-padding = rem(30)
+card-background-color = #fff
+
+// Form Elements
+form-el-width = 100%
+form-el-height = rem(40)
+form-el-padding = rem(10) rem(14)
+form-el-border-radius = rem(4)
+
+// Label
+label-padding = rem(6) rem(18)
+label-color = #fff
+
+// Message
+message-border-radius = rem(8)
+message-padding = rem(10) rem(14)
+
+// Message BOX
+messageBox-wrapper-background-color = rgba(39, 39, 39, 0.48)
+messageBox-background-color = #fff
+messageBox-border-radius = rem(8)
+messageBox-title-font-size = rem(24)
+
+// Table
+table-background-color = #fff
+table-line-height = 1.5em
+table-td-padding = 14px
+
+// Sidebar
+sidebar-height = 96vh
+sidebar-width = 240px
+sidebar-content-padding = 40px 0
+sidebar-content-padding--mobile = 20px 30px
+sidebar-list-margin = rem(20) auto
+sidebar-item-font-size = rem(18)
+sidebar-item-line-height = 2.1
+
+// Navbar
+navbar-background-color = #fff
+navbar-height = 80px
+navbar-item-color = #333
+navbar-item-hover-color = #000
+navbar-item-hover-background-color = transparent
+navbar-fixed-z = 2
+
+// Grid
+grid-row-margin = rem(-10)
+grid-col-padding = rem(10)
+  </code>
+</pre>
           </div>
         </section>
         <footer>

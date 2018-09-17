@@ -20,7 +20,7 @@
                 <ul class="navbar-list">
                   <li class="navbar-item"><a class="navbar-link" href="get-started.html">Documetation</a></li>
                   <li class="navbar-item"><a class="navbar-link" href="changelog.html">Changelog</a></li>
-                  <li class="navbar-item"><a class="navbar-link" href="#">Download</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="get-started.html">Download</a></li>
                 </ul>
               </div>
               <div class="navbar-menu--mobile">
@@ -28,7 +28,7 @@
                 <ul class="navbar-list--mobile">
                   <li class="navbar-item"><a class="navbar-link" href="get-started.html">Documetation</a></li>
                   <li class="navbar-item"><a class="navbar-link" href="changelog.html">Changelog</a></li>
-                  <li class="navbar-item"><a class="navbar-link" href="#">Download</a></li>
+                  <li class="navbar-item"><a class="navbar-link" href="get-started.html">Download</a></li>
                 </ul>
               </div>
             </div>
@@ -75,11 +75,45 @@
         </div>
       </div>
       <div class="content-wrapper content-wrapper--sidebar content-wrapper--fix-header">
-        <section class="color-customize-doc">
+        <section id="header">
           <div class="container">
             <div class="content-docs_header">
-              <h1 class="ui-title-1">Color customize</h1>
+              <h1 class="ui-title-1">Color customize</h1><span class="docs-descr">Minimal UI uses BEM-styled CSS so that you can override styles easily. But if you need to replace styles at a large scale, e.g. change the theme color from blue to orange or green, maybe overriding them one by one is not a good idea.</span>
             </div>
+          </div>
+        </section>
+        <section id="update-css">
+          <div class="container">
+            <div class="content-docs_header">
+              <h2 class="ui-title-1">Update STYLUS variables in your project</h2><span class="docs-descr">Follow to stylus/utils/colors.styl</span>
+            </div><pre>
+  <code class="stylus">
+// Base color
+linkColor = #333
+mainFontColor = #101010
+
+// Main color
+default-color = #ffffff
+primary-color = #444ce0
+success-color = #26de81
+danger-color = #fc5c65
+warning-color = #fed330
+light-color = #999999
+purple-color = #8854d0
+
+// Neutral Color
+neutral-primary = #303133
+neutral-regular = #606266
+neutral-secondary = #909399
+neutral-placeholder = #C0C4CC
+
+// Border Color
+border-base = #DCDFE6
+border-light = #E4E7ED
+border-lighter = #EBEEF5
+border-lightex = #F2F6FC
+  </code>
+</pre>
           </div>
         </section>
         <footer>

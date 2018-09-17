@@ -1,12 +1,22 @@
 extends ../layout/docs
 
 block variables
-  - var pageClass        = 'variables-page';
-  - var title            = 'Variables for Minimal-ui CSS framework based on Flexbox';
-  - var description      = 'Variables Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+  - var pageClass        = 'variables-customize-page';
+  - var title            = 'Variables customize for Minimal-ui CSS framework based on Flexbox';
+  - var description      = 'Variables customize Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
 
 block content
-  section.variables-doc
+  section#header
     .container
       .content-docs_header
-        h1.ui-title-1 Variables
+        h1.ui-title-1 Variables customize
+        span.docs-descr
+          | Minimal UI uses BEM-styled CSS so that you can override styles easily.
+
+  section#update-css
+    .container
+      .content-docs_header
+        h2.ui-title-1 Update STYLUS variables in your project
+        span.docs-descr
+          | Follow to stylus/utils/vars.styl
+      include variables/all.html

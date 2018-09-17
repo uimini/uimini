@@ -1,24 +1,18 @@
 // Main
-
-hr
-  border: 1px solid #ccc;
-  border-width: .3px;
-  margin: 40px 0;
-
 .content-docs_header
   margin-bottom 60px
 
 .docs-descr
   display block
-  margin-bottom rem(10)
+  margin-bottom 20px
+
+.content-docs_help
+  margin-bottom 8px
 
 .docs-descr__name
   padding: 18px 24px;
   background-color: #fafafa;
   border: 1px solid #eaeefb;
-
-.content-docs_help
-  margin-bottom 8px
 
 .example
   padding: 20px
@@ -30,12 +24,10 @@ hr
   margin-bottom 40px
 
 // Typography
-.typography-doc
-
-  .example
-    .ui-title-1, .ui-title-2, .ui-title-3, .ui-title-4,
-    .ui-text-regular, .ui-text-small, .ui-text-smaller
-      margin-bottom 0
+.typography-page
+  .ui-title-1, .ui-title-2, .ui-title-3, .ui-title-4,
+  .ui-text-regular, .ui-text-small, .ui-text-smaller
+    margin-bottom 0
 
 // Colors
 .example-color__list
@@ -60,19 +52,16 @@ hr
     color: neutral-primary
 
 // Labels
-.labels-doc
+.labels-page
 
-  .example,
-  .example-empty
+  .label
+    margin-right 10px
 
-    .label
-      margin-right 10px
-
-      &:last-child
-        margin-right 0
+    &:last-child
+      margin-right 0
 
 // Button
-.buttons-doc
+.buttons-page
 
   .example,
   .example-empty
@@ -87,7 +76,7 @@ hr
 
 
 // Card
-.card-doc
+.card-page
 
   .col-md-4
     padding-right 12px
@@ -96,6 +85,13 @@ hr
       padding-right 0
 
 // Grid
+.grid-page
+  .row
+    margin-bottom: 20px
+
+    @media screen and (max-width phoneWidth)
+      margin-bottom: 10px
+
 .grid-example-block
   border-radius: 6px
   padding: 10px 16px
@@ -103,11 +99,3 @@ hr
   @media screen and (max-width phoneWidth)
     padding: 2px
     font-size rem(14)
-
-
-.grid-page
-  .row
-    margin-bottom: 20px
-
-    @media screen and (max-width phoneWidth)
-      margin-bottom: 10px
