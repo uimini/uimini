@@ -47,7 +47,20 @@ if(uiAlert){
       this.parentNode.parentNode.removeChild(this.parentNode);
     };
   }
+}
 
+//
+// Tag
+//
+var uiTag = document.querySelectorAll('.ui-tag');
+var uiTagBtnClose = document.querySelectorAll('.ui-tag .button-close');
+
+if(uiTag){
+  for (var i = 0; i < uiTagBtnClose.length; i++) {
+    uiTagBtnClose[i].onclick = function(){
+      this.parentNode.parentNode.removeChild(this.parentNode);
+    };
+  }
 }
 
 // TODO: Global FIX func

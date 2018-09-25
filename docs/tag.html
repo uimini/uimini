@@ -5,12 +5,12 @@
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge, chrome = 1"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Typography for Minimal-ui CSS framework based on Flexbox</title>
-    <meta name="description" content="Typography Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free">
+    <title>Tags for Minimal-ui CSS framework based on Flexbox</title>
+    <meta name="description" content="Tags Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free">
     <link rel="stylesheet" href="static/css/minimal-ui.min.css">
     <link rel="stylesheet" href="static/css/main.min.css">
   </head>
-  <body class="typography-page">
+  <body class="tag-page">
     <div class="wrapper">
       <header>
         <div class="navbar navbar-fixed">
@@ -88,95 +88,75 @@
         </div>
       </div>
       <div class="content-wrapper content-wrapper--sidebar content-wrapper--fix-header">
-        <section class="typography-doc">
+        <section id="header">
           <div class="container">
-            <div class="content-docs_header">
-              <h1 class="ui-title-1">Typography</h1><span class="docs-descr">The rem unit is relative to the font-size of the root element html . That means that we can define a single font size on the root element, and define all rem units to be a percentage of that.</span>
-            </div>
-            <div class="content-docs_help"><span class="ui-title-2">Font:</span><pre><code class="stylus">
-body
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  font-weight normal
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-</pre></code>
-            </div>
-            <div class="content-docs_help"><span class="ui-title-2">Font Size:</span><pre><code class="stylus">
-html
-  font-size 18px
-</pre></code>
-            </div>
+            <h1 class="ui-title-1">Tags</h1><span class="docs-descr">Simple and Modern</span>
           </div>
         </section>
-        <section class="typography-doc">
-          <div class="container"><span class="ui-title-2">Titles:</span>
-            <div class="example">
-              <table class="ui-table">
-                <tbody>
-                  <tr>
-                    <td>
-                      <h1 class="ui-title-1">Heading h1</h1>
-                    </td>
-                    <td><span class="ui-text-small">2.7 rem</span></td>
-                    <td><span>50 px</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h2 class="ui-title-2">Heading h2</h2>
-                    </td>
-                    <td><span class="ui-text-small">2.2 rem</span></td>
-                    <td><span>40 px</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="ui-title-3">Heading h3</h3>
-                    </td>
-                    <td><span class="ui-text-small">1.6 rem</span></td>
-                    <td><span>30 px</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h3 class="ui-title-4">Heading h4</h3>
-                    </td>
-                    <td><span class="ui-text-small">1.3 rem</span></td>
-                    <td><span>24 px</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p class="ui-text-regular">Body</p>
-                    </td>
-                    <td><span class="ui-text-small">1 rem</span></td>
-                    <td><span>18 px</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p class="ui-text-small">Small</p>
-                    </td>
-                    <td><span class="ui-text-small">.8 rem</span></td>
-                    <td><span>16 px</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p class="ui-text-smaller">Extra small</p>
-                    </td>
-                    <td><span class="ui-text-small">.7 rem</span></td>
-                    <td><span>14 px</span></td>
-                  </tr>
-                </tbody>
-              </table>
+        <section id="closebtn">
+          <div class="container"><span class="ui-title-2">With close button:</span>
+            <div class="example-empty">
+              <div class="ui-tag__wrapper">
+                <div class="ui-tag"><span class="tag-title">Dogs</span><span class="button-close"></span></div>
+              </div>
+              <div class="ui-tag__wrapper">
+                <div class="ui-tag"><span class="tag-title">Cats</span><span class="button-close"></span></div>
+              </div>
+              <div class="ui-tag__wrapper">
+                <div class="ui-tag"><span class="tag-title">Horses</span><span class="button-close"></span></div>
+              </div>
+              <div class="ui-tag__wrapper">
+                <div class="ui-tag"><span class="tag-title">Pigs</span><span class="button-close"></span></div>
+              </div>
+              <div class="ui-tag__wrapper">
+                <div class="ui-tag"><span class="tag-title">Cows</span><span class="button-close"></span></div>
+              </div>
             </div>
-            <div class="content-docs_help"><span class="ui-title-2">Example:</span></div><pre>
-  <code class="html">
-&lt;h1 class=&quot;ui-title-1&quot;&gt; Heading h1 &lt;/h1&gt;
-&lt;h2 class=&quot;ui-title-2&quot;&gt; Heading h2 &lt;/h2&gt;
-&lt;h3 class=&quot;ui-title-3&quot;&gt; Heading h3 &lt;/h3&gt;
-&lt;h4 class=&quot;ui-title-4&quot;&gt; Heading h4 &lt;/h4&gt;
-&lt;p class=&quot;ui-text-regular&quot;&gt; Body &lt;/p&gt;
-&lt;p class=&quot;ui-text-small&quot;&gt; Small &lt;/p&gt;
-&lt;p class=&quot;ui-text-smaller&quot;&gt; Extra small &lt;/p&gt;
-  </code>
-</pre>
-
+            <div class="content-docs_help"><span class="ui-title-2">Example:</span></div><pre><code>
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Dogs&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Cats&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Horses&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Pigs&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Cows&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></code><span class="ui-title-2">Simple:</span>
+            <div class="example-empty">
+              <div class="ui-tag__wrapper">
+                <div class="ui-tag"><span class="tag-title">Dogs</span></div>
+              </div>
+              <div class="ui-tag__wrapper">
+                <div class="ui-tag"><span class="tag-title">Cats</span></div>
+              </div>
+              <div class="ui-tag__wrapper">
+                <div class="ui-tag"><span class="tag-title">Fish</span></div>
+              </div>
+            </div>
+            <div class="content-docs_help"><span class="ui-title-3">Example:</span></div><pre><code>
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Dogs&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Cats&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Horses&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Pigs&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui-tag__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-tag&quot;&gt;&lt;span class=&quot;tag-title&quot;&gt;Cows&lt;/span&gt;&lt;span class=&quot;button-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></code>
           </div>
         </section>
         <footer>

@@ -1,0 +1,58 @@
+extends ../layout/docs
+
+block variables
+  - var pageClass        = 'tag-page';
+  - var title            = 'Tags for Minimal-ui CSS framework based on Flexbox';
+  - var description      = 'Tags Minimal-ui.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free';
+
+block content
+  section#header
+    .container
+      h1.ui-title-1 Tags
+      span.docs-descr
+        | Simple and Modern
+
+  section#closebtn
+    .container
+      span.ui-title-2 With close button:
+      .example-empty
+        .ui-tag__wrapper
+          .ui-tag
+            span.tag-title Dogs
+            span.button-close
+        .ui-tag__wrapper
+          .ui-tag
+            span.tag-title Cats
+            span.button-close
+        .ui-tag__wrapper
+          .ui-tag
+            span.tag-title Horses
+            span.button-close
+        .ui-tag__wrapper
+          .ui-tag
+            span.tag-title Pigs
+            span.button-close
+        .ui-tag__wrapper
+          .ui-tag
+            span.tag-title Cows
+            span.button-close
+
+      .content-docs_help
+        span.ui-title-2 Example:
+      include tag/tag-close.html
+
+      span.ui-title-2 Simple:
+      .example-empty
+        .ui-tag__wrapper
+          .ui-tag
+            span.tag-title Dogs
+        .ui-tag__wrapper
+          .ui-tag
+            span.tag-title Cats
+        .ui-tag__wrapper
+          .ui-tag
+            span.tag-title Fish
+
+      .content-docs_help
+        span.ui-title-3 Example:
+      include tag/tag.html

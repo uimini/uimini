@@ -21,13 +21,8 @@
     "js": false
   },
   "Buttons": {
-    "title" : "Buttons",
+    "title" : "Button",
     "url" : "buttons.html",
-    "js": false
-  },
-  "Labels": {
-    "title" : "Labels",
-    "url" : "labels.html",
     "js": false
   },
   "Table            --Data": {
@@ -55,6 +50,16 @@
   "MessageBox": {
     "title" : "MessageBox",
     "url" : "message-box.html",
+    "js": true
+  },
+  "Label": {
+    "title" : "Label",
+    "url" : "labels.html",
+    "js": false
+  },
+  "Tag": {
+    "title" : "Tag",
+    "url" : "tag.html",
     "js": true
   },
   "Navigation        --Navigation": {
