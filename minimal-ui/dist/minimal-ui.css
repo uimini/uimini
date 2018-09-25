@@ -770,9 +770,6 @@ section,
     padding: 20px 30px;
   }
 }
-.sidebar-content:hover {
-  color: #303133;
-}
 .sidebar-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -784,6 +781,7 @@ section,
   margin: 1.111111111111111rem auto;
 }
 .sidebar-item {
+  position: relative;
   line-height: 2.1;
   -webkit-transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
   -o-transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);

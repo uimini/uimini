@@ -2,62 +2,76 @@
   "Grid            --Basic": {
     "prefix": "Basic:",
     "title" : "Grid",
-    "url" : "grid.html"
+    "url" : "grid.html",
+    "js": false
   },
   "Layout": {
     "title" : "Layout",
-    "url" : "layout.html"
+    "url" : "layout.html",
+    "js": false
   },
   "Color": {
     "title" : "Color",
-    "url" : "color.html"
+    "url" : "color.html",
+    "js": false
   },
   "Typography": {
     "title" : "Typography",
-    "url": "typography.html"
+    "url": "typography.html",
+    "js": false
   },
   "Buttons": {
     "title" : "Buttons",
-    "url" : "buttons.html"
+    "url" : "buttons.html",
+    "js": false
   },
   "Labels": {
     "title" : "Labels",
-    "url" : "labels.html"
+    "url" : "labels.html",
+    "js": false
   },
   "Table            --Data": {
     "prefix": "Data:",
     "title" : "Table",
-    "url" : "table.html"
+    "url" : "table.html",
+    "js": false
   },
   "Form": {
     "title" : "Form",
-    "url" : "form.html"
+    "url" : "form.html",
+    "js": false
   },
   "Alert            --Notice": {
     "prefix": "Notice:",
     "title" : "Alert",
-    "url" : "alert.html"
+    "url" : "alert.html",
+    "js": true
   },
-  "Loading": {
+  "Message": {
     "title" : "Message",
-    "url" : "message.html"
+    "url" : "message.html",
+    "js": true
   },
   "MessageBox": {
     "title" : "MessageBox",
-    "url" : "message-box.html"
+    "url" : "message-box.html",
+    "js": true
   },
   "Navigation        --Navigation": {
     "prefix": "Navigation:",
     "title" : "Nav",
-    "url" : "navigation.html"
+    "url" : "navigation.html",
+    "js": true
   },
   "Sidebar": {
     "title" : "Sidebar",
-    "url" : "sidebar.html"
+    "url" : "sidebar.html",
+    "js": true
   },
   "Card --Other": {
     "prefix": "Other:",
     "title" : "Card",
-    "url" : "cards.html"
+    "url" : "cards.html",
+    "js": false
   }
 }

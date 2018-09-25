@@ -7,7 +7,7 @@ var uiSidebar = document.querySelector('.sidebar');
 var uiSidebarBtn = document.querySelector('.sidebar-open-button .button-burger');
 
 if(uiSidebarBtn){
-  uiSidebarBtn.onclick = function(){
+  uiSidebarBtn.addEventListener('click', function(){
     this.classList.toggle('active');
     uiSidebar.classList.toggle('full');
     if(this.classList.contains('active')){
@@ -15,7 +15,7 @@ if(uiSidebarBtn){
     }else{
       uiSidebar.style='left: -240px;';
     }
-  };
+  });
 }
 
 //
@@ -25,14 +25,14 @@ var uiNavbarListMobile = document.querySelector('.navbar-list--mobile');
 var uiNavbarMenuMobileBtn = document.querySelector('.navbar-menu--mobile .button-burger');
 
 if(uiNavbarMenuMobileBtn){
-  uiNavbarMenuMobileBtn.onclick = function(){
+  uiNavbarMenuMobileBtn.addEventListener('click', function(){
     this.classList.toggle('active');
     if(this.classList.contains('active')){
       uiNavbarListMobile.style='display: flex;';
     }else{
       uiNavbarListMobile.style='display: none;';
     }
-  };
+  });
 }
 
 //
@@ -125,13 +125,16 @@ function uiMessage(){
     element.addEventListener('click', function(){
       closeMessageDialog(i);
     });
+
     // Close click to window
     window.addEventListener('click', function(e){
-      var messageDialog = document.getElementsByClassName('ui-messageBox__wrapper')[i];
+      // Becouse [i]
+      messageDialog = document.getElementsByClassName('ui-messageBox__wrapper')[i];
       if(e.target == messageDialog){
         messageDialog.style.display = "none";
       }
     });
+
   });
 
   // Event for Close Cancel
@@ -171,10 +174,10 @@ function uiMessage(){
     messageDialog.style.display = "none";
   }
 
-  function messageDialogItCancel(){
-    return true;
-  }
-  function messageDialogItOk(){
-    return true;
-  }
+} // end message
+function messageDialogItCancel(){
+  return true;
+}
+function messageDialogItOk(){
+  return true;
 }

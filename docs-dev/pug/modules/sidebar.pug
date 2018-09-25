@@ -16,12 +16,21 @@ mixin menuItemSidebar(title,url)
       ul.sidebar-list
         each item in docNavDev
           +menuItemSidebar(item["title"], item["url"])
-      
+
       // Components
       .ui-title-4 Components
       ul.sidebar-list
         each item in docNavComp
-          if(item['prefix'])
+          if(item['js'] && item['prefix'])
+            p.ui-text-small(style="margin:16px 0 6px 0;")= item['prefix']
+            .sidebar-item--js__wrapper
+              span.sidebar-item--js js
+              +menuItemSidebar(item["title"], item["url"])
+          else if(item['js'])
+            .sidebar-item--js__wrapper
+              span.sidebar-item--js js
+              +menuItemSidebar(item["title"], item["url"])
+          else if(item['prefix'])
             p.ui-text-small(style="margin:16px 0 6px 0;")= item['prefix']
             +menuItemSidebar(item["title"], item["url"])
           else
