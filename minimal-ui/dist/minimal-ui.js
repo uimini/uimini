@@ -1,156 +1,180 @@
- // Sidebar
-var sidebar = document.querySelector('.sidebar');
-var sidebarBtn = document.querySelector('.sidebar-open-button .button-burger');
+// TODO: Global es6
 
-if(sidebarBtn){
-  sidebarBtn.onclick = function(){
+//
+// Sidebar
+//
+var uiSidebar = document.querySelector('.sidebar');
+var uiSidebarBtn = document.querySelector('.sidebar-open-button .button-burger');
+
+if(uiSidebarBtn){
+  uiSidebarBtn.onclick = function(){
     this.classList.toggle('active');
-    sidebar.classList.toggle('full');
+    uiSidebar.classList.toggle('full');
     if(this.classList.contains('active')){
-      sidebar.style='left: 0;';
+      uiSidebar.style='left: 0;';
     }else{
-      sidebar.style='left: -240px;';
+      uiSidebar.style='left: -240px;';
     }
-  }
+  };
 }
 
+//
 // Navbar
-var navbarListMobile = document.querySelector('.navbar-list--mobile');
-var navbarMenuMobileBtn = document.querySelector('.navbar-menu--mobile .button-burger');
+//
+var uiNavbarListMobile = document.querySelector('.navbar-list--mobile');
+var uiNavbarMenuMobileBtn = document.querySelector('.navbar-menu--mobile .button-burger');
 
-if(navbarMenuMobileBtn){
-  navbarMenuMobileBtn.onclick = function(){
+if(uiNavbarMenuMobileBtn){
+  uiNavbarMenuMobileBtn.onclick = function(){
     this.classList.toggle('active');
     if(this.classList.contains('active')){
-      navbarListMobile.style='display: flex;'
+      uiNavbarListMobile.style='display: flex;';
     }else{
-      navbarListMobile.style='display: none;'
+      uiNavbarListMobile.style='display: none;';
     }
-  }
+  };
 }
 
+//
 // Alert
-var alertUi = document.querySelectorAll('.ui-alert');
-var alertBtnClose = document.querySelectorAll('.ui-alert .button-close');
+//
+var uiAlert = document.querySelectorAll('.ui-alert');
+var uiAlertBtnClose = document.querySelectorAll('.ui-alert .button-close');
 
-if(alertUi){
-  for (var i = 0; i < alertBtnClose.length; i++) {
-    alertBtnClose[i].onclick = function(){
+if(uiAlert){
+  for (var i = 0; i < uiAlertBtnClose.length; i++) {
+    uiAlertBtnClose[i].onclick = function(){
       this.parentNode.parentNode.removeChild(this.parentNode);
-    }
+    };
   }
 
 }
 
+// TODO: Global FIX func
+
+
+//
 // Message
+//
 function showMessage(message, messageBtn){
-  var message = document.querySelectorAll(message),
-      messageBtn = document.querySelectorAll(messageBtn),
+  var uiMessage = document.querySelectorAll(message),
+      uiMessageBtn = document.querySelectorAll(messageBtn),
       timeOut = 2000,
       // Becouse animation: fadeOutUp .3s
       timeOutUp = timeOut - 1700;
-  console.log(messageBtn)
+  // console.log(uiMessageBtn)
+
   // Only Message without button
-  if(messageBtn.length === 0){
-    for (var i = 0; i < message.length; i++) {
-      var message = message[i];
+  if(uiMessageBtn.length === 0){
+    for (var i = 0; i < uiMessage.length; i++) {
+      var uiMessage = uiMessage[i];
       showAndHideMessage();
     }
   }
 
   // Message with button
-  for (var i = 0; i < message.length; i++) {
-    var message = message[i],
-        messageBtn = messageBtn[i];
+  for (var i = 0; i < uiMessage.length; i++) {
+    var uiMessage = uiMessage[i],
+        uiMessageBtn = uiMessageBtn[i];
 
-    messageBtn.onclick = function(){
-      showAndHideMessage()
-    }
+    uiMessageBtn.onclick = function(){
+      showAndHideMessage();
+    };
   }
 
   function showAndHideMessage(){
-    message.style.display = 'flex';
+    uiMessage.style.display = 'flex';
 
     // Animation
-    message.classList.add('fadeInDown');
-    message.classList.remove('fadeOutUp');
+    uiMessage.classList.add('fadeInDown');
+    uiMessage.classList.remove('fadeOutUp');
 
     setTimeout(function() {
       setTimeout(function(){
-        message.style.display = 'none';
+        uiMessage.style.display = 'none';
       }, timeOutUp);
 
       // Animation
-      message.classList.add('fadeOutUp');
-      message.classList.remove('fadeInDown');
+      uiMessage.classList.add('fadeOutUp');
+      uiMessage.classList.remove('fadeInDown');
     }, timeOut);
   }
 
 }
 
+//
 // Message Dialog
+//
 
-// [i] for forEach
-// var messageDialog = document.getElementsByClassName('ui-message-box__wrapper');
-var messageDialogBtnShow = document.getElementsByClassName('ui-message-box-show');
-var messageDialogBtnOk = document.getElementsByClassName('ui-message-box-ok');
-var messageDialogBtnCancel = document.getElementsByClassName('ui-message-box-cancel');
-var messageDialogBtnClose = document.getElementsByClassName('ui-message-box-close');
-
-// Event for Show
-[].forEach.call(messageDialogBtnShow, function(element, i) {
-  element.addEventListener('click', function(){
-    showMessageDialog(i);
+function uiMessage(){
+  // [i] for forEach
+  // var messageDialog = document.getElementsByClassName('ui-messageBox__wrapper');
+  var uiMessageDialogBtnShow = document.getElementsByClassName('ui-messageBox-show');
+  var uiMessageDialogBtnOk = document.getElementsByClassName('ui-messageBox-ok');
+  var uiMessageDialogBtnCancel = document.getElementsByClassName('ui-messageBox-cancel');
+  var uiMessageDialogBtnClose = document.getElementsByClassName('ui-messageBox-close');
+  // Event for Show
+  [].forEach.call(uiMessageDialogBtnShow, function(element, i) {
+    element.addEventListener('click', function(){
+      showMessageDialog(i);
+    });
   });
-});
 
-// Event for Close
-[].forEach.call(messageDialogBtnClose, function(element, i) {
-  element.addEventListener('click', function(){
-    closeMessageDialog(i);
+  // Event for Close
+  [].forEach.call(uiMessageDialogBtnClose, function(element, i) {
+    element.addEventListener('click', function(){
+      closeMessageDialog(i);
+    });
+    // Close click to window
+    window.addEventListener('click', function(e){
+      var messageDialog = document.getElementsByClassName('ui-messageBox__wrapper')[i];
+      if(e.target == messageDialog){
+        messageDialog.style.display = "none";
+      }
+    });
   });
-  // Close click to window
-  window.addEventListener('click', function(e){
-    var messageDialog = document.getElementsByClassName('ui-message-box__wrapper')[i];
-    if(e.target == messageDialog){
-      messageDialog.style.display = "none";
-    }
+
+  // Event for Close Cancel
+  // TODO: bug
+  // Если кенцел отсутвует на 1 модалке и есть на второq в i отправляется 0.
+  // закрывается 1. вторая без изменений
+  // решение - новая функция+класс для окна с кенцел
+  [].forEach.call(uiMessageDialogBtnCancel, function(element, i) {
+    element.addEventListener('click', function(){
+      //Exit
+      closeMessageDialog(i);
+      // Ok func
+      messageDialogItCancel();
+    });
   });
-});
 
-// Event for Close Cancel
-// TODO: bug
-// Если кенцел отсутвует на 1 модалке и есть на второq в i отправляется 0.
-// закрывается 1. вторая без изменений
-[].forEach.call(messageDialogBtnCancel, function(element, i) {
-  element.addEventListener('click', function(){
-    closeMessageDialog(i);
-    messageDialogItCancel();
+
+  // Event for Close OK
+  [].forEach.call(uiMessageDialogBtnOk, function(element, i) {
+    element.addEventListener('click', function(){
+      //Exit
+      closeMessageDialog(i);
+      // Ok func
+      messageDialogItOk();
+    });
   });
-});
 
+  function showMessageDialog(i){
+    // Becouse [i]
+    var messageDialog = document.getElementsByClassName('ui-messageBox__wrapper')[i];
+    messageDialog.style.display = "flex";
+  }
 
-// Event for Close OK
-[].forEach.call(messageDialogBtnOk, function(element, i) {
-  element.addEventListener('click', function(){
-    closeMessageDialog(i);
-    messageDialogItOk();
-  });
-});
+  function closeMessageDialog(i){
+    // Becouse [i]
+    var messageDialog = document.getElementsByClassName('ui-messageBox__wrapper')[i];
+    messageDialog.style.display = "none";
+  }
 
-function showMessageDialog(i){
-  var messageDialog = document.getElementsByClassName('ui-message-box__wrapper')[i];
-  messageDialog.style.display = "flex";
-}
-
-function closeMessageDialog(i){
-  var messageDialog = document.getElementsByClassName('ui-message-box__wrapper')[i];
-  messageDialog.style.display = "none";
-}
-
-function messageDialogItCancel(){
-  return true
-}
-function messageDialogItOk(){
-  return true
+  function messageDialogItCancel(){
+    return true;
+  }
+  function messageDialogItOk(){
+    return true;
+  }
 }

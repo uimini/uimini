@@ -1,10 +1,6 @@
 .button
 	display: inline-block
-
-	padding-bottom: calc(0.375em - 1px)
-	padding-left: 0.75em
-	padding-right: 0.75em
-	padding-top: calc(0.375em - 1px)
+	padding: button-padding
 	color #fff
 	text-align: center
 	white-space: nowrap
@@ -42,9 +38,8 @@
 
 
 	&.button--round
-		border-radius: 1em
-		padding-left: 1em
-		padding-right: 1em
+		border-radius: button--round-border-radius
+		padding .48em 1.2em
 
 	&.button--disable
 		opacity .6

@@ -77,35 +77,35 @@
       <div class="content-wrapper content-wrapper--sidebar content-wrapper--fix-header">
         <section id="header">
           <div class="container">
-            <h1 class="ui-title-1">Message-Box</h1><span>A set of modal boxes simulating system message box, mainly for alerting information</span>
+            <h1 class="ui-title-1">MessageBox</h1><span>A set of modal boxes simulating system message box, mainly for alerting information</span>
           </div>
         </section>
         <section id="standart">
-          <div class="container"><span class="ui-title-2">Standart Message-box:</span>
+          <div class="container"><span class="ui-title-2">Standart MessageBox:</span>
             <div class="example-empty">
               <div class="ui-message ui-message--danger" id="exampleMessage"><span class="message-title">Example message - Cancel</span></div>
               <div class="ui-message ui-message--success" id="exampleMessage2"><span class="message-title">Example message - Done</span></div>
-              <div class="ui-message-box__wrapper">
-                <div class="ui-message-box fadeInDown">
-                  <div class="ui-message-box__header"><span class="message-box-title">Title</span><span class="button-close ui-message-box-close"></span></div>
-                  <div class="ui-message-box__content"><span>Message is here</span></div>
-                  <div class="ui-message-box__footer">
-                    <div class="button button-light ui-message-box-cancel">Cancel</div>
-                    <div class="button button-primary ui-message-box-ok">OK</div>
+              <div class="ui-messageBox__wrapper">
+                <div class="ui-messageBox fadeInDown">
+                  <div class="ui-messageBox__header"><span class="messageBox-title">Title</span><span class="button-close ui-messageBox-close"></span></div>
+                  <div class="ui-messageBox__content"><span>Message is here</span></div>
+                  <div class="ui-messageBox__footer">
+                    <div class="button button-light ui-messageBox-cancel">Cancel</div>
+                    <div class="button button-primary ui-messageBox-ok">OK</div>
                   </div>
                 </div>
               </div>
-              <div class="button button-light ui-message-box-show">Show confirm message</div>
-              <div class="ui-message-box__wrapper">
-                <div class="ui-message-box fadeInDown">
-                  <div class="ui-message-box__header"><span class="message-box-title">Another Title</span><span class="button-close ui-message-box-close"></span></div>
-                  <div class="ui-message-box__content"><span>Another Message is here</span></div>
-                  <div class="ui-message-box__footer">
-                    <div class="button button-primary ui-message-box-ok">OK</div>
+              <div class="button button-light ui-messageBox-show">Show confirm message</div>
+              <div class="ui-messageBox__wrapper">
+                <div class="ui-messageBox fadeInDown">
+                  <div class="ui-messageBox__header"><span class="messageBox-title">Another Title</span><span class="button-close ui-messageBox-close"></span></div>
+                  <div class="ui-messageBox__content"><span>Another Message is here</span></div>
+                  <div class="ui-messageBox__footer">
+                    <div class="button button-primary ui-messageBox-ok">OK</div>
                   </div>
                 </div>
               </div>
-              <div class="button button-light ui-message-box-show">Show standart message</div>
+              <div class="button button-light ui-messageBox-show">Show standart message</div>
             </div>
             <div class="content-docs_help"><span class="ui-title-3">Example:</span></div><pre>
     <code>
@@ -115,36 +115,39 @@
 &lt;div class=&quot;ui-message ui-message--success&quot; id=&quot;exampleMessage2&quot;&gt;&lt;span class=&quot;message-title&quot;&gt;Example message - Done&lt;/span&gt;&lt;/div&gt;
 
 &lt;!-- Wrapper for first message --&gt;
-&lt;div class=&quot;ui-message-box__wrapper&quot;&gt;
-  &lt;div class=&quot;ui-message-box fadeInDown&quot;&gt;
-    &lt;div class=&quot;ui-message-box__header&quot;&gt;&lt;span class=&quot;message-box-title&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;button-close ui-message-box-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-    &lt;div class=&quot;ui-message-box__content&quot;&gt;&lt;span&gt;Message is here&lt;/span&gt;&lt;/div&gt;
-    &lt;div class=&quot;ui-message-box__footer&quot;&gt;
-      &lt;div class=&quot;button button-light ui-message-box-cancel&quot;&gt;Cancel&lt;/div&gt;
-      &lt;div class=&quot;button button-primary ui-message-box-ok&quot;&gt;OK&lt;/div&gt;
+&lt;div class=&quot;ui-messageBox__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-messageBox fadeInDown&quot;&gt;
+    &lt;div class=&quot;ui-messageBox__header&quot;&gt;&lt;span class=&quot;messageBox-title&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;button-close ui-messageBox-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-messageBox__content&quot;&gt;&lt;span&gt;Message is here&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-messageBox__footer&quot;&gt;
+      &lt;div class=&quot;button button-light ui-messageBox-cancel&quot;&gt;Cancel&lt;/div&gt;
+      &lt;div class=&quot;button button-primary ui-messageBox-ok&quot;&gt;OK&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;!-- Button for first message --&gt;
-&lt;div class=&quot;button button-light ui-message-box-show&quot;&gt;Show confirm message&lt;/div&gt;
+&lt;div class=&quot;button button-light ui-messageBox-show&quot;&gt;Show confirm message&lt;/div&gt;
 
 &lt;!-- Wrapper for second message --&gt;
-&lt;div class=&quot;ui-message-box__wrapper&quot;&gt;
-  &lt;div class=&quot;ui-message-box fadeInDown&quot;&gt;
-    &lt;div class=&quot;ui-message-box__header&quot;&gt;&lt;span class=&quot;message-box-title&quot;&gt;Another Title&lt;/span&gt;&lt;span class=&quot;button-close ui-message-box-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-    &lt;div class=&quot;ui-message-box__content&quot;&gt;&lt;span&gt;Another Message is here&lt;/span&gt;&lt;/div&gt;
-    &lt;div class=&quot;ui-message-box__footer&quot;&gt;
-      &lt;div class=&quot;button button-primary ui-message-box-ok&quot;&gt;OK&lt;/div&gt;
+&lt;div class=&quot;ui-messageBox__wrapper&quot;&gt;
+  &lt;div class=&quot;ui-messageBox fadeInDown&quot;&gt;
+    &lt;div class=&quot;ui-messageBox__header&quot;&gt;&lt;span class=&quot;messageBox-title&quot;&gt;Another Title&lt;/span&gt;&lt;span class=&quot;button-close ui-messageBox-close&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-messageBox__content&quot;&gt;&lt;span&gt;Another Message is here&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-messageBox__footer&quot;&gt;
+      &lt;div class=&quot;button button-primary ui-messageBox-ok&quot;&gt;OK&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;!-- Button for second message --&gt;
-&lt;div class=&quot;button button-light ui-message-box-show&quot;&gt;Show standart message&lt;/div&gt;
+&lt;div class=&quot;button button-light ui-messageBox-show&quot;&gt;Show standart message&lt;/div&gt;
 
 
 &lt;script&gt;
+  // Start message
+  uiMessage()
+
   // Example message for Cancel button
   function messageDialogItCancel(){
     showMessage('#exampleMessage') 
@@ -168,6 +171,7 @@
 <script>hljs.initHighlightingOnLoad();</script>
     <script src="static/js/minimal-ui.min.js"></script>
     <script>
+      uiMessage()
       function messageDialogItCancel(){
       showMessage('#exampleMessage')
       return console.log('Cancel');

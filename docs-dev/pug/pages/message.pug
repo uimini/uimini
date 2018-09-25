@@ -36,12 +36,17 @@ block content
           span.message-title Warning Message is here
         .button.button-warning#exampleMessageBtn5 Warning
 
+
+
       .content-docs_help
         span.ui-title-3 Example:
       include message/standart.html
 
+  .ui-message.ui-message--primary#exampleMessage10
+    span.message-title Hello message
+
 block script
-  script(type='text/javascript').
+  script.
     showMessage('#exampleMessage', '#exampleMessageBtn')
     showMessage('#exampleMessage2', '#exampleMessageBtn2')
     showMessage('#exampleMessage3', '#exampleMessageBtn3')
@@ -49,4 +54,4 @@ block script
     showMessage('#exampleMessage5', '#exampleMessageBtn5')
 
     // Only Message without button
-    //- showMessage('#exampleMessage2')
+    showMessage('#exampleMessage10')

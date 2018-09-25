@@ -926,28 +926,28 @@ section,
   -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
           box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
 }
-.label {
+.ui-label {
   padding: 0.333333333333333rem 1rem;
   white-space: nowrap;
   text-transform: uppercase;
   color: #fff;
 }
-.label--primary {
+.ui-label--primary {
   background-color: #444ce0;
 }
-.label--success {
+.ui-label--success {
   background-color: #26de81;
 }
-.label--danger {
+.ui-label--danger {
   background-color: #fc5c65;
 }
-.label--warning {
+.ui-label--warning {
   background-color: #fed330;
 }
-.label--light {
+.ui-label--light {
   background-color: #999;
 }
-.label--purple {
+.ui-label--purple {
   background-color: #8854d0;
 }
 .ui-table {
@@ -984,10 +984,7 @@ section,
 }
 .button {
   display: inline-block;
-  padding-bottom: calc(0.375em - 1px);
-  padding-left: 0.75em;
-  padding-right: 0.75em;
-  padding-top: calc(0.375em - 1px);
+  padding: 0.4em 1em;
   color: #fff;
   text-align: center;
   white-space: nowrap;
@@ -1040,9 +1037,8 @@ section,
   color: #fff;
 }
 .button.button--round {
-  border-radius: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  border-radius: 0.6em;
+  padding: 0.48em 1.2em;
 }
 .button.button--disable {
   opacity: 0.6;
@@ -1359,7 +1355,7 @@ textarea {
 .ui-alert--purple {
   background-color: #8854d0;
 }
-.ui-message-box__wrapper {
+.ui-messageBox__wrapper {
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1375,7 +1371,7 @@ textarea {
   z-index: 2002;
   background-color: rgba(39,39,39,0.48);
 }
-.ui-message-box {
+.ui-messageBox {
   position: relative;
   min-width: 400px;
   padding: 0.666666666666667rem 0.777777777777778rem;
@@ -1386,20 +1382,20 @@ textarea {
   overflow: hidden;
 }
 @media screen and (max-width: 768px) {
-  .ui-message-box {
+  .ui-messageBox {
     min-width: 336px;
   }
 }
 @media screen and (max-width: 480px) {
-  .ui-message-box {
+  .ui-messageBox {
     min-width: 240px;
   }
 }
-.ui-message-box .button-close {
+.ui-messageBox .button-close {
   width: 1.222222222222222rem;
   height: 1.222222222222222rem;
 }
-.ui-message-box__header {
+.ui-messageBox__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1412,13 +1408,13 @@ textarea {
   padding-bottom: 0.444444444444444rem;
   margin-bottom: 0.444444444444444rem;
 }
-.ui-message-box__content {
+.ui-messageBox__content {
   margin-bottom: 0.888888888888889rem;
 }
-.ui-message-box__footer {
+.ui-messageBox__footer {
   text-align: right;
 }
-.message-box-title {
+.messageBox-title {
   font-size: 1.333333333333333rem;
 }
 .ui-message {

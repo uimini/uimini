@@ -8,13 +8,13 @@ block variables
 block content
   section#header
     .container
-      h1.ui-title-1 Message-Box
+      h1.ui-title-1 MessageBox
       span
         | A set of modal boxes simulating system message box, mainly for alerting information
 
   section#standart
     .container
-      span.ui-title-2 Standart Message-box:
+      span.ui-title-2 Standart MessageBox:
 
       .example-empty
         .ui-message.ui-message--danger#exampleMessage
@@ -23,29 +23,29 @@ block content
         .ui-message.ui-message--success#exampleMessage2
           span.message-title Example message - Done
 
-        .ui-message-box__wrapper
-          .ui-message-box.fadeInDown
-            .ui-message-box__header
-              span.message-box-title Title
-              span.button-close.ui-message-box-close
-            .ui-message-box__content
+        .ui-messageBox__wrapper
+          .ui-messageBox.fadeInDown
+            .ui-messageBox__header
+              span.messageBox-title Title
+              span.button-close.ui-messageBox-close
+            .ui-messageBox__content
               span Message is here
-            .ui-message-box__footer
-              .button.button-light.ui-message-box-cancel Cancel
-              .button.button-primary.ui-message-box-ok OK
-        .button.button-light.ui-message-box-show Show confirm message
+            .ui-messageBox__footer
+              .button.button-light.ui-messageBox-cancel Cancel
+              .button.button-primary.ui-messageBox-ok OK
+        .button.button-light.ui-messageBox-show Show confirm message
 
-        .ui-message-box__wrapper
-          .ui-message-box.fadeInDown
-            .ui-message-box__header
-              span.message-box-title Another Title
-              span.button-close.ui-message-box-close
-            .ui-message-box__content
+        .ui-messageBox__wrapper
+          .ui-messageBox.fadeInDown
+            .ui-messageBox__header
+              span.messageBox-title Another Title
+              span.button-close.ui-messageBox-close
+            .ui-messageBox__content
               span Another Message is here
-            .ui-message-box__footer
-              //- .button.button-light.ui-message-box-cancel Cancel
-              .button.button-primary.ui-message-box-ok OK
-        .button.button-light.ui-message-box-show Show standart message
+            .ui-messageBox__footer
+              //- .button.button-light.ui-messageBox-cancel Cancel
+              .button.button-primary.ui-messageBox-ok OK
+        .button.button-light.ui-messageBox-show Show standart message
 
       .content-docs_help
         span.ui-title-3 Example:
@@ -53,6 +53,7 @@ block content
 
 block script
   script.
+    uiMessage()
     function messageDialogItCancel(){
     showMessage('#exampleMessage')
     return console.log('Cancel');
