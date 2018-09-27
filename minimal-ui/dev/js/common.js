@@ -27,11 +27,7 @@ var uiNavbarMenuMobileBtn = document.querySelector('.navbar-menu--mobile .button
 if(uiNavbarMenuMobileBtn){
   uiNavbarMenuMobileBtn.addEventListener('click', function(){
     this.classList.toggle('active');
-    if(this.classList.contains('active')){
-      uiNavbarListMobile.style='display: flex;';
-    }else{
-      uiNavbarListMobile.style='display: none;';
-    }
+    uiNavbarListMobile.classList.toggle('active');
   });
 }
 

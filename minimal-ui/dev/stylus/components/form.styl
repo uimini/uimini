@@ -34,18 +34,23 @@ textarea
 .ui-checkbox-wrapper
   position relative
   cursor pointer
+  input,
+  label,
+  .label--inline
+    margin-bottom 0
 
 .ui-checkbox
+  width: 1rem
+  height: @width
   position: relative
-  top: -6px
-  margin-right 10px
   cursor: pointer
+
   @media screen and (max-width phoneWidth)
     top: 2px
 
 
   &:before
-    width: 1rem
+    width: form-el-checkbox-size
     height: @width
     content: ""
     position: absolute
@@ -59,13 +64,13 @@ textarea
     &:before
       transform: rotate(-45deg);
       height: 0.5rem;
-      border: 2px solid success-color;
+      border: 2px solid form-el-checkbox-color
       border-radius: 0
       border-top-style: none;
       border-right-style: none;
 
   &:after
-    width: 1.1rem;
+    width: form-el-checkbox-size
     height: @width
     position: absolute;
     top: rem(-2);
