@@ -11,20 +11,22 @@ var     gulp         =       require('gulp'),
         autoprefixer =       require('gulp-autoprefixer'),
         browserSync  =       require('browser-sync'),
         cache        =       require('gulp-cache'),
-        gutil        =       require('gulp-util'),
         rename       =       require("gulp-rename"),
         del          =       require('del'),
-        fs           =       require('fs');
+        fs           =       require('fs'),
 
-var config = {        
+        // WARRNING css-media-queries group
+        gcmq         =       require('gulp-group-css-media-queries');
 
-        // MINIMAL-UI
+var config = {
+
+        // UIMini
         // Build
-        cssFolder:           './minimal-ui/dist/',
-        jsFolder:            './minimal-ui/dist/',
+        cssFolder:           './dist/css',
+        jsFolder:            './dist/js',
         // Dev
-        stylusFolder:        './minimal-ui/dev/stylus',
-        jsDevFolder:         './minimal-ui/dev/js',
+        stylusFolder:        './src/stylus',
+        jsDevFolder:         './src/js',
 
         // DOCS
         devFolder:           './docs-dev',
@@ -32,7 +34,7 @@ var config = {
         secondBuildFolder:   '/static'
 };
 
-//STYLUS MINIMAL-UI --DEV
+//STYLUS UI-MINI --DEV
 gulp.task('style:dev', function(){
     return gulp
         .src(config.stylusFolder + '/main.styl')
@@ -46,15 +48,16 @@ gulp.task('style:dev', function(){
             browsers: ['last 3 version']
         }))
         // .pipe(sourcemaps.write('.'))
-        .pipe(rename({ basename: "minimal-ui" }))
-        
+        .pipe(rename({ basename: "uimini" }))
+
         .pipe(gulp.dest(config.cssFolder))
+        .pipe(gcmq())
         .pipe(cssnano())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(config.cssFolder))
-        
+
         //Dest min v for docs
-        .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/css/'))
+        // .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/css/'))
         .pipe(browserSync.reload({stream: true}))
 });
 
@@ -89,10 +92,10 @@ gulp.task('pug', function () {
         .pipe(pug({
                 locals: {
                     mainNav: JSON.parse(fs.readFileSync(config.devFolder +'/data/main-navigation.json', 'utf8')),
-                    
+
                     docNavDev: JSON.parse(fs.readFileSync(config.devFolder +'/data/documentation/development.json', 'utf8')),
                     docNavComp: JSON.parse(fs.readFileSync(config.devFolder +'/data/documentation/components.json', 'utf8')),
-                    
+
                     logs: JSON.parse(fs.readFileSync(config.devFolder +'/data/changelog/logs.json', 'utf8')),
                 },
                 pretty: true
@@ -102,7 +105,7 @@ gulp.task('pug', function () {
         .on('end', browserSync.reload)
 });
 
-//JS MINIMAL-UI
+//JS UIMini
 gulp.task('script:dev', function() {
     return gulp
         .src([
@@ -110,7 +113,7 @@ gulp.task('script:dev', function() {
         ])
         .pipe(plumber())
 
-        /* 
+        /*
         Jshint - detects errors and potential problems in JavaScript code.
         Errors are output in the console with syntax highlighting.
         You can add a list of ignored files on - .jshintignore (file is hidden)
@@ -118,8 +121,8 @@ gulp.task('script:dev', function() {
         */
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
-        
-        .pipe(concat('minimal-ui.js'))
+
+        .pipe(concat('uimini.js'))
         .pipe(gulp.dest(config.jsFolder))
         //TODO uglify
         .pipe(uglify())
@@ -149,7 +152,7 @@ gulp.task('fonts', function() {
 //DELETE FOLDER BEFORE DEV
 gulp.task('clean', function() {
 
-    //MINIMAL-UI
+    //UIMini
     return del.sync(config.cssFolder)
 
     //DOCS
@@ -161,7 +164,7 @@ gulp.task('clean', function() {
 //WATCH DOCS
 gulp.task('watch', function(){
 
-    //MINIMAL-UI
+    //UIMini
     gulp.watch(config.stylusFolder +'/**/*.styl', ['style:dev']);
     gulp.watch(config.jsDevFolder +'/**/*.js', ['script:dev']);
 
@@ -188,8 +191,8 @@ gulp.task('serve', function() {
 
 //MAIN TASK
 
-//DEV FOR MINIMAL-UI & DOCS
-gulp.task('default', ['clean','pug','styleDOCS:dev','style:dev','script:dev','fonts','img:dev','watch','serve']);
+//DEV FOR UIMini & DOCS
+gulp.task('default', ['pug','styleDOCS:dev','style:dev','script:dev','fonts','img:dev','watch','serve']);
 
 //CLEAR CACHE
 gulp.task('cache', function() {

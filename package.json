@@ -1,14 +1,14 @@
 {
-  "name": "minimal-ui.css",
+  "name": "uimin.css",
   "version": "1.0.0",
-  "description": "Minimal-ui modern CSS framework based on Flexbox",
+  "description": "UIMini modern CSS framework based on Flexbox",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/vedees/minimal-ui.css"
+    "url": "git://github.com/vedees/uimini.css"
   },
   "keywords": [
     "minimal",
@@ -29,6 +29,7 @@
     "gulp-cache": "^1.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-jshint": "^2.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
