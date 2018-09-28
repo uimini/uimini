@@ -522,27 +522,24 @@ section,
   right: 0;
   z-index: 2;
 }
-.navbar-open-button {
+.navbar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 80px;
+}
+.navbar-content .button-burger {
   display: none;
+  z-index: 442;
 }
 @media screen and (max-width: 480px) {
-  .navbar-open-button {
-    display: block;
-  }
-}
-@media screen and (max-width: 480px) {
-  .navbar-menu {
-    display: none;
-  }
-}
-.navbar-menu--mobile {
-  display: none;
-}
-.navbar-menu--mobile .button-burger {
-  z-index: 44;
-}
-@media screen and (max-width: 480px) {
-  .navbar-menu--mobile {
+  .navbar-content .button-burger {
     display: block;
   }
 }
@@ -550,16 +547,14 @@ section,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 80px;
 }
-.navbar-list--mobile {
-  display: none;
+@media screen and (max-width: 480px) {
+  .navbar-list__wrapper {
+    display: none;
+  }
+}
+.navbar-list__wrapper.active {
+  display: block;
   position: fixed;
   top: 81px;
   left: 0;
@@ -568,10 +563,7 @@ section,
   z-index: 30;
   background-color: #fff;
 }
-.navbar-list--mobile.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.navbar-list__wrapper.active .navbar-list {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -580,10 +572,10 @@ section,
       -ms-flex-align: center;
           align-items: center;
 }
-.navbar-list--mobile .navbar-item {
+.navbar-list__wrapper .navbar-item {
   padding-right: 20px;
 }
-.navbar-list--mobile .navbar-item:last-child {
+.navbar-list__wrapper .navbar-item:last-child {
   padding-right: 20px;
 }
 .navbar-item,

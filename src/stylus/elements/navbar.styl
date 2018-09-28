@@ -17,64 +17,51 @@
   &.navbar--transparent
     background-color: transparent
 
-
   &.navbar-fixed
     position: fixed
     left: 0
     right: 0
     z-index: navbar-fixed-z
 
-.navbar-open-button
-  display none
 
-  @media screen and (max-width: phoneWidth)
-    display block
-
-.navbar-menu
-  @media screen and (max-width: phoneWidth)
-    display none
-
-.navbar-menu--mobile
-  display none
+.navbar-content
+  display flex
+  align-items center
+  justify-content space-between
+  min-height: navbar-height
 
   .button-burger
-    z-index 44
-
-  @media screen and (max-width: phoneWidth)
-    display block
+    display none
+    z-index 442
+    @media screen and (max-width: phoneWidth)
+      display block
 
 .navbar-list
   display flex
-  justify-content space-between
-  align-items: center
-  min-height: navbar-height
+.navbar-list__wrapper
 
-.navbar-list--mobile
-  display none
+  @media screen and (max-width: phoneWidth)
+    display none
 
-  position fixed
-  // Becouse border
-  top navbar-height + 1
-  left 0
-  width 100%
-  height 100%
-  z-index 30
-  background-color #fff
   &.active
-    display flex
-    flex-direction column
-    align-items: center
+    display block
+    position fixed
+    // Becouse border
+    top navbar-height + 1
+    left 0
+    width 100%
+    height 100%
+    z-index 30
+    background-color #fff
+
+    .navbar-list
+      flex-direction column
+      align-items: center
 
   .navbar-item
     padding-right 20px
     &:last-child
       padding-right 20px
-
-  @media screen and (max-width: phoneWidth)
-    // display flex
-
-
-
 
 .navbar-item,
 .navbar-link

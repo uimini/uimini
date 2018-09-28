@@ -21,8 +21,8 @@ if(uiSidebarBtn){
 //
 // Navbar
 //
-var uiNavbarListMobile = document.querySelector('.navbar-list--mobile');
-var uiNavbarMenuMobileBtn = document.querySelector('.navbar-menu--mobile .button-burger');
+var uiNavbarListMobile = document.querySelector('.navbar-list__wrapper');
+var uiNavbarMenuMobileBtn = document.querySelector('.navbar-content .button-burger');
 
 if(uiNavbarMenuMobileBtn){
   uiNavbarMenuMobileBtn.addEventListener('click', function(){

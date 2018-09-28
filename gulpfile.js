@@ -57,7 +57,7 @@ gulp.task('style:dev', function(){
         .pipe(gulp.dest(config.cssFolder))
 
         //Dest min v for docs
-        // .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/css/'))
+        .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/css/'))
         .pipe(browserSync.reload({stream: true}))
 });
 
