@@ -20,6 +20,19 @@ input[type='url'], textarea, select
   box-sizing: inherit;
   border-radius: form-el-border-radius
 
+// RESET FOR STANDART STYLE
+// FOCUS
+input:focus,select:focus, textarea:focus
+  background-color transparent
+  outline none
+// RIGHT OPTIONS
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance none
+  /* <-- Apparently some margin are still there even though it's hidden */
+  margin 0
+
 fieldset, input, select, textarea
   margin-bottom: rem(20)
 
