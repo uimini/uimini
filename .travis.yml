@@ -4,5 +4,8 @@ node_js:
   - "8"
 before_install:
 - "npm install -g npm"
+- "npm install -g gulp"
 install:
 - "npm install"
+before_script:
+- "gulp build"

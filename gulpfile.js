@@ -73,8 +73,8 @@ gulp.task ('script', function() {
         You can add a list of ignored files on - .jshintignore (file is hidden)
         Also, you can comment on 2 lines below if you dont need jshint.
         */
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
+        // .pipe(jshint())
+        // .pipe(jshint.reporter('jshint-stylish'))
 
         .pipe(concat('uimini.js'))
         .pipe(gulp.dest(config.jsFolder))
@@ -138,6 +138,7 @@ gulp.task('serve', function() {
 
 // DEV FOR UIMini & TEST
 gulp.task('default', ['pug','style','script','watch','serve']);
+gulp.task('build', ['style','script']);
 
 // CLEAR CACHE
 gulp.task('cache', function() {
