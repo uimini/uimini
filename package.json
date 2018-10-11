@@ -18,7 +18,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "test": "gulp"
+    "test": "gulp test"
   },
   "style": "dist/css/uimini.min.css",
   "styl": "src/stylus/main.styl",

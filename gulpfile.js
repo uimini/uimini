@@ -139,6 +139,7 @@ gulp.task('serve', function() {
 // DEV FOR UIMini & TEST
 gulp.task('default', ['pug','style','script','watch','serve']);
 gulp.task('build', ['style','script']);
+gulp.task('test', ['style','script']);
 
 // CLEAR CACHE
 gulp.task('cache', function() {
