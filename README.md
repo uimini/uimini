@@ -9,9 +9,11 @@ UImini is a modern responsive CSS framework based on Flexbox. Full responsive an
 You have the following options to get UImini:
 
 **Latest release**
+
 Download the [latest release](https://github.com/vedees/uimini/releases/latest) with pre-built CSS and JS.
 
 **NPM**
+
 Install with [npm](https://npmjs.com)
 
 ```shell
@@ -19,11 +21,13 @@ $ npm install uimini
 ```
 
 **Yarn**
+
 Install with [yarn](https://yarnpkg.com/)
 
 ```shell
 $ yarn add uimini
 ```
+
 **Build From Source**
 
 Optionally, you can build UImini from its source on Github. To do this, you'll
@@ -53,4 +57,4 @@ Browse the [online documentation here.](https://uimini.vedees.ru/get-started)
 
 ### License
 
-Uimini is [MIT licensed](./LICENSE).
+UImini is [MIT licensed](./LICENSE).
