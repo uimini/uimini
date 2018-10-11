@@ -1,42 +1,40 @@
-var     gulp         =       require('gulp'),
-        pug          =       require('gulp-pug'),
-        stylus       =       require('gulp-stylus'),
-        plumber      =       require('gulp-plumber'),
-        notify       =       require('gulp-notify'),
-        concat       =       require('gulp-concat'),
-        uglify       =       require('gulp-uglifyjs'),
-        jshint       =       require('gulp-jshint'),
-        sourcemaps   =       require('gulp-sourcemaps'),
-        cssnano      =       require('gulp-cssnano'),
-        autoprefixer =       require('gulp-autoprefixer'),
-        browserSync  =       require('browser-sync'),
-        cache        =       require('gulp-cache'),
-        rename       =       require("gulp-rename"),
-        del          =       require('del'),
-        fs           =       require('fs'),
+var     gulp         =    require('gulp'),
+        pug          =    require('gulp-pug'),
+        stylus       =    require('gulp-stylus'),
+        plumber      =    require('gulp-plumber'),
+        notify       =    require('gulp-notify'),
+        concat       =    require('gulp-concat'),
+        uglify       =    require('gulp-uglifyjs'),
+        jshint       =    require('gulp-jshint'),
+        sourcemaps   =    require('gulp-sourcemaps'),
+        cssnano      =    require('gulp-cssnano'),
+        autoprefixer =    require('gulp-autoprefixer'),
+        browserSync  =    require('browser-sync'),
+        cache        =    require('gulp-cache'),
+        rename       =    require("gulp-rename"),
+        del          =    require('del'),
 
         // WARRNING css-media-queries group
-        gcmq         =       require('gulp-group-css-media-queries');
+        gcmq         =    require('gulp-group-css-media-queries');
 
 var config = {
-
-        // UIMini
         // Build
         cssFolder:           './dist/css',
         jsFolder:            './dist/js',
+
         // Dev
-        stylusFolder:        './src/stylus',
+        cssDevFolder:        './src/stylus',
         jsDevFolder:         './src/js',
 
-        // DOCS
+        // TEST
         testFolder:           './test',
         testSecondFolder:   '/static'
 };
 
-//STYLUS UI-MINI --DEV
-gulp.task('style:dev', function(){
+// STYLE FOR UImini
+gulp.task ('style', function() {
     return gulp
-        .src(config.stylusFolder + '/main.styl')
+        .src(config.cssDevFolder + '/main.styl')
         // .pipe(sourcemaps.init())
         .pipe(plumber({ errorHandler: onError }))
         .pipe(stylus({
@@ -46,6 +44,7 @@ gulp.task('style:dev', function(){
             //3v for Flex-box
             browsers: ['last 3 version']
         }))
+        // Dosn`t work
         // .pipe(sourcemaps.write('.'))
         .pipe(rename({ basename: "uimini" }))
 
@@ -55,23 +54,13 @@ gulp.task('style:dev', function(){
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(config.cssFolder))
 
-        //Dest min v for docs
+        // Dest min for test
         .pipe(gulp.dest(config.testFolder +config.testSecondFolder + '/css/'))
         .pipe(browserSync.reload({stream: true}))
 });
 
-//PUG FOR DOCS
-gulp.task('pug', function () {
-    return gulp
-        .src(config.testFolder +'/**/*.pug')
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(pug({ pretty: true }))
-        .pipe(gulp.dest(config.testFolder))
-        .on('end', browserSync.reload)
-});
-
-//JS UIMini
-gulp.task('script:dev', function() {
+// SCRIPT FOR UIMini
+gulp.task ('script', function() {
     return gulp
         .src([
             config.jsDevFolder +'/common.js'
@@ -89,17 +78,26 @@ gulp.task('script:dev', function() {
 
         .pipe(concat('uimini.js'))
         .pipe(gulp.dest(config.jsFolder))
-        //TODO uglify
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(config.jsFolder))
 
+        // Dest min for test
         .pipe(gulp.dest(config.testFolder +config.testSecondFolder +'/js'))
         .pipe(browserSync.reload({stream: true}))
 });
 
+// PUG FOR TEST
+gulp.task ('pug', function () {
+    return gulp
+        .src(config.testFolder +'/**/*.pug')
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(pug({ pretty: true }))
+        .pipe(gulp.dest(config.testFolder))
+        .on('end', browserSync.reload)
+});
 
-//DELETE FOLDER BEFORE DEV
+// DELETE FOLDER BEFORE RUN SERVER
 gulp.task('clean', function() {
 
     //UIMini
@@ -110,20 +108,19 @@ gulp.task('clean', function() {
 
 });
 
-
-//WATCH DOCS
+// WATCH
 gulp.task('watch', function(){
 
-    //UIMini
-    gulp.watch(config.stylusFolder +'/**/*.styl', ['style:dev']);
-    gulp.watch(config.jsDevFolder +'/**/*.js', ['script:dev']);
+    // UIMini
+    gulp.watch(config.cssDevFolder +'/**/*.styl', ['style']);
+    gulp.watch(config.jsDevFolder +'/**/*.js', ['script']);
 
-    //Test
+    // Test
     gulp.watch(config.testFolder +'/**/*.pug', ['pug']);
 });
 
 
-//SERVER TEST
+// SERVER FOR TEST
 gulp.task('serve', function() {
     browserSync({
         server:{
@@ -135,19 +132,20 @@ gulp.task('serve', function() {
     })
 });
 
+//
+// MAIN TASK
+//
 
-//MAIN TASK
+// DEV FOR UIMini & TEST
+gulp.task('default', ['pug','style','script','watch','serve']);
 
-//DEV FOR UIMini & DOCS
-gulp.task('default', ['pug','style:dev','script:dev','watch','serve']);
-
-//CLEAR CACHE
+// CLEAR CACHE
 gulp.task('cache', function() {
     return cache.clearAll();
 });
 
 
-//Error Message
+// Error Message
 var onError = function(err) {
     notify.onError({
         title:    "Error in " + err.plugin,

@@ -1,19 +1,56 @@
+[![uimini banner](https://uimini.vedees.ru/git_logo_uimini.png)](https://uimini.vedees.ru/)
+
 # UImini
 
-UImini.css is a modern responsive CSS framework based on Flexbox. Full responsive and available for free
-
----
+UImini is a modern responsive CSS framework based on Flexbox. Full responsive and available for free
 
 ## Getting started
 
-You have the following options to get uimini.css:
+You have the following options to get UImini:
 
-- Download the [latest release](https://github.com/vedees/uimini.css/releases/latest) with pre-built CSS and JS.
-- Install with [npm](https://npmjs.com) is coming
-- Install with [yarn](https://yarnpkg.com/) is coming
-- Clone the repo to get all source files including build scripts: `git clone git://github.com/vedees/uimini.css.git`
+**Latest release**
+Download the [latest release](https://github.com/vedees/uimini/releases/latest) with pre-built CSS and JS.
 
-## Developers
-To always have the latest development version of UImini, even before a release, you may want to use npm or yarn with the `dev` tag.
-- Using npm: is coming
-- Using yarn: is coming
+**NPM**
+Install with [npm](https://npmjs.com)
+
+```shell
+$ npm install uimini
+```
+
+**Yarn**
+Install with [yarn](https://yarnpkg.com/)
+
+```shell
+$ yarn add uimini
+```
+**Build From Source**
+
+Optionally, you can build UImini from its source on Github. To do this, you'll
+need to have Node.js and npm installed. I use Gulp to build UImini.
+
+```shell
+$ git clone https://github.com/vedees/uimini.git
+$ cd uimini
+$ npm install
+$ npm start
+```
+
+## Browser Support
+
+UImini uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions. According to [Can I use](https://caniuse.com/#feat=flexbox), UImini is compatible with **recent** versions of:
+
+* Chrome
+* Firefox
+* Opera
+* Safari
+* Edge
+* Internet Explorer (10+)
+
+## Documentation
+
+Browse the [online documentation here.](https://uimini.vedees.ru/get-started)
+
+### License
+
+Uimini is [MIT licensed](./LICENSE).

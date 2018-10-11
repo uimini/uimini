@@ -1,30 +1,40 @@
 {
-  "name": "uimin.css",
+  "name": "uimin",
+  "description": "UIMini modern CSS framework based on Flexbox and Stylus",
   "version": "1.1.0",
-  "description": "UIMini modern CSS framework based on Flexbox",
-  "main": "index.js",
-  "scripts": {
-    "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/vedees/uimini.css"
-  },
   "keywords": [
     "minimal",
+    "mini",
     "ui",
+    "responsive",
+    "framework",
     "flexbox",
-    "css",
     "stylus",
-    "framework"
+    "css",
+    "js"
   ],
+  "homepage": "https://uimini.vedees.ru",
   "author": "https://github.com/vedees",
+  "scripts": {
+    "start": "gulp",
+    "run dev": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "style": "dist/css/uimini.min.css",
+  "styl": "src/stylus/main.styl",
+  "main": "dist/js/uimini",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedees/uimini.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vedees/uimini/issues"
+  },
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "del": "^3.0.0",
-    "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cache": "^1.0.2",
@@ -43,7 +53,15 @@
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1"
   },
-  "dependencies": {
-    "highlight.js": "^9.12.0"
-  }
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "dist/{css,js}/*.{css,js,map}",
+    "src/{stylus,js}/**/*.{styl,js,map}",
+    "test/**/**/*.{css,js,html,pug}",
+    "gulpfile.js",
+    "LICENSE",
+    "README.md"
+  ]
 }
