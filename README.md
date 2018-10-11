@@ -4,6 +4,8 @@
 
 UImini is a modern responsive CSS framework based on Flexbox. Full responsive and available for free
 
+[![Travis (.org)](https://img.shields.io/travis/vedees/uimini.svg?style=popout-square)](https://travis-ci.org/vedees/uimini) [![npm](https://img.shields.io/npm/v/uimini.svg?style=popout-square)](https://www.npmjs.com/package/uimini) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://www.npmjs.com/package/uimini)
+
 ## Getting started
 
 You have the following options to get UImini:
