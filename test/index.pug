@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title Uimini - Test
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+
+    // UImini
+    link(href='static/css/uimini.min.css' rel='stylesheet' )
+    // For test
+    link(href='static/css/test.css' rel='stylesheet' )
+
+
+  body
+    .wrapper
+      header
+        // You header here
+      .content-wrapper
+        section
+          .container
+            h1.ui-title-1 Hello
+            p Recommendation: edit this page usage index.pug
+        section
+          .container
+            p.ui-title-2 Editing
+            p UImini:
+            ul
+              li.ui-text-regular Style: src/stylus/main.styl
+              li.ui-text-regular JS: src/js/common.js
+            p Test:
+            ul
+              li.ui-text-regular Style: static/css/test.css
+              li.ui-text-regular JS: static/js/test.js
+
+        section
+          .container
+            h2.ui-title-2 Support
+            a.button.button-primary.button--round(href='https://uimini.vedees.ru/', style='margin-right: 16px') Documetation
+            a.button.button-default.button--round(href='https://github.com/vedees/uimini.css') GitHub
+
+  // UImini
+  script(src='static/js/uimini.min.js')
+  // For test
+  script(src='static/js/test.js')

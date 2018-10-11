@@ -29,9 +29,8 @@ var config = {
         jsDevFolder:         './src/js',
 
         // DOCS
-        devFolder:           './docs-dev',
-        buildFolder:         './docs',
-        secondBuildFolder:   '/static'
+        testFolder:           './test',
+        testSecondFolder:   '/static'
 };
 
 //STYLUS UI-MINI --DEV
@@ -57,51 +56,17 @@ gulp.task('style:dev', function(){
         .pipe(gulp.dest(config.cssFolder))
 
         //Dest min v for docs
-        .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/css/'))
-        .pipe(browserSync.reload({stream: true}))
-});
-
-
-//STYLUS DOCS --DEV
-gulp.task('styleDOCS:dev', function(){
-    return gulp
-        .src(config.devFolder +'/stylus/main.styl')
-        .pipe(sourcemaps.init())
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(stylus({
-            //Libs include here - 'devFolder' +'/sylus/libs.styl'
-            'include css': true
-        }))
-        .pipe(autoprefixer({
-            //3v for Flex-box
-            browsers: ['last 3 version']
-        }))
-        // .pipe(sourcemaps.write('.'))
-        // .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/css/'))
-        .pipe(cssnano())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/css/'))
+        .pipe(gulp.dest(config.testFolder +config.testSecondFolder + '/css/'))
         .pipe(browserSync.reload({stream: true}))
 });
 
 //PUG FOR DOCS
 gulp.task('pug', function () {
     return gulp
-        .src(config.devFolder +'/pug/pages/**/*.pug')
+        .src(config.testFolder +'/**/*.pug')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(pug({
-                locals: {
-                    mainNav: JSON.parse(fs.readFileSync(config.devFolder +'/data/main-navigation.json', 'utf8')),
-
-                    docNavDev: JSON.parse(fs.readFileSync(config.devFolder +'/data/documentation/development.json', 'utf8')),
-                    docNavComp: JSON.parse(fs.readFileSync(config.devFolder +'/data/documentation/components.json', 'utf8')),
-
-                    logs: JSON.parse(fs.readFileSync(config.devFolder +'/data/changelog/logs.json', 'utf8')),
-                },
-                pretty: true
-            }
-        ))
-        .pipe(gulp.dest(config.buildFolder))
+        .pipe(pug({ pretty: true }))
+        .pipe(gulp.dest(config.testFolder))
         .on('end', browserSync.reload)
 });
 
@@ -128,24 +93,9 @@ gulp.task('script:dev', function() {
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(config.jsFolder))
-        .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/js'))
+
+        .pipe(gulp.dest(config.testFolder +config.testSecondFolder +'/js'))
         .pipe(browserSync.reload({stream: true}))
-});
-
-//IMG DOCS
-gulp.task('img:dev', function() {
-    return gulp
-        .src(config.devFolder +'/img/**/*.{jpg,JPG,gif,png,PNG,svg,ico}')
-        .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/img'));
-
-});
-
-//FONTS DOCS
-gulp.task('fonts', function() {
-    return gulp
-        .src(config.devFolder +'/fonts/**/*.*')
-        .pipe(gulp.dest(config.buildFolder +config.secondBuildFolder +'/fonts'));
-
 });
 
 
@@ -155,8 +105,8 @@ gulp.task('clean', function() {
     //UIMini
     return del.sync(config.cssFolder)
 
-    //DOCS
-    return del.sync(config.buildFolder)
+    //Test
+    return del.sync(config.testFolder)
 
 });
 
@@ -168,19 +118,16 @@ gulp.task('watch', function(){
     gulp.watch(config.stylusFolder +'/**/*.styl', ['style:dev']);
     gulp.watch(config.jsDevFolder +'/**/*.js', ['script:dev']);
 
-    //DOCS
-    gulp.watch(config.devFolder +'/pug/**/*.pug', ['pug']);
-    gulp.watch(config.devFolder +'/stylus/**/*.styl', ['styleDOCS:dev']);
-    gulp.watch(config.devFolder +'/img/**/*.img', ['img:dev']);
-
+    //Test
+    gulp.watch(config.testFolder +'/**/*.pug', ['pug']);
 });
 
 
-//SERVER DOCS
+//SERVER TEST
 gulp.task('serve', function() {
     browserSync({
         server:{
-            baseDir: config.buildFolder
+            baseDir: config.testFolder
         },
         // port: 8080,
         // open: true,
@@ -192,7 +139,7 @@ gulp.task('serve', function() {
 //MAIN TASK
 
 //DEV FOR UIMini & DOCS
-gulp.task('default', ['pug','styleDOCS:dev','style:dev','script:dev','fonts','img:dev','watch','serve']);
+gulp.task('default', ['pug','style:dev','script:dev','watch','serve']);
 
 //CLEAR CACHE
 gulp.task('cache', function() {
