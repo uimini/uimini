@@ -1,7 +1,7 @@
 {
   "name": "uimini",
   "description": "UIMini modern CSS framework based on Flexbox and Stylus",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "keywords": [
     "minimal",
     "mini",
@@ -51,7 +51,8 @@
     "gulp-uglifyjs": "^0.6.2",
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.5",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "natives": "^1.1.6"
   },
   "engines": {
     "node": ">=6"

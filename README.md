@@ -39,7 +39,7 @@ need to have Node.js and npm installed. I use Gulp to build UImini.
 $ git clone https://github.com/vedees/uimini.git
 $ cd uimini
 $ npm install
-$ npm start
+$ npm run start
 ```
 
 ## Browser Support
