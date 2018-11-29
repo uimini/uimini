@@ -1,11 +1,20 @@
-.button
+.button,
+button
 	display: inline-block
 	padding: button-padding
-	color #fff
-	text-align: center
-	white-space: nowrap
+	color button-color
+	text-align center
 	cursor pointer
-	font-size 18px
+	font-size button-font-size
+	//! Reset
+	white-space nowrap
+	user-select none
+	border none
+	// Common
+	letter-spacing normal
+	word-spacing normal
+	vertical-align top
+	text-rendering auto
 	@media screen and (max-width tableWidth)
 		font-size @font-size - 16%
 	@media screen and (max-width phoneWidth)
@@ -13,7 +22,9 @@
 
 	&:hover
 		opacity .8
+		outline 0
 
+	// BIG
 	&.button--big
 		font-size 22px
 		@media screen and (max-width tableWidth)
@@ -21,7 +32,7 @@
 		@media screen and (max-width phoneWidth)
 			font-size @font-size - 34%
 
-
+	//* LARGE
 	&.button--large
 		font-size 26px
 		@media screen and (max-width tableWidth)
@@ -29,90 +40,84 @@
 		@media screen and (max-width phoneWidth)
 			font-size @font-size - 36%
 
-
+	//* PLAIN
 	&.button--plain
 		background-color transparent
-
 		&:hover
 			color #fff
 
-
+	//* ROUND
 	&.button--round
 		border-radius: button--round-border-radius
 		padding .48em 1.2em
 
+	//* DISABLE
 	&.button--disable
+	&[disable]
 		opacity .6
-		cursor: not-allowed
-		background-image: none
+		//! Reset
+    cursor not-allowed
+    pointer-events none
+		background-image none
 
+//! Button style
+//* Default
 .button-default
 	color linkColor
 	border: 1px solid border-base
 	background-color default-color
-
 	&.button--plain
 		color linkColor
-
 		&:hover
 			background-color linkColor
 
+//* Primary
 .button-primary
 	background-color primary-color
-
 	&.button--plain
 		color primary-color
 		border: 1px solid primary-color
-
 		&:hover
 			background-color primary-color
 
-
+//* Success
 .button-success
 	background-color success-color
-
 	&.button--plain
 		color success-color
 		border: 1px solid success-color
-
 		&:hover
 			background-color success-color
 
-
-
+//* Danger
 .button-danger
 	background-color danger-color
-
 	&.button--plain
 		color danger-color
 		border: 1px solid danger-color
-
 		&:hover
 			background-color danger-color
 
+//* Warning
 .button-warning
 	background-color warning-color
-
 	&.button--plain
 		color warning-color
 		border: 1px solid warning-color
-
 		&:hover
 			background-color warning-color
 
+//* Light
 .button-light
 	background-color light-color
-
 	&.button--plain
 		color: light-color
 		border: 1px solid light-color
-
 		&:hover
 			background-color light-color
 
-
-// Another buttons:
-
+//! Another buttons:
+//* Close
 .button-close
 	display: inline-block
 	position: relative
@@ -122,7 +127,6 @@
 	cursor: pointer
 	opacity: .7
 	transition: mainTransition
-
 	&:hover
 		opacity: 1
 
@@ -138,10 +142,10 @@
 
 	&:before
 		transform: rotate(45deg)
-
 	&:after
 		transform: rotate(-45deg)
 
+//* Burget
 .button-burger
 	position: relative
 	width: 34px
@@ -149,7 +153,6 @@
 	transform: rotate(0deg)
 	transition: .5s ease-in-out
 	cursor: pointer;
-
 	&:hover,
 	&:focus
 		.line-1
@@ -165,6 +168,7 @@
 		.line-3
 			transform: translateY(-8.33px) translateX(0) rotate(-45deg);
 
+	// Burger Line
 	.line
 		display: block
 		position: absolute
@@ -180,11 +184,10 @@
 		&.line--white
 			background-color: #fff
 
+	// Center
 	.line-1
 		top: 0%
-
 	.line-2
 		top: 50%
-
 	.line-3
 		top: 100%

@@ -1,4 +1,4 @@
-/* UImini v1.1.1 | MIT License | github.com/vedees/uimini */
+/* UImini v1.1.2 | MIT License | github.com/vedees/uimini */
 html,
 body,
 p,
@@ -981,67 +981,95 @@ section,
 .ui-table.ui-table--hover tbody tr:hover {
   background-color: #f2f6fc;
 }
-.button {
+.button,
+button {
   display: inline-block;
   padding: 0.4em 1em;
   color: #fff;
   text-align: center;
-  white-space: nowrap;
   cursor: pointer;
   font-size: 18px;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: none;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
 }
 @media screen and (max-width: 768px) {
-  .button {
+  .button,
+  button {
     font-size: 15.120000000000001px;
   }
 }
 @media screen and (max-width: 480px) {
-  .button {
+  .button,
+  button {
     font-size: 13.68px;
   }
 }
-.button:hover {
+.button:hover,
+button:hover {
   opacity: 0.8;
+  outline: 0;
 }
-.button.button--big {
+.button.button--big,
+button.button--big {
   font-size: 22px;
 }
 @media screen and (max-width: 768px) {
-  .button.button--big {
+  .button.button--big,
+  button.button--big {
     font-size: 16.28px;
   }
 }
 @media screen and (max-width: 480px) {
-  .button.button--big {
+  .button.button--big,
+  button.button--big {
     font-size: 14.52px;
   }
 }
-.button.button--large {
+.button.button--large,
+button.button--large {
   font-size: 26px;
 }
 @media screen and (max-width: 768px) {
-  .button.button--large {
+  .button.button--large,
+  button.button--large {
     font-size: 18.72px;
   }
 }
 @media screen and (max-width: 480px) {
-  .button.button--large {
+  .button.button--large,
+  button.button--large {
     font-size: 16.64px;
   }
 }
-.button.button--plain {
+.button.button--plain,
+button.button--plain {
   background-color: transparent;
 }
-.button.button--plain:hover {
+.button.button--plain:hover,
+button.button--plain:hover {
   color: #fff;
 }
-.button.button--round {
+.button.button--round,
+button.button--round {
   border-radius: 1.2em;
   padding: 0.48em 1.2em;
 }
-.button.button--disable {
+.button.button--disable,
+button.button--disable,
+.button[disable],
+button[disable] {
   opacity: 0.6;
-  cursor: not-allowed;
+}
+cursor not-allowed,
+pointer-events none {
   background-image: none;
 }
 .button-default {
