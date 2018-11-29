@@ -880,9 +880,6 @@ section,
 .navbar-list__wrapper .navbar-item {
   padding-right: 20px;
 }
-.navbar-list__wrapper .navbar-item:last-child {
-  padding-right: 20px;
-}
 .navbar-item,
 .navbar-link {
   display: block;

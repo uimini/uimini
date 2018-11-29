@@ -2,21 +2,11 @@
   "name": "uimini",
   "description": "UIMini modern CSS framework based on Flexbox and Stylus",
   "version": "1.1.1",
-  "keywords": [
-    "minimal",
-    "mini",
-    "ui",
-    "responsive",
-    "framework",
-    "flexbox",
-    "stylus",
-    "css",
-    "js"
-  ],
   "homepage": "https://uimini.vedees.ru",
   "author": "https://github.com/vedees",
   "scripts": {
     "start": "gulp",
+    "dev": "gulp",
     "build": "gulp build",
     "test": "gulp test"
   },
@@ -64,5 +54,16 @@
     "gulpfile.js",
     "LICENSE",
     "README.md"
+  ],
+  "keywords": [
+    "minimal",
+    "mini",
+    "ui",
+    "responsive",
+    "framework",
+    "flexbox",
+    "stylus",
+    "css",
+    "js"
   ]
 }
