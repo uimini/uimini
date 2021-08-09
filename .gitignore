@@ -62,8 +62,8 @@ jspm_packages/
 # dotenv environment variables file
 #.env
 
-# production
-/dist
+# dist
+dist2
 
 # IDE (coz i wanna keep my settup)
 # .idea
