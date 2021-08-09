@@ -1,18 +1,28 @@
 {
   "name": "uimini",
-  "description": "UIMini modern CSS framework based on Flexbox and Stylus",
+  "description": "ui mini modern CSS framework based on flexbox and stylus",
   "version": "1.1.3",
+  "keywords": [
+    "minimal",
+    "mini",
+    "ui",
+    "mobile-first",
+    "responsive",
+    "framework",
+    "web",
+    "css"
+  ],
   "homepage": "https://uimini.vedees.ru",
   "author": "https://github.com/vedees",
   "scripts": {
     "start": "gulp",
     "dev": "gulp",
     "build": "gulp build",
-    "test": "gulp test"
+    "deploy": "bash ./deploy.sh",
+    "test": "jest"
   },
-  "style": "dist/css/uimini.min.css",
+  "style": "dist/css/uimini.css",
   "styl": "src/stylus/main.styl",
-  "main": "dist/js/uimini",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vedees/uimini.git"
@@ -44,26 +54,9 @@
     "jshint-stylish": "^2.2.1",
     "natives": "^1.1.6"
   },
-  "engines": {
-    "node": ">=6"
-  },
   "files": [
-    "dist/{css,js}/*.{css,js,map}",
-    "src/{stylus,js}/**/*.{styl,js,map}",
-    "test/**/**/*.{css,js,html,pug}",
-    "gulpfile.js",
-    "LICENSE",
-    "README.md"
-  ],
-  "keywords": [
-    "minimal",
-    "mini",
-    "ui",
-    "responsive",
-    "framework",
-    "flexbox",
-    "stylus",
-    "css",
-    "js"
+    "dist/{css,js}/*.{css,js}",
+    "src/{stylus,js}/**/*.{styl,js}",
+    "test/**/**/*.{css,js,html,pug}"
   ]
 }
