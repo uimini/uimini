@@ -1,18 +1,22 @@
-[![uimini banner](https://uimini.vedees.ru/git_logo_uimini.png)](https://uimini.vedees.ru/)
+[![uimini banner](https://vedegis.com/uploads/uimini/meta-v1-1.png)](https://uimini.vedees.ru/)
 
-# UImini
+# Uimini v1
 
-UImini is a modern responsive CSS framework based on Flexbox. Full responsive and available for free
+Uimini is a modern responsive CSS framework based on Flexbox. Full responsive and available for free
 
 [![Travis (.org)](https://img.shields.io/travis/vedees/uimini.svg?style=popout-square)](https://travis-ci.org/vedees/uimini) [![npm](https://img.shields.io/npm/v/uimini.svg?style=popout-square)](https://www.npmjs.com/package/uimini) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://www.npmjs.com/package/uimini)
 
 ## Getting started
 
-You have the following options to get UImini:
+You have the following options to get uimini:
 
-**Latest release**
+**v1 release**
 
-Download the [latest release](https://github.com/vedees/uimini/releases/latest) with pre-built CSS and JS.
+Download [v1 release](https://github.com/vedees/uimini/archive/refs/tags/v1.zip) with pre-built CSS and JS.
+
+**v1 assets**
+
+Or just download assets with pre-built CSS and JS of v1 release [click here](https://vedegis.com/uploads/uimini/v1-stable-assets.zip).
 
 **NPM**
 
@@ -32,8 +36,16 @@ $ yarn add uimini
 
 **Build From Source**
 
-Optionally, you can build UImini from its source on Github. To do this, you'll
-need to have Node.js and npm installed. I use Gulp to build UImini.
+Optionally, you can build uimini from its source on Github. To do this, you'll
+need to have Node.js and npm installed. I use Gulp to build uimini.
+
+```shell
+$ git clone https://github.com/vedees/uimini.git
+$ cd uimini
+$ yarn && yarn start
+```
+
+or
 
 ```shell
 $ git clone https://github.com/vedees/uimini.git
@@ -44,19 +56,15 @@ $ npm run start
 
 ## Browser Support
 
-UImini uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions. According to [Can I use](https://caniuse.com/#feat=flexbox), UImini is compatible with **recent** versions of:
+Uimini uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions. According to [Can I use](https://caniuse.com/#feat=flexbox), uimini is compatible with **recent** versions of:
 
-* Chrome
-* Firefox
-* Opera
-* Safari
-* Edge
-* Internet Explorer (10+)
-
-## Documentation
-
-Browse the [online documentation here.](https://uimini.vedees.ru/get-started)
+- Chrome
+- Firefox
+- Opera
+- Safari
+- Edge
+- Internet Explorer (10+)
 
 ### License
 
-UImini is [MIT licensed](./LICENSE).
+Uimini is [MIT licensed](./LICENSE).
