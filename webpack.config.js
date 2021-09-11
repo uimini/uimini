@@ -15,7 +15,7 @@ module.exports = {
     rules: [
       // stylus
       {
-        test: /\.styl$/,
+        test: /\.scss$/,
         use: [
           MiniCSSPlugin.loader,
           // 'style-loader',
@@ -34,7 +34,7 @@ module.exports = {
             }
           },
           {
-            loader: 'stylus-loader',
+            loader: 'sass-loader',
             options: {
               // outputStyle: 'expanded',
               // minimize: false,
