@@ -1,0 +1,90 @@
+.ui-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: rem(6) rem(12);
+  //
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  //
+  color: #212529;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.02);
+  background-color: transparent;
+  border: 1px solid transparent;
+  opacity: 0.92;
+  transition: $defaultTransition;
+  //
+  height: rem(38);
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active,
+  &.isActive {
+    opacity: 1;
+  }
+
+  &:disabled,
+  &.isDisabled,
+  fieldset:disabled & {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  //
+  // Buttons types:
+  //
+  &.isDefault {
+    border-color: var(--g-200);
+  }
+  &.isPrimary {
+    background-color: var(--primaryColor);
+    color: var(--g-0);
+  }
+  &.isSecondary {
+    background-color: var(--g-200);
+  }
+  &.isDangerous {
+    color: var(--g-0);
+    background-color: var(--dangerColor);
+  }
+  &.isWarning {
+    color: var(--g-0);
+    background-color: var(--warningColor);
+  }
+  &.isSuccess {
+    color: var(--g-0);
+    background-color: var(--successColor);
+  }
+
+  //
+  &.isLink {
+    color: var(--primaryColor);
+    border-color: transparent;
+    background: 0 0;
+    box-shadow: none;
+    opacity: 1;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &.isText {
+    border-color: transparent;
+    background: 0 0;
+    box-shadow: none;
+    opacity: 1;
+    &:hover {
+      background-color: var(--g-100);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// Size
+$mainFontSize: 18px;
+$mainLineHeight: 1.6;
+
+// default shadow
+$defaultBoxShadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+
+// Transition
+$modernTransition: transform 0.2s cubic-bezier(0.36, -0.24, 0.26, 1.32);
+$defaultTransition: all 150ms ease-in;
+$defaultTransitionSlow: all 300ms ease-in;
+
+// sizes
+
+$lgDesktopWidth: 1400px;
+$desktopWidth: 1280px;
+$smDesktopWidth: 1024px;
+$tableWidth: 768px;
+$smTableWidth: 640px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
