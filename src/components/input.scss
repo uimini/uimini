@@ -1,0 +1,49 @@
+/* Input
+   ========================================================================== */
+
+// sizes:
+$ui-input-width: 100%;
+$ui-input-min-height: 36px;
+$ui-input-padding: 7px 7px 7px 14px;
+$ui-input-font-size: 0.75rem; // todo: rem to em?
+
+// colors:
+$ui-input-bg: var(--g-0);
+$ui-input-color: inherit;
+$ui-input-border-color: rgba(0, 0, 0, 0.1);
+$ui-input-shadow: rgba(0, 0, 0, 0.04);
+
+.ui-input {
+  position: relative;
+
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rem(8);
+    font-size: 0.75rem;
+    line-height: rem(16);
+
+    &.isRequired {
+      &:after {
+        content: '*';
+        color: #ee5454;
+        margin-left: 2px;
+      }
+    }
+  }
+
+  input {
+    width: $ui-input-width;
+    min-height: $ui-input-min-height;
+    padding: $ui-input-padding;
+    line-height: 1.28;
+    font-size: ui-input-font-size;
+    border-radius: 3px;
+    color: $ui-input-color;
+    transition: border 0.2s;
+    -webkit-appearance: none;
+    background: $ui-input-bg;
+    border: 1px solid $ui-input-border-color;
+    box-shadow: 0 1px 2px 0 $ui-input-shadow;
+  }
+}
