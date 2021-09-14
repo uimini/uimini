@@ -45,7 +45,7 @@ $ui-checkbox-label-padding: 0.75em;
     }
 
     &:before {
-      // box
+      // checkbox
       width: $ui-checkbox-size;
       height: $ui-checkbox-size;
       background: var(--g-0);
@@ -55,9 +55,9 @@ $ui-checkbox-label-padding: 0.75em;
       transition: background 0.3s;
     }
 
-    &:after {
-      // checkmark
-    }
+    // &:after {
+    //   // checkmark
+    // }
   }
 
   input[type='checkbox'] {
