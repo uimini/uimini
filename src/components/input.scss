@@ -3,14 +3,14 @@
 
 // sizes:
 $ui-input-width: 100%;
-$ui-input-min-height: 36px;
-$ui-input-padding: 7px 7px 7px 14px;
+$ui-input-min-height: rem(38);
+$ui-input-padding: rem(8) rem(8) rem(8) rem(14);
 $ui-input-font-size: 0.75rem; // todo: rem to em?
 
 // colors:
 $ui-input-bg: var(--g-0);
 $ui-input-color: inherit;
-$ui-input-border-color: rgba(0, 0, 0, 0.1);
+$ui-input-border-color: rgba(0, 0, 0, 0.2);
 $ui-input-shadow: rgba(0, 0, 0, 0.04);
 
 .ui-input {
