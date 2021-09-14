@@ -1,3 +1,6 @@
+/* Mixins
+   ========================================================================== */
+
 // px to rem
 @function rem($pixels, $context: $mainFontSize) {
   @if (unitless($pixels)) {
