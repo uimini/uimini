@@ -1,2 +1,81 @@
-/* ? Switch
+/* Switch
    ========================================================================== */
+
+// size
+$switch-font-size: rem(16);
+$switch-width: 44px;
+$switch-height: 22px;
+$switch-switcher-size: 18px;
+
+// colors:
+$switch-bg-disabled-color: $defaultShadow;
+$switch-bg-enabled-color: var(--primaryColor);
+$switch-lever-disabled-color: #fff;
+$switch-lever-enabled-color: #fff;
+
+// Switch
+.ui-switch {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  font-size: $switch-font-size;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: $switch-width;
+    height: $switch-height;
+    opacity: 0;
+    z-index: 0;
+  }
+
+  // Unchecked
+  label {
+    display: block;
+    padding: 0 0 0 $switch-width;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: $switch-width;
+      height: $switch-height;
+      background-color: $switch-bg-disabled-color;
+      border-radius: 14px;
+      z-index: 1;
+      transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: $switch-switcher-size;
+      height: $switch-switcher-size;
+      background-color: $switch-lever-disabled-color;
+      border-radius: 14px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      z-index: 2;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-property: left, background-color;
+    }
+  }
+
+  // Checked
+  input:checked + label {
+    &:before {
+      background-color: $switch-bg-enabled-color;
+    }
+
+    &:after {
+      left: 22px;
+      background-color: $switch-lever-enabled-color;
+    }
+  }
+}
