@@ -10,8 +10,8 @@ $ui-input-font-size: 0.75rem; // todo: rem to em?
 // colors:
 $ui-input-bg: var(--g-0);
 $ui-input-color: inherit;
-$ui-input-border-color: rgba(0, 0, 0, 0.2);
-$ui-input-shadow: rgba(0, 0, 0, 0.04);
+$ui-input-border-color: $lightShadow;
+$ui-input-shadow: $tinyShadow;
 
 .ui-input {
   position: relative;

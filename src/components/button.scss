@@ -2,16 +2,16 @@
    ========================================================================== */
 
 // sizes:
-$ui-input-height: rem(38);
-$ui-input-padding: rem(6) rem(12);
-$ui-input-font-size: 0.75rem; // todo: rem to em?
+$ui-button-height: rem(38);
+$ui-button-padding: rem(6) rem(12);
+$ui-button-font-size: rem(16);
 
 // colors:
-$ui-input-bg: transparent;
-$ui-input-color: inherit;
-$ui-input-default-color: rgba(0, 0, 0, 0.1); // ? keep it todo
-$ui-input-border-color: transparent;
-$ui-input-shadow: rgba(0, 0, 0, 0.04);
+$ui-button-bg: transparent;
+$ui-button-color: inherit;
+$ui-button-default-color: $lightShadow;
+$ui-button-border-color: transparent;
+$ui-button-shadow: $tinyShadow;
 
 .ui-button {
   position: relative;
@@ -21,8 +21,8 @@ $ui-input-shadow: rgba(0, 0, 0, 0.04);
   flex-shrink: 0;
   font-weight: 400;
   line-height: 1.5;
-  height: $ui-input-height;
-  padding: $ui-input-padding;
+  height: $ui-button-height;
+  padding: $ui-button-padding;
   //
   cursor: pointer;
   -webkit-user-select: none;
@@ -30,10 +30,10 @@ $ui-input-shadow: rgba(0, 0, 0, 0.04);
   user-select: none;
   white-space: nowrap;
   //
-  color: $ui-input-color;
-  box-shadow: 0 1px 2px 0 $ui-input-shadow;
-  background-color: $ui-input-bg;
-  border: 1px solid $ui-input-border-color;
+  color: $ui-button-color;
+  box-shadow: 0 1px 2px 0 $ui-button-shadow;
+  background-color: $ui-button-bg;
+  border: 1px solid $ui-button-border-color;
   opacity: 0.92;
   transition: $defaultTransition;
 
@@ -59,14 +59,14 @@ $ui-input-shadow: rgba(0, 0, 0, 0.04);
   // Buttons types:
   //
   &.isDefault {
-    border-color: $ui-input-default-color;
+    border-color: $ui-button-default-color;
   }
   &.isPrimary {
     background-color: var(--primaryColor);
     color: var(--g-0);
   }
   &.isSecondary {
-    background-color: $ui-input-default-color;
+    background-color: $ui-button-default-color;
   }
   &.isDangerous {
     color: var(--g-0);
@@ -101,7 +101,7 @@ $ui-input-shadow: rgba(0, 0, 0, 0.04);
     opacity: 1;
     &:hover {
       opacity: 0.8;
-      background-color: $ui-input-default-color;
+      background-color: $ui-button-default-color;
     }
   }
 }

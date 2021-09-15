@@ -1,12 +1,15 @@
 /* Vars
    ========================================================================== */
 
-// Main sizes
+// Main sizes:
 $mainFontSize: 18px;
 $mainLineHeight: 1.6;
 
-// Shadows
-$defaultBoxShadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+// Shadows:
+$tinyShadow: rgba(0, 0, 0, 0.04);
+$lightShadow: rgba(0, 0, 0, 0.1);
+$defaultShadow: rgba(0, 0, 0, 0.2);
+$darkShadow: rgba(0, 0, 0, 0.3);
 
 // Transitions
 $modernTransition: transform 0.2s cubic-bezier(0.36, -0.24, 0.26, 1.32);

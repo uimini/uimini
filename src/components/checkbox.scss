@@ -9,10 +9,10 @@ $ui-checkbox-border-radius: 0.125em;
 
 // colors:
 $ui-checkbox-checked-color: var(--primaryColor);
-$ui-checkbox-border-color: rgba(0, 0, 0, 0.1);
-$ui-checkbox-border-color-disabled: rgba(0, 0, 0, 0.3);
-$ui-checkbox-checked-color-disabled: rgba(0, 0, 0, 0.3);
-$ui-checkbox-shadow: rgba(0, 0, 0, 0.04);
+$ui-checkbox-border-color: $lightShadow;
+$ui-checkbox-border-color-disabled: $darkShadow;
+$ui-checkbox-checked-color-disabled: $darkShadow;
+$ui-checkbox-shadow: $tinyShadow;
 
 // checkmark
 $ui-checkmark-width: 0.125em;
