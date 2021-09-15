@@ -11,6 +11,9 @@ $lightShadow: rgba(0, 0, 0, 0.1);
 $defaultShadow: rgba(0, 0, 0, 0.2);
 $darkShadow: rgba(0, 0, 0, 0.3);
 
+// todo rm
+$primaryColor: var(--primaryColor);
+
 // Transitions
 $modernTransition: transform 0.2s cubic-bezier(0.36, -0.24, 0.26, 1.32);
 $defaultTransition: all 150ms ease-in;

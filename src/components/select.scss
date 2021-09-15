@@ -1,2 +1,47 @@
 /* Select
    ========================================================================== */
+
+// sizes:
+$ui-select-min-width: rem(140);
+$ui-select-height: rem(38);
+$ui-select-font-size: rem(16);
+// colors:
+$ui-select-bg: var(--g-0);
+$ui-select-color: inherit;
+$ui-select-border-color: $lightShadow;
+$ui-select-focus-border-color: var(--primaryColor);
+$ui-select-shadow: $tinyShadow;
+
+.ui-select select {
+  width: 100%;
+  max-width: 100%;
+  min-width: $ui-select-min-width;
+  height: $ui-select-height;
+
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8' stroke='currentColor' %3E %3Cpath fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 3.73926L4.15176 7 8 3'/%3E %3C/svg%3E")
+    no-repeat right 15px top 50% !important;
+  background-color: $ui-select-bg;
+  appearance: none;
+  transition: border-color 0.1s linear;
+  border: 1px solid $ui-select-border-color;
+  font-size: $ui-select-font-size;
+  padding: rem(8) rem(44) rem(8) rem(8);
+  color: $ui-select-color;
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &.isSelected {
+    stroke: var(--primaryColor) !important;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8' stroke='currentColor' %3E %3Cpath fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 3.73926L4.15176 7 10 1'/%3E %3C/svg%3E") !important;
+  }
+  &.isLoading {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 50 50'%3E%3Cpath fill='currentColor' d='M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 25 25' to='360 25 25' dur='0.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E") !important;
+  }
+}
