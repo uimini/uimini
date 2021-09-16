@@ -98,7 +98,7 @@ li {
 .ui-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  @include margin(0 auto);
   min-height: 100vh;
 }
 
@@ -111,9 +111,10 @@ li {
 .ui-container {
   position: relative;
   flex: 0 0 auto;
-  margin: 0 auto;
   width: 100%;
-  padding: 0 16px;
+  @include padding(0 16px);
+  @include margin(0 auto);
+
   @media screen and (min-width: $lgDesktopWidth) {
     max-width: unset;
   }

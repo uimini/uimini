@@ -15,16 +15,13 @@ $switch-lever-enabled-color: #fff;
 
 // Switch
 .ui-switch {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  position: relative;
-
   font-size: $switch-font-size;
 
   input {
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position(absolute, 0 null null 0);
     min-width: $switch-width;
     height: $switch-height;
     opacity: 0;
@@ -39,9 +36,7 @@ $switch-lever-enabled-color: #fff;
 
     &:before {
       content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
+      @include position(absolute, 0 null null 0);
       min-width: $switch-width;
       height: $switch-height;
       background-color: $switch-bg-disabled-color;
@@ -52,11 +47,8 @@ $switch-lever-enabled-color: #fff;
 
     &:after {
       content: '';
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: $switch-switcher-size;
-      height: $switch-switcher-size;
+      @include position(absolute, 2px null null 2px);
+      @include size($switch-switcher-size);
       background-color: $switch-lever-disabled-color;
       border-radius: 14px;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),

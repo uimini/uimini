@@ -25,12 +25,12 @@ $ui-checkbox-label-padding: 0.75em;
   text-align: left;
 
   label {
-    cursor: pointer;
     display: inline;
-    line-height: $ui-checkbox-size;
-    vertical-align: top;
-    clear: both;
     padding-left: 1px;
+    clear: both;
+    vertical-align: top;
+    cursor: pointer;
+    line-height: $ui-checkbox-size;
 
     &:not(:empty) {
       padding-left: $ui-checkbox-label-padding;
@@ -39,15 +39,12 @@ $ui-checkbox-label-padding: 0.75em;
     &:before,
     &:after {
       content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
+      @include position(absolute, 0 null null 0);
     }
 
     &:before {
       // checkbox
-      width: $ui-checkbox-size;
-      height: $ui-checkbox-size;
+      @include size($ui-checkbox-size);
       background: var(--g-0);
       border: $ui-checkbox-border-width solid $ui-checkbox-border-color;
       border-radius: $ui-checkbox-border-radius;
@@ -61,14 +58,14 @@ $ui-checkbox-label-padding: 0.75em;
   }
 
   input[type='checkbox'] {
-    outline: 0;
-    visibility: hidden;
+    display: block;
     width: $ui-checkbox-size;
     margin: 0;
-    display: block;
     float: left;
     font-size: inherit;
     box-shadow: 0 1px 2px 0 $ui-checkbox-shadow;
+    outline: 0;
+    visibility: hidden;
 
     &:checked {
       + label:before {
@@ -83,9 +80,8 @@ $ui-checkbox-label-padding: 0.75em;
             ($ui-checkbox-size / 2) - ($ui-checkmark-size / 2.6)
           )
           rotate(-45deg);
-        width: $ui-checkmark-size;
-        height: $ui-checkmark-size / 2;
 
+        @include size($ui-checkmark-size, ($ui-checkmark-size / 2));
         border: $ui-checkmark-width solid $ui-checkmark-color;
         border-top-style: none;
         border-right-style: none;

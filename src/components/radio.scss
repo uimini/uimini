@@ -38,7 +38,6 @@ $ui-radio-border-color: $lightShadow;
     vertical-align: bottom;
     &:before,
     &:after {
-      // position: absolute;
       content: '';
       display: flex;
       align-items: center;
@@ -55,8 +54,7 @@ $ui-radio-border-color: $lightShadow;
       border: 2px solid $ui-radio-border-color;
     }
     &:after {
-      position: absolute;
-      left: ($ui-radio-checked-size / 2);
+      @include position(absolute, null null null ($ui-radio-checked-size / 2));
       width: $ui-radio-checked-size;
       height: $ui-radio-checked-size;
       transform: scale(0);

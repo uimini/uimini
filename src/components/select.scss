@@ -14,19 +14,19 @@ $ui-select-shadow: $tinyShadow;
 
 .ui-select select {
   width: 100%;
+  height: $ui-select-height;
   max-width: 100%;
   min-width: $ui-select-min-width;
-  height: $ui-select-height;
+  padding: rem(8) rem(44) rem(8) rem(8);
 
   background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8' stroke='currentColor' %3E %3Cpath fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 3.73926L4.15176 7 8 3'/%3E %3C/svg%3E")
     no-repeat right 15px top 50% !important;
   background-color: $ui-select-bg;
-  appearance: none;
-  transition: border-color 0.1s linear;
   border: 1px solid $ui-select-border-color;
   font-size: $ui-select-font-size;
-  padding: rem(8) rem(44) rem(8) rem(8);
   color: $ui-select-color;
+  appearance: none;
+  transition: border-color 0.1s linear;
 
   &:focus {
     box-shadow: none;
@@ -38,7 +38,6 @@ $ui-select-shadow: $tinyShadow;
   }
 
   &.isSelected {
-    stroke: var(--primaryColor) !important;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8' stroke='currentColor' %3E %3Cpath fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 3.73926L4.15176 7 10 1'/%3E %3C/svg%3E") !important;
   }
   &.isLoading {
