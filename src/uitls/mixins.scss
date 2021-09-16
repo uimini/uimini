@@ -12,6 +12,17 @@
   @return $pixels / $context * 1rem;
 }
 
+// px to rem
+@function minus-procent($pixels) {
+  // @if (unitless($pixels)) {
+  //   $pixels: $pixels * 1px;
+  // }
+  // @if (unitless($context)) {
+  //   $context: $context + '%';
+  // }
+  @return $pixels - 10% * 1px;
+}
+
 // size to one line
 @mixin size($width, $height: $width) {
   width: $width;

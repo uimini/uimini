@@ -1,0 +1,27 @@
+/* Text
+   ========================================================================== */
+
+.ui-text {
+  color: var(--g-990);
+  overflow-wrap: break-word;
+
+  &.isPrimary {
+    color: var(--primaryColor);
+  }
+  &.isSecondary {
+    color: var(--g-400);
+  }
+  &.isDangerous {
+    color: var(--dangerColor);
+  }
+  &.isWarning {
+    color: var(--warningColor);
+  }
+  &.isSuccess {
+    color: var(--successColor);
+  }
+  &.isMark {
+    color: black;
+    background-color: var(--markColor);
+  }
+}

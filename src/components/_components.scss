@@ -7,10 +7,14 @@
 @import './card';
 @import './checkbox';
 @import './input';
-@import './list';
 @import './radio';
 @import './select';
 @import './spin';
 @import './switch';
 @import './table';
 @import './tag';
+
+// typography
+@import './typography/title';
+@import './typography/text';
+@import './typography/list';
