@@ -11,15 +11,24 @@
   &.isSecondary {
     color: var(--g-400);
   }
-  &.isDangerous {
-    color: var(--dangerColor);
+
+  // statuses:
+  &.isSuccess {
+    color: var(--successColor);
   }
   &.isWarning {
     color: var(--warningColor);
   }
-  &.isSuccess {
-    color: var(--successColor);
+  &.isDangerous {
+    color: var(--dangerColor);
   }
+  &.isDisabled {
+    color: var(--g-200);
+    user-select: none;
+    cursor: not-allowed;
+  }
+
+  // others:
   &.isMark {
     color: black;
     background-color: var(--markColor);

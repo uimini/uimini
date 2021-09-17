@@ -1,6 +1,13 @@
 /* Components:
    ========================================================================== */
 
+// typography:
+@import './typography/link';
+@import './typography/list';
+@import './typography/text';
+@import './typography/title';
+
+// components:
 @import './badge';
 @import './button-group';
 @import './button';
@@ -13,8 +20,3 @@
 @import './switch';
 @import './table';
 @import './tag';
-
-// typography
-@import './typography/title';
-@import './typography/text';
-@import './typography/list';
