@@ -9,7 +9,6 @@
   <body>
     <div class="ui-wrapper">
       <div class="ui-content-wrapper">
-
         <section class="ui-section">
           <div class="ui-container">
             <span class="ui-tag">vue</span>
@@ -55,6 +54,9 @@
             <br />
             <h5 class="ui-title-5">title 5</h5>
             <p>some text</p>
+
+            <br />
+            <br />
 
             <div>
               <p class="ui-text">Text example</p>
@@ -224,26 +226,31 @@
             </div>
 
             <div style="width: 280px">
-                <select class="ui-select" name="select1">
-                  <option value="option1">option1</option>
-                  <option value="option2" selected>option2</option>
-                  <option value="option3">option3</option>
-                </select>
-                <br />
-                <br />
+              <select class="ui-select" name="select1">
+                <option value="option1">option1</option>
+                <option value="option2" selected>option2</option>
+                <option value="option3">option3</option>
+              </select>
 
-                <select  class="ui-select isSelected"name="select2">
-                  <option value="option1">option1</option>
-                  <option value="option2" selected>option2</option>
-                </select>
-                <br />
-                <br />
-                <select class="ui-select isLoading" name="select3">
-                  <option value="option1">option1</option>
-                  <option value="option2" selected>option2</option>
-                </select>
-              </div>
+              <br />
+              <br />
+
+              <select class="ui-select isSelected" name="select2">
+                <option value="option1">option1</option>
+                <option value="option2" selected>option2</option>
+              </select>
+
+              <br />
+              <br />
+
+              <select class="ui-select isLoading" name="select3">
+                <option value="option1">option1</option>
+                <option value="option2" selected>option2</option>
+              </select>
             </div>
+
+            <br />
+            <br />
 
             <div>
               <div class="ui-switch">
@@ -261,12 +268,33 @@
         <section class="ui-section">
           <div class="ui-container">
             <h2>Inputs</h2>
-            <div>
+            <form style="max-width: 400px">
               <div class="ui-input">
-                <label for="input-1">my label</label>
+                <label for="input-1">Default input</label>
                 <input id="input-1" type="text" value="" placeholder="hello" />
               </div>
-            </div>
+
+              <br />
+              <br />
+
+              <div class="ui-input">
+                <label for="input-2">Password input</label>
+                <input
+                  id="input-2"
+                  type="password"
+                  value=""
+                  placeholder="hello"
+                />
+              </div>
+
+              <br />
+              <br />
+
+              <div class="ui-input isRequired">
+                <label for="input-3">Required input</label>
+                <input id="input-3" type="text" value="" placeholder="hello" />
+              </div>
+            </form>
           </div>
         </section>
       </div>

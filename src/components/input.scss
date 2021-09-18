@@ -5,7 +5,9 @@
 $ui-input-width: 100%;
 $ui-input-min-height: rem(38);
 $ui-input-padding: rem(8) rem(8) rem(8) rem(14);
-$ui-input-font-size: 0.75rem; // todo: rem to em?
+$ui-input-border-radius: rem(4);
+$ui-input-label-font-size: rem(14); // todo: rem to em?
+$ui-input-text-font-size: rem(16); // todo: rem to em?
 
 // colors:
 $ui-input-bg: var(--g-0);
@@ -16,29 +18,27 @@ $ui-input-shadow: $tinyShadow;
 .ui-input {
   position: relative;
 
+  &.isRequired label {
+    &:after {
+      content: '*';
+      color: #ee5454;
+      padding-left: rem(4);
+    }
+  }
+
   label {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: rem(8);
-    font-size: 0.75rem;
-    line-height: rem(16);
-
-    &.isRequired {
-      &:after {
-        content: '*';
-        color: #ee5454;
-        margin-left: 2px;
-      }
-    }
+    font-size: $ui-input-label-font-size;
   }
 
   input {
     width: $ui-input-width;
     min-height: $ui-input-min-height;
     padding: $ui-input-padding;
-    line-height: 1.28;
-    font-size: ui-input-font-size;
-    border-radius: 3px;
+    border-radius: $ui-input-border-radius;
+    font-size: $ui-input-text-font-size;
     color: $ui-input-color;
     transition: border 0.2s;
     -webkit-appearance: none;

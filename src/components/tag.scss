@@ -27,12 +27,15 @@ $ui-tag-text-hover-decoration: underline;
     padding-right: rem(2);
   }
 
+  // statuses:
   &.isActive {
     text-decoration: $ui-tag-text-hover-decoration;
   }
+  // todo: disabled
 
   &.isBox {
     padding: 0 rem(8);
+    // todo: to vars
     background: #fafafa;
     border: 1px solid #d9d9d9;
     border-radius: rem(3);
