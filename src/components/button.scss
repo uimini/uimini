@@ -62,7 +62,7 @@ $ui-button-shadow: $tinyShadow;
     border-color: $ui-button-default-color;
   }
   &.isPrimary {
-    background-color: var(--primaryColor);
+    background-color: var(--ui-primary-color);
     color: var(--g-0);
   }
   &.isSecondary {
@@ -70,20 +70,20 @@ $ui-button-shadow: $tinyShadow;
   }
   &.isDangerous {
     color: var(--g-0);
-    background-color: var(--dangerColor);
+    background-color: var(--ui-danger-color);
   }
   &.isWarning {
     color: var(--g-0);
-    background-color: var(--warningColor);
+    background-color: var(--ui-warning-color);
   }
   &.isSuccess {
     color: var(--g-0);
-    background-color: var(--successColor);
+    background-color: var(--ui-success-color);
   }
 
   //
   &.isLink {
-    color: var(--primaryColor);
+    color: var(--ui-primary-color);
     border-color: transparent;
     background: 0 0;
     box-shadow: none;

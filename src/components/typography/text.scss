@@ -6,7 +6,7 @@
   overflow-wrap: break-word;
 
   &.isPrimary {
-    color: var(--primaryColor);
+    color: var(--ui-primary-color);
   }
   &.isSecondary {
     color: var(--g-400);
@@ -14,13 +14,13 @@
 
   // statuses:
   &.isSuccess {
-    color: var(--successColor);
+    color: var(--ui-success-color);
   }
   &.isWarning {
-    color: var(--warningColor);
+    color: var(--ui-warning-color);
   }
   &.isDangerous {
-    color: var(--dangerColor);
+    color: var(--ui-danger-color);
   }
   &.isDisabled {
     color: var(--g-200);
@@ -31,6 +31,6 @@
   // others:
   &.isMark {
     color: black;
-    background-color: var(--markColor);
+    background-color: var(--ui-mark-color);
   }
 }
