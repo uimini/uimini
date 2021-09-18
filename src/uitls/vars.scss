@@ -7,10 +7,13 @@ $mainFontSize: 18px;
 $mainLineHeight: 1.6;
 
 // Shadows:
-$tinyShadow: rgba(0, 0, 0, 0.04);
-$lightShadow: rgba(0, 0, 0, 0.1);
-$defaultShadow: rgba(0, 0, 0, 0.2);
-$darkShadow: rgba(0, 0, 0, 0.3);
+// $tinyShadow: rgba(0, 0, 0, 0.04);
+$tinyShadow: var(--g-100);
+// $lightShadow: rgba(0, 0, 0, 0.1);
+$lightShadow: var(--g-200);
+// $defaultShadow: rgba(0, 0, 0, 0.2);
+$defaultShadow: var(--g-400);
+$darkShadow: var(--g-500);
 
 // todo rm
 $primaryColor: var(--primaryColor);

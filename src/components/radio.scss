@@ -3,7 +3,7 @@
 
 // sizes:
 $ui-radio-size: 16px;
-$ui-radio-checked-size: 8px;
+$ui-radio-checked-size: $ui-radio-size / 2;
 $ui-radio-pulse-size: 2px;
 
 // colors:
@@ -51,7 +51,7 @@ $ui-radio-border-color: $lightShadow;
     &:before {
       width: $ui-radio-size;
       height: $ui-radio-size;
-      border: 2px solid $ui-radio-border-color;
+      border: 1px solid $ui-radio-border-color;
     }
     &:after {
       @include position(absolute, null null null ($ui-radio-checked-size / 2));
