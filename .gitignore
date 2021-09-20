@@ -11,9 +11,8 @@ npm-debug.log
 node_modules
 
 # dist
-docs-dev
-docs
-downloand
+dist/*.html
+dist/*.js
 
 # BD, logs
 *.log
@@ -61,9 +60,6 @@ jspm_packages/
 
 # dotenv environment variables file
 #.env
-
-# dist
-dist2
 
 # IDE (coz i wanna keep my settup)
 # .idea

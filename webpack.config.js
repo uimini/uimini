@@ -3,13 +3,15 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCSSPlugin = require('mini-css-extract-plugin')
 
+const distFolder = 'dist'
+
 module.exports = {
   entry: {
     uimini: path.resolve(__dirname, 'src', 'index.js')
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist2')
+    path: path.resolve(__dirname, distFolder)
   },
   module: {
     rules: [

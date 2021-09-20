@@ -1,6 +1,11 @@
 # give me access:
 # cd chmod 755 git-push.sh
 
+# build
+rm -rf dist
+npm run build
+
+# commit
 echo "Enter your message"
 read message
 git add .
