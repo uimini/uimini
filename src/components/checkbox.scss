@@ -16,7 +16,7 @@ $ui-checkbox-shadow: $tinyShadow;
 
 // checkmark
 $ui-checkmark-width: 0.125em;
-$ui-checkui-mark-color: var(--g-0);
+$ui-checkmark-color: var(--ui-g-0);
 $ui-checkbox-label-padding: 0.75em;
 
 .ui-checkbox {
@@ -45,7 +45,7 @@ $ui-checkbox-label-padding: 0.75em;
     &:before {
       // checkbox
       @include size($ui-checkbox-size);
-      background: var(--g-0);
+      background: var(--ui-g-0);
       border: $ui-checkbox-border-width solid $ui-checkbox-border-color;
       border-radius: $ui-checkbox-border-radius;
       cursor: pointer;
@@ -82,7 +82,7 @@ $ui-checkbox-label-padding: 0.75em;
           rotate(-45deg);
 
         @include size($ui-checkmark-size, ($ui-checkmark-size / 2));
-        border: $ui-checkmark-width solid $ui-checkui-mark-color;
+        border: $ui-checkmark-width solid $ui-checkmark-color;
         border-top-style: none;
         border-right-style: none;
       }

@@ -2,14 +2,14 @@
    ========================================================================== */
 
 .ui-text {
-  color: var(--g-990);
+  color: var(--ui-g-990);
   overflow-wrap: break-word;
 
   &.isPrimary {
     color: var(--ui-primary-color);
   }
   &.isSecondary {
-    color: var(--g-400);
+    color: var(--ui-g-400);
   }
 
   // statuses:
@@ -23,7 +23,7 @@
     color: var(--ui-danger-color);
   }
   &.isDisabled {
-    color: var(--g-200);
+    color: var(--ui-g-200);
     user-select: none;
     cursor: not-allowed;
   }

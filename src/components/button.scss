@@ -7,7 +7,7 @@ $ui-button-padding: rem(6) rem(12);
 $ui-button-font-size: rem(16);
 
 // colors:
-$ui-button-bg: transparent;
+$ui-button-bg: transparent; // todo rm ?
 $ui-button-color: inherit;
 $ui-button-default-color: $lightShadow;
 $ui-button-border-color: transparent;
@@ -55,33 +55,67 @@ $ui-button-shadow: $tinyShadow;
     opacity: 0.7;
   }
 
-  //
   // Buttons types:
-  //
   &.isDefault {
     border-color: $ui-button-default-color;
   }
   &.isPrimary {
     background-color: var(--ui-primary-color);
-    color: var(--g-0);
+    color: var(--ui-g-0);
   }
   &.isSecondary {
     background-color: $ui-button-default-color;
   }
   &.isDangerous {
-    color: var(--g-0);
+    color: var(--ui-g-0);
     background-color: var(--ui-danger-color);
   }
   &.isWarning {
-    color: var(--g-0);
+    color: var(--ui-g-0);
     background-color: var(--ui-warning-color);
   }
   &.isSuccess {
-    color: var(--g-0);
+    color: var(--ui-g-0);
     background-color: var(--ui-success-color);
   }
 
-  //
+  // inline
+  // todo: name?
+  &.isInline {
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.isPrimary {
+      color: var(--ui-primary-color);
+      border-color: var(--ui-primary-color);
+      background: var(--ui-g-0);
+    }
+    &.isSecondary {
+      color: var(--ui-button-default-color);
+      border-color: var(--ui-button-default-color);
+      background: var(--ui-g-0);
+    }
+    &.isDangerous {
+      color: var(--ui-danger-color);
+      border-color: var(--ui-danger-color);
+      background: var(--ui-g-0);
+    }
+    &.isWarning {
+      color: var(--ui-warning-color);
+      border-color: var(--ui-warning-color);
+      background: var(--ui-g-0);
+    }
+    &.isSuccess {
+      color: var(--ui-success-color);
+      border-color: var(--ui-success-color);
+      background: var(--ui-g-0);
+    }
+  }
+
+  // helpers:
   &.isLink {
     color: var(--ui-primary-color);
     border-color: transparent;
@@ -92,8 +126,6 @@ $ui-button-shadow: $tinyShadow;
       opacity: 0.8;
     }
   }
-
-  //
   &.isText {
     border-color: transparent;
     background: 0 0;
