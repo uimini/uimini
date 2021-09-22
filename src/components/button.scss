@@ -7,7 +7,7 @@ $ui-button-padding: rem(6) rem(12);
 $ui-button-font-size: rem(16);
 
 // colors:
-$ui-button-bg: transparent; // todo rm ?
+$ui-button-bg: var(--ui-g-0);
 $ui-button-color: inherit;
 $ui-button-default-color: $lightShadow;
 $ui-button-border-color: transparent;
@@ -79,39 +79,33 @@ $ui-button-shadow: $tinyShadow;
     background-color: var(--ui-success-color);
   }
 
-  // inline
-  // todo: name?
-  &.isInline {
+  // Outline
+  &.isOutline {
     opacity: 1;
+    background-color: transparent;
 
     &:hover {
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
     &.isPrimary {
       color: var(--ui-primary-color);
       border-color: var(--ui-primary-color);
-      background: var(--ui-g-0);
     }
     &.isSecondary {
-      color: var(--ui-button-default-color);
-      border-color: var(--ui-button-default-color);
-      background: var(--ui-g-0);
+      border-color: $ui-button-default-color;
     }
     &.isDangerous {
       color: var(--ui-danger-color);
       border-color: var(--ui-danger-color);
-      background: var(--ui-g-0);
     }
     &.isWarning {
       color: var(--ui-warning-color);
       border-color: var(--ui-warning-color);
-      background: var(--ui-g-0);
     }
     &.isSuccess {
       color: var(--ui-success-color);
       border-color: var(--ui-success-color);
-      background: var(--ui-g-0);
     }
   }
 

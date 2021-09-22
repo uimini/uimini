@@ -7,16 +7,10 @@ $mainFontSize: 18px;
 $mainLineHeight: 1.6;
 
 // Shadows:
-// $tinyShadow: rgba(0, 0, 0, 0.04);
 $tinyShadow: var(--ui-g-100);
-// $lightShadow: rgba(0, 0, 0, 0.1);
 $lightShadow: var(--ui-g-200);
-// $defaultShadow: rgba(0, 0, 0, 0.2);
 $defaultShadow: var(--ui-g-400);
 $darkShadow: var(--ui-g-500);
-
-// todo rm
-$ui-primary-color: var(--ui-primary-color);
 
 // Transitions
 $modernTransition: transform 0.2s cubic-bezier(0.36, -0.24, 0.26, 1.32);

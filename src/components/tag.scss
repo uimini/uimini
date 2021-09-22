@@ -3,10 +3,14 @@
 
 //  size:
 $ui-tag-font-size: rem(14);
+
 // colors:
 $ui-tag-color: var(--ui-primary-color);
 $ui-tag-text-decoration: none;
 $ui-tag-text-hover-decoration: underline;
+// box
+$ui-tag-box-border-color: $tinyShadow;
+$ui-tag-box-background-color: $tinyShadow;
 
 .ui-tag {
   display: inline-block;
@@ -31,13 +35,18 @@ $ui-tag-text-hover-decoration: underline;
   &.isActive {
     text-decoration: $ui-tag-text-hover-decoration;
   }
-  // todo: disabled
+
+  &:disabled,
+  &.isDisabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
 
   &.isBox {
     padding: 0 rem(8);
-    // todo: to vars
-    background: #fafafa;
-    border: 1px solid #d9d9d9;
+    background-color: $ui-tag-box-background-color;
+    border: 1px solid $ui-tag-box-border-color;
     border-radius: rem(3);
     color: inherit;
     cursor: pointer;

@@ -6,8 +6,8 @@ $ui-input-width: 100%;
 $ui-input-min-height: rem(38);
 $ui-input-padding: rem(8) rem(8) rem(8) rem(14);
 $ui-input-border-radius: rem(4);
-$ui-input-label-font-size: rem(14); // todo: rem to em?
-$ui-input-text-font-size: rem(16); // todo: rem to em?
+$ui-input-label-font-size: rem(14);
+$ui-input-text-font-size: rem(16);
 
 // colors:
 $ui-input-bg: var(--ui-g-0);
@@ -42,7 +42,7 @@ $ui-input-shadow: $tinyShadow;
     color: $ui-input-color;
     transition: border 0.2s;
     -webkit-appearance: none;
-    background: $ui-input-bg;
+    background-color: $ui-input-bg;
     border: 1px solid $ui-input-border-color;
     box-shadow: 0 1px 2px 0 $ui-input-shadow;
   }

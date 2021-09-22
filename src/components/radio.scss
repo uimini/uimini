@@ -11,10 +11,9 @@ $ui-radio-checked-color: var(--ui-primary-color);
 $ui-radio-border-color: $lightShadow;
 
 .ui-radio {
+  position: relative;
   display: flex;
   align-items: center;
-
-  margin: 6px 0; // todo rm
 
   input[type='radio'] {
     display: none;

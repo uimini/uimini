@@ -8,7 +8,6 @@ $ui-list-padding-left: 2em;
   display: block;
   padding-left: $ui-list-padding-left;
   margin-top: 0; // reset
-  margin-bottom: 16px; // todo rm
   li {
     position: relative;
     list-style-type: disc;
@@ -20,7 +19,6 @@ $ui-list-padding-left: 2em;
   position: relative;
   padding-left: $ui-list-padding-left;
   margin-top: 0; // reset
-  margin-bottom: 16px; // todo rm
   li {
     position: relative;
     list-style-type: decimal;

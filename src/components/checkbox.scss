@@ -2,8 +2,8 @@
    ========================================================================== */
 
 // sizes:
-$ui-checkbox-size: 1.25em;
-$ui-checkbox-padding: 0.25em;
+$ui-checkbox-size: rem(24);
+$ui-checkbox-padding: rem(4);
 $ui-checkbox-border-width: 1px;
 $ui-checkbox-border-radius: 0.125em;
 
@@ -15,14 +15,15 @@ $ui-checkbox-checked-color-disabled: $darkShadow;
 $ui-checkbox-shadow: $tinyShadow;
 
 // checkmark
-$ui-checkmark-width: 0.125em;
+$ui-checkmark-width: rem(2.2);
 $ui-checkmark-color: var(--ui-g-0);
-$ui-checkbox-label-padding: 0.75em;
+$ui-checkbox-label-margin: rem(14);
 
 .ui-checkbox {
   position: relative;
-  margin: 14px 0; // todo: remove it
-  text-align: left;
+  display: flex;
+  align-items: center;
+  // text-align: left;
 
   label {
     display: inline;
@@ -33,7 +34,7 @@ $ui-checkbox-label-padding: 0.75em;
     line-height: $ui-checkbox-size;
 
     &:not(:empty) {
-      padding-left: $ui-checkbox-label-padding;
+      margin-left: $ui-checkbox-label-margin;
     }
 
     &:before,
@@ -45,16 +46,12 @@ $ui-checkbox-label-padding: 0.75em;
     &:before {
       // checkbox
       @include size($ui-checkbox-size);
-      background: var(--ui-g-0);
+      background-color: var(--ui-g-0);
       border: $ui-checkbox-border-width solid $ui-checkbox-border-color;
       border-radius: $ui-checkbox-border-radius;
       cursor: pointer;
       transition: background 0.3s;
     }
-
-    // &:after {
-    //   // checkmark
-    // }
   }
 
   input[type='checkbox'] {
@@ -69,7 +66,7 @@ $ui-checkbox-label-padding: 0.75em;
 
     &:checked {
       + label:before {
-        background: $ui-checkbox-checked-color;
+        background-color: $ui-checkbox-checked-color;
         border: none;
       }
       + label:after {
@@ -88,13 +85,14 @@ $ui-checkbox-label-padding: 0.75em;
       }
     }
 
-    &:disabled {
+    &:disabled,
+    &.isDisabled {
       + label:before {
         border-color: $ui-checkbox-border-color-disabled;
       }
       &:checked {
         + label:before {
-          background: $ui-checkbox-checked-color-disabled;
+          background-color: $ui-checkbox-checked-color-disabled;
         }
       }
     }
