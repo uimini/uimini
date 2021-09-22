@@ -4,10 +4,11 @@
 $ui-button-group-space: rem(14);
 
 .ui-button-group {
-  display: inline-flex;
+  display: flex;
   align-items: center;
 
-  .ui-button {
+  .ui-button,
+  .ui-tag {
     margin-right: $ui-button-group-space;
     &:last-child {
       margin-right: 0;
@@ -15,11 +16,13 @@ $ui-button-group-space: rem(14);
   }
 
   &.isVertical {
+    display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 
-    .ui-button {
+    .ui-button,
+    .ui-tag {
       width: 100%;
       margin-bottom: $ui-button-group-space;
       &:last-child {
@@ -29,7 +32,8 @@ $ui-button-group-space: rem(14);
   }
 
   &.isInline {
-    .ui-button {
+    .ui-button,
+    .ui-tag {
       margin: 0 !important;
     }
   }
