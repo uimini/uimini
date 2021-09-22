@@ -20,6 +20,7 @@
     "build": "webpack --mode production",
     "deploy": "bash ./deploy.sh",
     "git": "bash ./lazy.sh",
+    "build:doc": "bash ./build-doc.sh",
     "test": "jest"
   },
   "style": "dist/css/uimini.css",
