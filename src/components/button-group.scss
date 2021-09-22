@@ -1,2 +1,36 @@
 /* Button group
    ========================================================================== */
+
+$ui-button-group-space: rem(14);
+
+.ui-button-group {
+  display: inline-flex;
+  align-items: center;
+
+  .ui-button {
+    margin-right: $ui-button-group-space;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.isVertical {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .ui-button {
+      width: 100%;
+      margin-bottom: $ui-button-group-space;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.isInline {
+    .ui-button {
+      margin: 0 !important;
+    }
+  }
+}
