@@ -18,22 +18,31 @@ $ui-input-group-space: rem(16);
     }
   }
 
-  &.isVertical {
-    flex-direction: column;
+  &.isHorizontal {
+    display: inline-flex;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: center;
 
-    .ui-button {
+    .ui-input,
+    .ui-checkbox,
+    .ui-radio,
+    .ui-select,
+    .ui-switch {
       width: 100%;
-      margin-bottom: $ui-button-group-space;
+      margin-right: $ui-button-group-space;
       &:last-child {
-        margin-bottom: 0;
+        margin-right: 0;
       }
     }
   }
 
   &.isInline {
-    .ui-button {
+    .ui-input,
+    .ui-checkbox,
+    .ui-radio,
+    .ui-select,
+    .ui-switch {
       margin: 0 !important;
     }
   }
