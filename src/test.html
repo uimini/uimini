@@ -244,7 +244,7 @@
           <div class="ui-container">
             <h2>Controls:</h2>
 
-            <div>
+            <div class="ui-input-group">
               <div class="ui-radio">
                 <input id="radio1" type="radio" name="radio" checked />
                 <label for="radio1">Option 1</label>
@@ -264,7 +264,7 @@
               </div>
             </div>
 
-            <div>
+            <div class="ui-input-group">
               <div class="ui-checkbox">
                 <input id="checkbox1" type="checkbox" checked />
                 <label for="checkbox1">Checkbox 1</label>
@@ -293,23 +293,17 @@
               </div>
             </div>
 
-            <div style="width: 280px">
+            <div class="ui-input-group" style="width: 280px">
               <select class="ui-select" name="select1">
                 <option value="option1">option1</option>
                 <option value="option2" selected>option2</option>
                 <option value="option3">option3</option>
               </select>
 
-              <br />
-              <br />
-
               <select class="ui-select isSelected" name="select2">
                 <option value="option1">option1</option>
                 <option value="option2" selected>option2</option>
               </select>
-
-              <br />
-              <br />
 
               <select class="ui-select isLoading" name="select3">
                 <option value="option1">option1</option>
@@ -320,7 +314,7 @@
             <br />
             <br />
 
-            <div>
+            <div class="ui-input-group">
               <div class="ui-switch">
                 <input type="checkbox" id="switch1" checked />
                 <label for="switch1">Switch 1</label>
@@ -336,31 +330,38 @@
         <section class="ui-section">
           <div class="ui-container">
             <h2>Inputs</h2>
+
             <form style="max-width: 400px">
-              <div class="ui-input">
-                <label for="input-1">Default input</label>
-                <input id="input-1" type="text" value="" placeholder="hello" />
-              </div>
+              <div class="ui-input-group">
+                <div class="ui-input">
+                  <label for="input-1">Default input</label>
+                  <input
+                    id="input-1"
+                    type="text"
+                    value=""
+                    placeholder="hello"
+                  />
+                </div>
 
-              <br />
-              <br />
+                <div class="ui-input">
+                  <label for="input-2">Password input</label>
+                  <input
+                    id="input-2"
+                    type="password"
+                    value=""
+                    placeholder="hello"
+                  />
+                </div>
 
-              <div class="ui-input">
-                <label for="input-2">Password input</label>
-                <input
-                  id="input-2"
-                  type="password"
-                  value=""
-                  placeholder="hello"
-                />
-              </div>
-
-              <br />
-              <br />
-
-              <div class="ui-input isRequired">
-                <label for="input-3">Required input</label>
-                <input id="input-3" type="text" value="" placeholder="hello" />
+                <div class="ui-input isRequired">
+                  <label for="input-3">Required input</label>
+                  <input
+                    id="input-3"
+                    type="text"
+                    value=""
+                    placeholder="hello"
+                  />
+                </div>
               </div>
             </form>
           </div>

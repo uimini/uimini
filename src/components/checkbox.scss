@@ -6,6 +6,7 @@ $ui-checkbox-size: rem(24);
 $ui-checkbox-padding: rem(4);
 $ui-checkbox-border-width: 1px;
 $ui-checkbox-border-radius: 0.125em;
+$ui-checkbox-label-margin: rem(14);
 
 // colors:
 $ui-checkbox-checked-color: var(--ui-primary-color);
@@ -17,13 +18,12 @@ $ui-checkbox-shadow: $tinyShadow;
 // checkmark
 $ui-checkmark-width: rem(2.2);
 $ui-checkmark-color: var(--ui-g-0);
-$ui-checkbox-label-margin: rem(14);
 
 .ui-checkbox {
   position: relative;
   display: flex;
   align-items: center;
-  // text-align: left;
+  min-height: $ui-checkbox-size;
 
   label {
     display: inline;
@@ -31,7 +31,6 @@ $ui-checkbox-label-margin: rem(14);
     clear: both;
     vertical-align: top;
     cursor: pointer;
-    line-height: $ui-checkbox-size;
 
     &:not(:empty) {
       margin-left: $ui-checkbox-label-margin;

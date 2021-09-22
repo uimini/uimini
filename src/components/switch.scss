@@ -6,6 +6,7 @@ $switch-font-size: rem(16);
 $switch-width: 44px;
 $switch-height: 22px;
 $switch-switcher-size: 18px;
+$ui-switch-label-margin: rem(14);
 
 // colors:
 $switch-bg-disabled-color: $defaultShadow;
@@ -33,6 +34,10 @@ $switch-lever-enabled-color: #fff;
     display: block;
     padding: 0 0 0 $switch-width;
     cursor: pointer;
+
+    &:not(:empty) {
+      margin-left: $ui-switch-label-margin;
+    }
 
     &:before {
       content: '';

@@ -14,6 +14,7 @@ $ui-radio-border-color: $lightShadow;
   position: relative;
   display: flex;
   align-items: center;
+  min-height: $ui-radio-size;
 
   input[type='radio'] {
     display: none;
@@ -27,10 +28,9 @@ $ui-radio-border-color: $lightShadow;
   }
 
   label {
+    position: relative;
     display: inline-flex;
     align-items: center;
-    position: relative;
-    min-height: $ui-radio-size;
     // padding: 0 ($ui-radio-size + 10px);
     margin-bottom: 0;
     cursor: pointer;

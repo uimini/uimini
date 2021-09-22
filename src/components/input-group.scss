@@ -1,0 +1,40 @@
+/* Input group
+   ========================================================================== */
+
+$ui-input-group-space: rem(16);
+
+.ui-input-group {
+  display: flex;
+  flex-direction: column;
+
+  .ui-input,
+  .ui-checkbox,
+  .ui-radio,
+  .ui-select,
+  .ui-switch {
+    margin-bottom: $ui-button-group-space;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.isVertical {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .ui-button {
+      width: 100%;
+      margin-bottom: $ui-button-group-space;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.isInline {
+    .ui-button {
+      margin: 0 !important;
+    }
+  }
+}

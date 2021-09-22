@@ -6,6 +6,7 @@ $ui-input-width: 100%;
 $ui-input-min-height: rem(38);
 $ui-input-padding: rem(8) rem(8) rem(8) rem(14);
 $ui-input-border-radius: rem(4);
+$ui-input-label-margin-bottom: rem(6);
 $ui-input-label-font-size: rem(14);
 $ui-input-text-font-size: rem(16);
 
@@ -29,7 +30,7 @@ $ui-input-shadow: $tinyShadow;
   label {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: rem(8);
+    margin-bottom: $ui-input-label-margin-bottom;
     font-size: $ui-input-label-font-size;
   }
 
