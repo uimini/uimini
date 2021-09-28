@@ -123,6 +123,8 @@ $ui-button-loader-bg-inverse-color: white; // todo to vars
   // statuses
   &:active,
   &.isActive {
+    cursor: default;
+    pointer-events: none;
     opacity: 1;
   }
   &:disabled,

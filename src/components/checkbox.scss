@@ -3,6 +3,7 @@
 
 // sizes:
 $ui-checkbox-size: rem(24);
+$ui-checkbox-font-size: rem(16);
 $ui-checkbox-padding: rem(4);
 $ui-checkbox-border-width: 1px;
 $ui-checkbox-border-radius: 0.125em;
@@ -24,6 +25,8 @@ $ui-checkmark-color: var(--ui-g-0);
   display: flex;
   align-items: center;
   min-height: $ui-checkbox-size;
+  font-size: $ui-checkbox-font-size;
+  user-select: none;
 
   label {
     display: inline;

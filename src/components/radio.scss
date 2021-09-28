@@ -3,6 +3,7 @@
 
 // sizes:
 $ui-radio-size: 16px;
+$ui-radio-font-size: rem(16);
 $ui-radio-checked-size: $ui-radio-size / 2;
 $ui-radio-pulse-size: 2px;
 
@@ -15,6 +16,8 @@ $ui-radio-border-color: $lightShadow;
   display: flex;
   align-items: center;
   min-height: $ui-radio-size;
+  font-size: $ui-radio-font-size;
+  user-select: none;
 
   input[type='radio'] {
     display: none;
