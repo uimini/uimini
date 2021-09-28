@@ -19,6 +19,7 @@ $ui-switch-lever-enabled-color: white;
   position: relative;
   display: inline-flex;
   align-items: center;
+  min-height: $ui-switch-height;
   font-size: $ui-switch-font-size;
   user-select: none;
 
@@ -65,8 +66,10 @@ $ui-switch-lever-enabled-color: white;
     }
   }
 
+  // todo: fix it
   // disabled status
   &.isDisabled label,
+  &.isDisabled,
   input:disabled + label,
   input.isDisabled + label {
     cursor: default;

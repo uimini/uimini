@@ -37,4 +37,15 @@ $ui-button-group-space: rem(14);
       margin: 0 !important;
     }
   }
+
+  // position helpers:
+  &.isReverse {
+    flex-direction: column-reverse;
+  }
+  &.isRight {
+    justify-content: flex-end;
+  }
+  &.isCenter {
+    justify-content: center;
+  }
 }
