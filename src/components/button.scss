@@ -127,6 +127,7 @@ $ui-button-loader-bg-inverse-color: white; // todo to vars
     pointer-events: none;
     opacity: 1;
   }
+  // disabled
   &:disabled,
   &.isDisabled,
   fieldset:disabled & {
