@@ -11,10 +11,10 @@ $ui-checkbox-label-margin: rem(14);
 
 // colors:
 $ui-checkbox-checked-color: var(--ui-primary-color);
-$ui-checkbox-border-color: $lightShadow;
-$ui-checkbox-border-color-disabled: $darkShadow;
-$ui-checkbox-checked-color-disabled: $darkShadow;
-$ui-checkbox-shadow: $tinyShadow;
+$ui-checkbox-border-color: var(--ui-g-200);
+$ui-checkbox-border-color-disabled: var(--ui-g-500);
+$ui-checkbox-checked-color-disabled: var(--ui-g-500);
+$ui-checkbox-shadow: var(--ui-g-100);
 
 // checkmark
 $ui-checkmark-width: rem(2.2);

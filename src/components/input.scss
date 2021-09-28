@@ -13,8 +13,8 @@ $ui-input-text-font-size: rem(16);
 // colors:
 $ui-input-bg: var(--ui-g-0);
 $ui-input-color: inherit;
-$ui-input-border-color: $lightShadow;
-$ui-input-shadow: $tinyShadow;
+$ui-input-border-color: var(--ui-g-200);
+$ui-input-shadow: var(--ui-g-100);
 
 .ui-input {
   position: relative;

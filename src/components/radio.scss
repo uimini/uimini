@@ -9,8 +9,8 @@ $ui-radio-pulse-size: 2px;
 
 // colors:
 $ui-radio-checked-color: var(--ui-primary-color);
-$ui-radio-border-color: $lightShadow;
-$ui-radio-disabled-border-color: $darkShadow;
+$ui-radio-border-color: var(--ui-g-200);
+$ui-radio-disabled-border-color: var(--ui-g-500);
 
 .ui-radio {
   position: relative;

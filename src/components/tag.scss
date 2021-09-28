@@ -9,8 +9,8 @@ $ui-tag-color: var(--ui-primary-color);
 $ui-tag-text-decoration: none;
 $ui-tag-text-hover-decoration: underline;
 // box
-$ui-tag-box-border-color: $tinyShadow;
-$ui-tag-box-background-color: $tinyShadow;
+$ui-tag-box-border-color: var(--ui-g-100);
+$ui-tag-box-background-color: var(--ui-g-100);
 
 .ui-tag {
   display: inline-block;

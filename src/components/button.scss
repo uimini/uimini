@@ -9,9 +9,9 @@ $ui-button-font-size: rem(16);
 // colors:
 $ui-button-bg: var(--ui-g-0);
 $ui-button-color: inherit;
-$ui-button-default-color: $lightShadow;
+$ui-button-default-color: var(--ui-g-200);
 $ui-button-border-color: transparent;
-$ui-button-shadow: $tinyShadow;
+$ui-button-shadow: var(--ui-g-100);
 $ui-button-loader-bg-color: rgba(131, 131, 131, 0.9);
 $ui-button-loader-bg-inverse-color: white; // todo to vars
 

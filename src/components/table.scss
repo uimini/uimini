@@ -7,8 +7,8 @@ $ui-table-td-padding: rem(14);
 
 // colors:
 $ui-table-background: transparent;
-$ui-table-hover-background: $tinyShadow;
-$ui-table-border-color: $tinyShadow;
+$ui-table-hover-background: var(--ui-g-100);
+$ui-table-border-color: var(--ui-g-100);
 
 .ui-table {
   width: 100%;

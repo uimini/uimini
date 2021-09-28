@@ -9,9 +9,9 @@ $ui-switch-switcher-size: 18px;
 $ui-switch-label-margin: rem(14);
 
 // colors:
-$ui-switch-bg-disabled-color: $defaultShadow;
+$ui-switch-bg-disabled-color: var(--ui-g-400);
 $ui-switch-bg-enabled-color: var(--ui-primary-color);
-$ui-switch-lever-disabled-color: $lightShadow;
+$ui-switch-lever-disabled-color: var(--ui-g-200);
 $ui-switch-lever-enabled-color: white;
 
 // Switch
