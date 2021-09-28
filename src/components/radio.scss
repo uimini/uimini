@@ -10,6 +10,7 @@ $ui-radio-pulse-size: 2px;
 // colors:
 $ui-radio-checked-color: var(--ui-primary-color);
 $ui-radio-border-color: $lightShadow;
+$ui-radio-disabled-border-color: $darkShadow;
 
 .ui-radio {
   position: relative;
@@ -60,7 +61,23 @@ $ui-radio-border-color: $lightShadow;
       width: $ui-radio-checked-size;
       height: $ui-radio-checked-size;
       transform: scale(0);
-      background: $ui-radio-checked-color;
+      background-color: $ui-radio-checked-color;
+    }
+  }
+
+  // disabled status
+  &.isDisabled label,
+  input:disabled + label,
+  input.isDisabled + label {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+
+    &:before {
+      border-color: $ui-radio-disabled-border-color !important;
+    }
+    &:after {
+      background-color: $ui-radio-disabled-border-color !important;
     }
   }
 }
