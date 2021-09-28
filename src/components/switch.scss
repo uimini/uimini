@@ -46,12 +46,13 @@ $ui-switch-lever-enabled-color: white;
       @include position(absolute, 0 null null 0);
       min-width: $ui-switch-width;
       height: $ui-switch-height;
-      background-color: $ui-switch-bg-enabled-color;
+      background-color: $ui-switch-bg-disabled-color;
       border-radius: 14px;
       z-index: 1;
       transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    // circle
     &:after {
       content: '';
       @include position(absolute, 2px null null 2px);
@@ -66,19 +67,13 @@ $ui-switch-lever-enabled-color: white;
     }
   }
 
-  // todo: fix it
   // disabled status
-  &.isDisabled label,
   &.isDisabled,
-  input:disabled + label,
-  input.isDisabled + label {
+  &.isDisabled + label,
+  input:disabled + label {
     cursor: default;
     pointer-events: none;
     opacity: 0.7;
-
-    &:before {
-      background-color: $ui-switch-bg-disabled-color !important;
-    }
   }
 
   // checked status

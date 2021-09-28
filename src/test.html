@@ -318,6 +318,7 @@
 
             <!-- Disabled group 1 -->
             <div class="ui-input-group">
+              <!-- #1 -->
               <div class="ui-radio">
                 <input
                   id="radio-Xi1"
@@ -327,12 +328,13 @@
                 />
                 <label for="radi-Xi1">Disabled 1</label>
               </div>
+              <!-- #2 -->
               <div class="ui-radio">
                 <input
                   id="radio-Xi2"
                   type="radio"
                   name="radio"
-                  class="isDisabled"
+                  disabled="disabled"
                 />
                 <label for="radi-Xi2">Disabled 2</label>
               </div>
@@ -340,20 +342,16 @@
 
             <br />
 
-            <!-- Disabled group 2 -->
+            <!-- Disabled group 2 with isDisabled class -->
             <div class="ui-input-group">
+              <!-- #1 -->
               <div class="ui-radio isDisabled">
                 <input id="radio-Xi3" type="radio" name="radio" />
                 <label for="radi-Xi3">Disabled 1</label>
               </div>
-              <div class="ui-radio">
-                <input
-                  id="radio-Xi4"
-                  type="radio"
-                  name="radio"
-                  disabled
-                  checked
-                />
+              <!-- #2 -->
+              <div class="ui-radio isDisabled">
+                <input id="radio-Xi4" type="radio" name="radio" checked />
                 <label for="radi-Xi4">Disabled 2 + checked </label>
               </div>
             </div>
@@ -390,6 +388,9 @@
               </div>
             </div>
 
+            <br />
+            <br />
+
             <div class="ui-input-group" style="width: 280px">
               <select class="ui-select" name="select1">
                 <option value="option1">option1</option>
@@ -407,6 +408,9 @@
                 <option value="option2" selected>option2</option>
               </select>
             </div>
+
+            <br />
+            <br />
 
             <div class="ui-input-group isHorizontal" style="width: 480px">
               <select class="ui-select" name="select33">
@@ -433,18 +437,7 @@
               </div>
               <div class="ui-switch">
                 <input type="checkbox" id="switch2" />
-                <label for="switch2">Switch 1</label>
-              </div>
-            </div>
-
-            <div class="ui-input-group isHorizontal">
-              <div class="ui-switch">
-                <input type="checkbox" id="switch3" checked />
-                <label for="switch3">Switch 1</label>
-              </div>
-              <div class="ui-switch">
-                <input type="checkbox" id="switch4" />
-                <label for="switch4">Switch 1</label>
+                <label for="switch2">Switch 2</label>
               </div>
             </div>
 
@@ -455,10 +448,6 @@
               <div class="ui-switch">
                 <input type="checkbox" id="switch-a23" disabled="disabled" />
                 <label for="switch-a23">Disabled 1</label>
-              </div>
-              <div class="ui-switch">
-                <input class="isDisabled" type="checkbox" id="switch-a231" />
-                <label for="switch-a231">Disabled 2</label>
               </div>
               <div class="ui-switch isDisabled">
                 <input type="checkbox" id="switch-aXa" />
