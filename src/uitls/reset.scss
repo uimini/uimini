@@ -89,6 +89,29 @@ video {
   vertical-align: baseline;
 }
 
+// base reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+b,
+strong {
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 // Links
 a {
   text-decoration: none;

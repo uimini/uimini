@@ -31,18 +31,12 @@ $ui-tag-box-background-color: var(--ui-g-100);
     padding-right: rem(2);
   }
 
-  // statuses:
+  // active status:
   &.isActive {
     text-decoration: $ui-tag-text-hover-decoration;
   }
 
-  &:disabled,
-  &.isDisabled {
-    cursor: default;
-    pointer-events: none;
-    opacity: 0.7;
-  }
-
+  // box View
   &.isBox {
     padding: 0 rem(8);
     background-color: $ui-tag-box-background-color;
@@ -57,10 +51,19 @@ $ui-tag-box-background-color: var(--ui-g-100);
       display: none;
     }
 
+    // active status:
     &.isActive {
       color: var(--ui-g-0);
       background-color: $ui-tag-color;
       text-decoration: none;
     }
+  }
+
+  // disabled status:
+  &:disabled,
+  &.isDisabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
   }
 }

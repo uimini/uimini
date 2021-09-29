@@ -1,0 +1,2 @@
+// main
+import '../main.scss'

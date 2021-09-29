@@ -7,7 +7,8 @@ const distFolder = 'dist'
 
 module.exports = {
   entry: {
-    uimini: path.resolve(__dirname, 'src', 'index.js')
+    uimini: path.resolve(__dirname, 'src', 'builds/default.js'),
+    uimini_no_reset: path.resolve(__dirname, 'src', 'builds/no-reset.js')
   },
   output: {
     filename: '[name].js',
