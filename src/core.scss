@@ -2,7 +2,7 @@
   Core styles:
   ========================================================================== */
 
-html {
+.ui-html {
   height: 100%;
   font-size: $mainFontSize;
   line-height: $mainLineHeight;
@@ -17,7 +17,7 @@ html {
   }
 }
 
-body {
+.ui-body {
   position: relative;
   height: 100%;
   margin: 0;
@@ -29,9 +29,9 @@ body {
   background-color: var(--ui-g-0);
 }
 
-html,
-body,
-.app-inner {
+.ui-html,
+.ui-body,
+.ui-app-inner {
   height: 100%;
   width: 100%;
   font-family: $mainFontFamily;
@@ -40,9 +40,7 @@ body,
   fill: currentcolor;
 }
 
-.app-html,
-.app-body,
-.app {
+.ui-app {
   position: relative;
   height: 100vh;
   overflow: hidden;

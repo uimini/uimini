@@ -1,21 +1,24 @@
 /* Default theme
    ========================================================================== */
 
-body {
-  // main colors:
-  --ui-primary-color: #1890ff;
-  --ui-success-color: #52c41a;
-  --ui-warning-color: #faad14;
-  --ui-mark-color: #ffe58f;
-  --ui-danger-color: #f5222d;
+.ui-body {
+  &.isDark {
+    // main colors:
+    --ui-primary-color: #1890ff;
+    --ui-success-color: #52c41a;
+    --ui-warning-color: #faad14;
+    --ui-mark-color: #ffe58f;
+    --ui-danger-color: #f5222d;
 
-  // gray
-  --ui-g-0: #141414;
-  --ui-g-10: #1e2844;
-  --ui-g-100: #9b9b9b;
-  --ui-g-200: #a8a8a8;
-  --ui-g-400: #c9c9c9;
-  --ui-g-500: #cfcfcf;
-  --ui-g-950: #fafafa;
-  --ui-g-999: #fdfdfd;
+    // gray
+    --ui-g-0: #141414;
+    --ui-g-10: #1e2844;
+    --ui-g-100: #9b9b9b;
+    --ui-g-200: #a8a8a8;
+    --ui-g-400: #c9c9c9;
+    --ui-g-500: #cfcfcf;
+    --ui-g-900: #e4e4e4;
+    --ui-g-950: #fafafa;
+    --ui-g-999: #fdfdfd;
+  }
 }
