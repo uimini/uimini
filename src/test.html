@@ -500,8 +500,49 @@
             </form>
           </div>
         </section>
-      </div>
 
+        <!-- disabled inputs -->
+        <section class="ui-section">
+          <div class="ui-container">
+            <form style="max-width: 400px">
+              <div class="ui-input-group">
+                <div class="ui-input">
+                  <label for="input-DaX1">Disabled input by default</label>
+                  <input
+                    id="input-DaX1"
+                    type="text"
+                    disabled="disabled"
+                    value=""
+                    placeholder="hello"
+                  />
+                </div>
+                <div class="ui-input isDisabled">
+                  <label for="input-DaX2">Disabled input by parent class</label>
+                  <input
+                    id="input-DaX2"
+                    type="text"
+                    value=""
+                    placeholder="hello"
+                  />
+                </div>
+                <div class="ui-input">
+                  <label for="input-DaX3"
+                    >Disabled input without placeholder</label
+                  >
+                  <input
+                    id="input-DaX3"
+                    type="text"
+                    disabled="disabled"
+                    value=""
+                    placeholder=""
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
       <footer></footer>
       <!-- end main wrapper -->
     </div>

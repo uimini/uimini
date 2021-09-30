@@ -19,14 +19,6 @@ $ui-input-shadow: var(--ui-g-100);
 .ui-input {
   position: relative;
 
-  &.isRequired label {
-    &:after {
-      content: '*';
-      color: #ee5454;
-      padding-left: rem(4);
-    }
-  }
-
   label {
     display: flex;
     flex-wrap: wrap;
@@ -46,5 +38,21 @@ $ui-input-shadow: var(--ui-g-100);
     background-color: $ui-input-bg;
     border: 1px solid $ui-input-border-color;
     box-shadow: 0 1px 2px 0 $ui-input-shadow;
+  }
+
+  // required status
+  &.isRequired label {
+    &:after {
+      content: '*';
+      color: #ee5454;
+      padding-left: rem(4);
+    }
+  }
+  // disabled status
+  &.isDisabled,
+  input:disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
   }
 }
