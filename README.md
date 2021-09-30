@@ -19,6 +19,14 @@
   <!-- <a href="https://uimini.github.io/docs/themes">Themes</a> -->
 </p>
 
+## Features
+
+- Css only: No JavaScript need it;
+- Lightweight: Only 4kb gzip (20kb by default) with zero dependencies;
+- Full responsive;
+- Powerful theme customization in every detail;
+- Easy combine with any frameworks from Bootstrap.css to React.js;
+- Enterprise-class UI designed for web applications.
 
 ## Table of contents
 
@@ -38,31 +46,36 @@
 - [Switch](https://uimini.github.io/docs/docs/switch.html)
 - [Input-group](https://uimini.github.io/docs/docs/input-group.html)
 
-## Getting started
+## Quick start
 
-You have the following options to get UImini:
+Several quick start options are available:
 
-**Latest release**
+- [Download the latest release](https://github.com/vedees/uimini/releases/latest) with pre-built CSS and JS.
+- Or clone the repo: `git clone https://github.com/vedees/uimini/`
+- Or install with [npm](https://www.npmjs.com/): `npm install uimini`
+- Or install with [yarn](https://yarnpkg.com/): `yarn add uimini`
 
-Download the [latest release](https://github.com/vedees/uimini/releases/latest) with pre-built CSS and JS.
+Read the [Getting started page](https://uimini.github.io/docs/docs/quick-start.html) for get more info.
 
-**NPM**
+## Status
 
-Install with [npm](https://npmjs.com)
+[![Travis (.org)](https://img.shields.io/travis/vedees/uimini.svg?style=popout-square)](https://travis-ci.org/vedees/uimini) [![npm](https://img.shields.io/npm/v/uimini.svg?style=popout-square)](https://www.npmjs.com/package/uimini) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://www.npmjs.com/package/uimini)
 
-```shell
-$ npm install uimini
-```
+## Browser Support
 
-**Yarn**
+Uimini uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions.
 
-Install with [yarn](https://yarnpkg.com/)
+Modern browsers and Internet Explorer 11 (no polyfills):
 
-```shell
-$ yarn add uimini
-```
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>IE / Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /></br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /></br>Opera |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IE10+, Edge<br/> (2012+)                                                                                                                                    | 2.21+<br/>(2006+)                                                                                                                                             | 4-20+<br/>(2010+)                                                                                                                                         | 3.1-6+<br/>(2008+)                                                                                                                                        | 12.1+<br/>(2012+)                                                                                                                                     |
 
-**Build From Source**
+## Bugs and feature requests
+
+If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
+
+## Build From Source
 
 Optionally, you can build UImini from its source on Github. To do this, you'll
 need to have Node.js and npm installed. I use Gulp to build UImini.
@@ -71,28 +84,13 @@ need to have Node.js and npm installed. I use Gulp to build UImini.
 $ git clone https://github.com/vedees/uimini.git
 $ cd uimini
 $ npm install
-$ npm run start
+$ npm run build
 ```
-
-## Status
-
-[![Travis (.org)](https://img.shields.io/travis/vedees/uimini.svg?style=popout-square)](https://travis-ci.org/vedees/uimini) [![npm](https://img.shields.io/npm/v/uimini.svg?style=popout-square)](https://www.npmjs.com/package/uimini) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://www.npmjs.com/package/uimini)
-
-## Browser Support
-
-UImini uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions. According to [Can I use](https://caniuse.com/#feat=flexbox), UImini is compatible with **recent** versions of:
-
-* Chrome
-* Firefox
-* Opera
-* Safari
-* Edge
-* Internet Explorer (10+)
 
 ## Documentation
 
 Browse the [online documentation here.](https://uimini.github.io/docs/)
 
-### License
+### Copyright and License
 
-UImini is [MIT licensed](./LICENSE).
+Code and documentation copyright 2018–2021 the [Evgenii Vedegis](https://github.com/vedees). Code released under the[MIT licensed](./LICENSE).
