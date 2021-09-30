@@ -2,10 +2,9 @@ language: node_js
 node_js:
   - "6"
   - "8"
-before_install:
-- "npm install -g npm"
-- "npm install -g gulp"
+
 install:
-- "npm install"
+  - "npm i -g yarn && yarn"
+
 before_script:
-- "gulp build"
+  - "yarn build"
