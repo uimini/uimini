@@ -1,0 +1,23 @@
+/* Vars
+   ========================================================================== */
+
+// Main vars:
+$mainFontColor: var(--ui-g-990);
+// All sizes (buttons, inputs, etc.) depend on $mainFontSize property
+$mainFontSize: 18px; // px only!
+$mainFontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+  'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+$mainLineHeight: 1.6;
+
+// Transitions
+$modernTransition: transform 0.2s cubic-bezier(0.36, -0.24, 0.26, 1.32);
+$defaultTransition: all 150ms ease-in;
+
+// Break Points
+$lgDesktopWidth: 1400px;
+$desktopWidth: 1280px;
+$smDesktopWidth: 1024px;
+$tableWidth: 768px;
+$smTableWidth: 640px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;

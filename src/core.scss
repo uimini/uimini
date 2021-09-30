@@ -1,0 +1,105 @@
+/*
+  Core styles:
+  ========================================================================== */
+
+.ui-html {
+  height: 100%;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  @media screen and (max-width: $smDesktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+.ui-body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  // THEME
+  color: var(--ui-g-950);
+  background-color: var(--ui-g-0);
+}
+
+.ui-html,
+.ui-body,
+.ui-app-inner {
+  height: 100%;
+  width: 100%;
+  font-family: $mainFontFamily;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  fill: currentcolor;
+}
+
+.ui-app {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.ui-section {
+  position: relative;
+  @include padding(40px 0);
+  @media screen and (max-width: $smDesktopWidth) {
+    @include padding(36px 0);
+  }
+  @media screen and (max-width: $tableWidth) {
+    @include padding(28px 0);
+  }
+  @media screen and (max-width: $phoneWidth) {
+    @include padding(20px 0);
+  }
+}
+
+.ui-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include margin(0 auto);
+  min-height: 100vh;
+}
+
+.ui-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.ui-container {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  @include padding(0 16px);
+  @include margin(0 auto);
+
+  @media screen and (min-width: $lgDesktopWidth) {
+    max-width: unset;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: $tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: $smTableWidth;
+  }
+  @media screen and (max-width: $smTableWidth) {
+    max-width: $phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: $smPhoneWidth;
+  }
+}

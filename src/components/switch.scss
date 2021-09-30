@@ -1,0 +1,90 @@
+/* Switch
+   ========================================================================== */
+
+// size
+$ui-switch-font-size: rem(16);
+$ui-switch-width: 44px;
+$ui-switch-height: 22px;
+$ui-switch-switcher-size: 18px;
+$ui-switch-label-margin: rem(14);
+
+// colors:
+$ui-switch-bg-disabled-color: var(--ui-g-400);
+$ui-switch-bg-enabled-color: var(--ui-primary-color);
+$ui-switch-lever-disabled-color: var(--ui-g-200);
+$ui-switch-lever-enabled-color: white;
+
+// Switch
+.ui-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: $ui-switch-height;
+  font-size: $ui-switch-font-size;
+  user-select: none;
+
+  input {
+    @include position(absolute, 0 null null 0);
+    min-width: $ui-switch-width;
+    height: $ui-switch-height;
+    opacity: 0;
+    z-index: 0;
+  }
+
+  // Unchecked
+  label {
+    display: block;
+    padding: 0 0 0 $ui-switch-width;
+    cursor: pointer;
+
+    &:not(:empty) {
+      margin-left: $ui-switch-label-margin;
+    }
+
+    &:before {
+      content: '';
+      @include position(absolute, 0 null null 0);
+      min-width: $ui-switch-width;
+      height: $ui-switch-height;
+      background-color: $ui-switch-bg-disabled-color;
+      border-radius: 14px;
+      z-index: 1;
+      transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    // circle
+    &:after {
+      content: '';
+      @include position(absolute, 2px null null 2px);
+      @include size($ui-switch-switcher-size);
+      background-color: $ui-switch-lever-enabled-color;
+      border-radius: 14px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      z-index: 2;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-property: left, background-color;
+    }
+  }
+
+  // disabled status
+  &.isDisabled,
+  &.isDisabled + label,
+  input:disabled + label {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  // checked status
+  input:checked + label {
+    &:before {
+      background-color: $ui-switch-bg-enabled-color;
+    }
+
+    &:after {
+      left: 22px;
+      background-color: $ui-switch-lever-enabled-color;
+    }
+  }
+}

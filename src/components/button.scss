@@ -1,0 +1,164 @@
+/* Button
+   ========================================================================== */
+
+// sizes:
+$ui-button-height: rem(38);
+$ui-button-padding: rem(6) rem(12);
+$ui-button-font-size: rem(16);
+
+// colors:
+$ui-button-bg: var(--ui-g-0);
+$ui-button-color: inherit;
+$ui-button-default-color: var(--ui-g-200);
+$ui-button-border-color: transparent;
+$ui-button-shadow: var(--ui-g-100);
+$ui-button-loader-bg-color: rgba(131, 131, 131, 0.9);
+$ui-button-loader-bg-inverse-color: white; // todo to vars
+
+.ui-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  height: $ui-button-height;
+  padding: $ui-button-padding;
+  //
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  //
+  color: $ui-button-color;
+  box-shadow: 0 1px 2px 0 $ui-button-shadow;
+  background-color: $ui-button-bg;
+  border: 1px solid $ui-button-border-color;
+  opacity: 0.92;
+  transition: $defaultTransition;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  // Buttons types:
+  &.isDefault {
+    border-color: $ui-button-default-color;
+  }
+  &.isPrimary {
+    background-color: var(--ui-primary-color);
+    color: var(--ui-g-0);
+  }
+  &.isSecondary {
+    background-color: $ui-button-default-color;
+  }
+  &.isDangerous {
+    color: var(--ui-g-0);
+    background-color: var(--ui-danger-color);
+  }
+  &.isWarning {
+    color: var(--ui-g-0);
+    background-color: var(--ui-warning-color);
+  }
+  &.isSuccess {
+    color: var(--ui-g-0);
+    background-color: var(--ui-success-color);
+  }
+
+  // Outline
+  &.isOutline {
+    opacity: 1;
+    background-color: transparent;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.isPrimary {
+      color: var(--ui-primary-color);
+      border-color: var(--ui-primary-color);
+    }
+    &.isSecondary {
+      border-color: $ui-button-default-color;
+    }
+    &.isDangerous {
+      color: var(--ui-danger-color);
+      border-color: var(--ui-danger-color);
+    }
+    &.isWarning {
+      color: var(--ui-warning-color);
+      border-color: var(--ui-warning-color);
+    }
+    &.isSuccess {
+      color: var(--ui-success-color);
+      border-color: var(--ui-success-color);
+    }
+  }
+
+  // helpers:
+  &.isLink {
+    color: var(--ui-primary-color);
+    border-color: transparent;
+    background: 0 0;
+    box-shadow: none;
+    opacity: 1;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &.isText {
+    border-color: transparent;
+    background: 0 0;
+    box-shadow: none;
+    opacity: 1;
+    &:hover {
+      opacity: 0.8;
+      background-color: $ui-button-default-color;
+    }
+  }
+
+  // statuses
+  &:active,
+  &.isActive {
+    cursor: default;
+    pointer-events: none;
+    opacity: 1;
+  }
+  // disabled
+  &:disabled,
+  &.isDisabled,
+  fieldset:disabled & {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  &.isLoading {
+    pointer-events: none;
+
+    &:before {
+      content: '';
+      width: rem(22);
+      height: rem(22);
+      background: no-repeat left 50% top 50% !important;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 50 50'%3E%3Cpath fill='#{$ui-button-loader-bg-color}' stroke='none' d='M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 25 25' to='360 25 25' dur='0.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E") !important;
+    }
+
+    &.isPrimary,
+    &.isDangerous,
+    &.isWarning {
+      &:before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 50 50'%3E%3Cpath fill='#{$ui-button-loader-bg-inverse-color}' stroke='none' d='M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 25 25' to='360 25 25' dur='0.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E") !important;
+      }
+    }
+
+    &:not(:empty) {
+      &:before {
+        margin-right: rem(6);
+      }
+    }
+  }
+}

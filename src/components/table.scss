@@ -1,0 +1,47 @@
+/* Table
+   ========================================================================== */
+
+// sizes:
+$ui-table-line-height: 1.5em;
+$ui-table-td-padding: rem(14);
+
+// colors:
+$ui-table-background: transparent;
+$ui-table-hover-background: var(--ui-g-100);
+$ui-table-border-color: var(--ui-g-100);
+
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $ui-table-background;
+  line-height: $ui-table-line-height;
+  transition: $defaultTransition;
+  td {
+    padding: $ui-table-td-padding;
+    border-bottom: 1px solid $ui-table-border-color;
+    &:first-child {
+      padding-right: 20px;
+    }
+  }
+  thead {
+    th {
+      padding: $ui-table-td-padding;
+      overflow: hidden;
+      white-space: nowrap;
+      user-select: none;
+      border-bottom: 1px solid $ui-table-border-color;
+    }
+    &:first-child {
+      padding-left: rem(20);
+    }
+  }
+  &.isHover {
+    tbody {
+      tr {
+        &:hover {
+          background-color: $ui-table-hover-background;
+        }
+      }
+    }
+  }
+}

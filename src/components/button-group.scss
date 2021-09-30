@@ -1,0 +1,51 @@
+/* Button group
+   ========================================================================== */
+
+$ui-button-group-space: rem(14);
+
+.ui-button-group {
+  display: flex;
+  align-items: center;
+
+  .ui-button,
+  .ui-tag {
+    margin-right: $ui-button-group-space;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.isVertical {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .ui-button,
+    .ui-tag {
+      width: 100%;
+      margin-bottom: $ui-button-group-space;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.isInline {
+    .ui-button,
+    .ui-tag {
+      margin: 0 !important;
+    }
+  }
+
+  // position helpers:
+  &.isReverse {
+    flex-direction: column-reverse;
+  }
+  &.isRight {
+    justify-content: flex-end;
+  }
+  &.isCenter {
+    justify-content: center;
+  }
+}

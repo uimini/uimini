@@ -1,0 +1,47 @@
+/* Titles
+   ========================================================================== */
+
+$h1-font-size: rem(40);
+$h2-font-size: rem(32);
+$h3-font-size: rem(26);
+$h4-font-size: rem(22);
+$h5-font-size: rem(18);
+
+%heading {
+  display: block;
+  margin-top: 0;
+  color: $mainFontColor;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.23;
+  margin-bottom: 0.5em;
+}
+
+@function latLong($lat, $long) {
+  @return (($long + 180) * (930/360)) * 1%;
+}
+
+.ui-title-1 {
+  font-size: $h1-font-size;
+  @extend %heading;
+}
+
+.ui-title-2 {
+  font-size: $h2-font-size;
+  @extend %heading;
+}
+
+.ui-title-3 {
+  font-size: $h3-font-size;
+  @extend %heading;
+}
+
+.ui-title-4 {
+  font-size: $h4-font-size;
+  @extend %heading;
+}
+
+.ui-title-5 {
+  font-size: $h5-font-size;
+  @extend %heading;
+}

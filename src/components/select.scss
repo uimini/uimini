@@ -1,0 +1,65 @@
+/* Select
+   ========================================================================== */
+
+// Sizes:
+$ui-select-width: 100%;
+$ui-select-min-width: rem(140);
+$ui-select-min-height: rem(38);
+$ui-select-font-size: rem(16);
+$ui-select-border-radius: rem(4);
+
+// Colors:
+$ui-select-bg: var(--ui-g-0);
+$ui-select-color: inherit;
+$ui-select-border-color: var(--ui-g-200);
+$ui-select-focus-border-color: var(--primaryColor);
+$ui-select-shadow: var(--ui-g-100);
+
+/*
+  Colors of bg img
+
+  Notes:
+    1. keep 0.9 with rgba cuz in other way it will convert to hex without encode `#`
+    2. dark theme doesn't work cuz vars is not supported inside `url()`
+    3. solve of dark mode can be marks: https://stackoverflow.com/a/58536915
+*/
+$ui-select-arrow-bg-color: rgba(131, 131, 131, 0.9);
+$ui-select-selected-bg-color: '%231890ff';
+$ui-select-loader-bg-color: '%231890ff';
+
+.ui-select {
+  position: relative;
+  width: $ui-select-width;
+  min-height: $ui-select-min-height;
+  min-width: $ui-select-min-width;
+  padding: rem(8) rem(44) rem(8) rem(8);
+  appearance: none;
+  //
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8' stroke='#{$ui-select-arrow-bg-color}' %3E %3Cpath fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 3.73926L4.15176 7 8 3'/%3E %3C/svg%3E")
+    no-repeat right 15px top 50%;
+  background-color: $ui-select-bg;
+  border: 1px solid $ui-select-border-color;
+  border-radius: $ui-select-border-radius;
+  font-size: $ui-select-font-size;
+  color: $ui-select-color;
+  transition: border-color 0.1s linear;
+
+  // reset
+  &::-ms-expand {
+    display: none;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  // statuses:
+  &.isSelected {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8' stroke='#{$ui-select-selected-bg-color}' %3E %3Cpath fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 3.73926L4.15176 7 10 1'/%3E %3C/svg%3E") !important;
+  }
+  &.isLoading {
+    cursor: default;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 50 50'%3E%3Cpath fill='#{$ui-select-loader-bg-color}' stroke='none' d='M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 25 25' to='360 25 25' dur='0.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E") !important;
+  }
+}

@@ -1,0 +1,25 @@
+/*! uimini | MIT License | github.com/vedees/uimini */
+
+/* Mixins
+   ========================================================================== */
+
+// validators:
+@import './validators/contains-falsy.scss';
+@import './validators/contains.scss';
+@import './validators/is-color.scss';
+@import './validators/is-length.scss';
+@import './validators/is-number.scss';
+@import './validators/is-size.scss';
+
+// helpers:
+@import './helpers/compact-shorthand';
+@import './helpers/directional-property.scss';
+@import './helpers/unpack-shorthand.scss';
+
+// main:
+@import './border-radius.scss';
+@import './margin.scss';
+@import './padding.scss';
+@import './position.scss';
+@import './rem.scss';
+@import './size.scss';

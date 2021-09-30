@@ -1,0 +1,36 @@
+/* Text
+   ========================================================================== */
+
+.ui-text {
+  color: var(--ui-g-990);
+  overflow-wrap: break-word;
+
+  &.isPrimary {
+    color: var(--ui-primary-color);
+  }
+  &.isSecondary {
+    color: var(--ui-g-400);
+  }
+
+  // statuses:
+  &.isSuccess {
+    color: var(--ui-success-color);
+  }
+  &.isWarning {
+    color: var(--ui-warning-color);
+  }
+  &.isDangerous {
+    color: var(--ui-danger-color);
+  }
+  &.isDisabled {
+    color: var(--ui-g-200);
+    user-select: none;
+    cursor: not-allowed;
+  }
+
+  // others:
+  &.isMark {
+    color: black;
+    background-color: var(--ui-mark-color);
+  }
+}

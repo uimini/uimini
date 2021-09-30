@@ -1,0 +1,58 @@
+/* Input
+   ========================================================================== */
+
+// sizes:
+$ui-input-width: 100%;
+$ui-input-min-height: rem(38);
+$ui-input-padding: rem(8) rem(8) rem(8) rem(14);
+$ui-input-border-radius: rem(4);
+$ui-input-label-margin-bottom: rem(6);
+$ui-input-label-font-size: rem(14);
+$ui-input-text-font-size: rem(16);
+
+// colors:
+$ui-input-bg: var(--ui-g-0);
+$ui-input-color: inherit;
+$ui-input-border-color: var(--ui-g-200);
+$ui-input-shadow: var(--ui-g-100);
+
+.ui-input {
+  position: relative;
+
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $ui-input-label-margin-bottom;
+    font-size: $ui-input-label-font-size;
+  }
+
+  input {
+    width: $ui-input-width;
+    min-height: $ui-input-min-height;
+    padding: $ui-input-padding;
+    border-radius: $ui-input-border-radius;
+    font-size: $ui-input-text-font-size;
+    color: $ui-input-color;
+    transition: border 0.2s;
+    -webkit-appearance: none;
+    background-color: $ui-input-bg;
+    border: 1px solid $ui-input-border-color;
+    box-shadow: 0 1px 2px 0 $ui-input-shadow;
+  }
+
+  // required status
+  &.isRequired label {
+    &:after {
+      content: '*';
+      color: #ee5454;
+      padding-left: rem(4);
+    }
+  }
+  // disabled status
+  &.isDisabled,
+  input:disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+}
