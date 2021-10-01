@@ -1,2 +1,0 @@
-// scss
-import './main.scss'
