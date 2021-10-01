@@ -1,18 +1,19 @@
 {
   "name": "uimini",
-  "description": "UImini modern CSS framework based on flexbox",
+  "description": "Uimini modern and lightweight CSS framework",
   "version": "2.0.0",
   "keywords": [
-    "minimal",
-    "mini",
-    "ui",
-    "mobile-first",
-    "responsive",
     "framework",
-    "web",
-    "css"
+    "css-framework",
+    "uimini",
+    "ui",
+    "ui-library",
+    "ui-kit",
+    "sass",
+    "scss",
+    "flexbox"
   ],
-  "homepage": "https://uimini.vedees.ru",
+  "homepage": "https://uimini.github.io/docs/",
   "author": "https://github.com/vedees",
   "scripts": {
     "dev": "webpack --mode development",
@@ -24,12 +25,13 @@
     "test": "jest"
   },
   "style": "dist/css/uimini.css",
+  "sass": "src/uimini.scss",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vedees/uimini.git"
+    "url": "git+https://github.com/uimini/uimini.git"
   },
   "bugs": {
-    "url": "https://github.com/vedees/uimini/issues"
+    "url": "https://github.com/uimini/uimini/issues"
   },
   "license": "MIT",
   "dependencies": {},
@@ -47,8 +49,7 @@
     "sass-loader": "10.1.1"
   },
   "files": [
-    "dist/{css,js}/*.{css,js}",
-    "src/{stylus,js}/**/*.{styl,js}",
-    "test/**/**/*.{css,js,html,pug}"
+    "dist/*.css",
+    "src/**/*.scss"
   ]
 }
