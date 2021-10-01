@@ -50,7 +50,7 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/vedees/uimini/releases/latest) with pre-built CSS and JS.
+- [Download the latest release](https://github.com/vedees/uimini/releases/latest) with pre-built CSS.
 - Or clone the repo: `git clone https://github.com/vedees/uimini/`
 - Or install with [npm](https://www.npmjs.com/): `npm install uimini`
 - Or install with [yarn](https://yarnpkg.com/): `yarn add uimini`

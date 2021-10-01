@@ -1,2 +1,2 @@
 // main
-import '../main.scss'
+import '../uimini.scss'

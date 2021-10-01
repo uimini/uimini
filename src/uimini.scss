@@ -1,17 +1,20 @@
 /*
-  Components
+  Main scss file
   All imports is here
   ========================================================================== */
 
-// utils:
+// utils
 @import './uitls/vars';
 @import './uitls/mixins/_mixins';
 
-// core styles:
+// core styles
 @import './core';
 
-// themes:
+// themes
 @import './theme/_theme';
 
-// components:
+// typography
+@import './typography/_typography';
+
+// components
 @import './components/_components';
