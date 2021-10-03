@@ -1,2 +1,51 @@
 /* Card
    ========================================================================== */
+
+// colors
+$ui-card-border-color: var(--ui-g-200);
+$ui-card-shadow: var(--ui-g-100);
+
+// sizes
+$ui-card-border-radius: rem(4);
+$ui-card-body-padding: rem(16) rem(16);
+
+.ui-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid $ui-card-border-color;
+  border-radius: $ui-card-border-radius;
+  box-shadow: 0 1px 2px 0 $ui-card-shadow;
+
+  &.isAnimated {
+    border-color: transparent;
+    box-shadow: none;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      border-radius: $ui-card-border-radius;
+      background-color: inherit;
+      transition: transform 0.3s;
+      content: '';
+    }
+    &:hover,
+    &:focus {
+      &:before {
+        transform: scale(1.04);
+      }
+    }
+  }
+}
+
+.ui-card-body {
+  flex: 1 1 auto;
+  padding: $ui-card-body-padding;
+}
