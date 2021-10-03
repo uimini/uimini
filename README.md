@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://uimini.github.io/docs/">
-    <img src="https://vedegis.com/uploads/uimini/meta-v2-1.png" alt="Uimini Modern and lightweight CSS framework" width="100%">
+    <img src="https://vedegis.com/uploads/uimini/ui-mini-logo.png" alt="Uimini Modern and lightweight CSS framework" width="100%">
   </a>
 </p>
 
