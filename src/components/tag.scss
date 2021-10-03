@@ -1,19 +1,20 @@
 /* Tag
    ========================================================================== */
 
-//  size:
+// default:
 $ui-tag-font-size: rem(14);
-
-// colors:
 $ui-tag-color: var(--ui-primary-color);
 $ui-tag-text-decoration: none;
 $ui-tag-text-hover-decoration: underline;
 // box
+$ui-tag-box-padding: rem(2) rem(8);
 $ui-tag-box-border-color: var(--ui-g-100);
+$ui-tag-box-border-radius: rem(3);
 $ui-tag-box-background-color: var(--ui-g-100);
 
 .ui-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   color: $ui-tag-color;
   font-size: $ui-tag-font-size;
   white-space: nowrap;
@@ -38,10 +39,10 @@ $ui-tag-box-background-color: var(--ui-g-100);
 
   // box View
   &.isBox {
-    padding: 0 rem(8);
+    padding: $ui-tag-box-padding;
     background-color: $ui-tag-box-background-color;
     border: 1px solid $ui-tag-box-border-color;
-    border-radius: rem(3);
+    border-radius: $ui-tag-box-border-radius;
     color: inherit;
     cursor: pointer;
     &:hover {
