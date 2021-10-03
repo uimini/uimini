@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://uimini.github.io/docs/">
-    <img src="https://vedegis.com/uploads/uimini/ui-mini-logo.png" alt="Uimini Modern and lightweight CSS framework" width="100%">
+    <img src="https://vedegis.com/uploads/uimini/meta-v2-2.png" alt="Uimini Modern and lightweight CSS framework" width="100%">
   </a>
 </p>
 
@@ -59,7 +59,7 @@ Read the [Getting started page](https://uimini.github.io/docs/docs/quick-start.h
 
 ## Status
 
-[![Travis (.org)](https://img.shields.io/travis/vedees/uimini.svg?style=popout-square)](https://travis-ci.org/vedees/uimini) [![npm](https://img.shields.io/npm/v/uimini.svg?style=popout-square)](https://www.npmjs.com/package/uimini) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://www.npmjs.com/package/uimini)
+[![npm](https://img.shields.io/npm/v/uimini.svg?style=popout-square)](https://www.npmjs.com/package/uimini) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://www.npmjs.com/package/uimini)
 
 ## Browser Support
 
