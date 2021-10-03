@@ -24,6 +24,17 @@ $ui-card-body-padding: rem(16) rem(16);
     border-color: transparent;
     box-shadow: none;
 
+    @media (min-width: $smDesktopWidth) {
+      &:hover:before,
+      &[focus-within]:before {
+        transform: scale(1.03);
+      }
+      &:focus-within:before,
+      &:hover:before {
+        transform: scale(1.03);
+      }
+    }
+
     &:before {
       position: absolute;
       top: 0;
@@ -35,12 +46,6 @@ $ui-card-body-padding: rem(16) rem(16);
       background-color: inherit;
       transition: transform 0.3s;
       content: '';
-    }
-    &:hover,
-    &:focus {
-      &:before {
-        transform: scale(1.04);
-      }
     }
   }
 }
