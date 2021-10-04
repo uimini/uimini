@@ -12,9 +12,9 @@
   <a href="https://uimini.github.io/docs/"><strong>Explore Uimini docs »</strong></a>
   <br>
   <br>
-  <a href="https://github.com/vedees/uimini/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
+  <a href="https://github.com/uimini/uimini/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
   ·
-  <a href="https://github.com/vedees/uimini/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
+  <a href="https://github.com/uimini/uimini/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
   ·
   <!-- <a href="https://uimini.github.io/docs/themes">Themes</a> -->
 </p>
@@ -50,8 +50,8 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/vedees/uimini/releases/latest) with pre-built CSS.
-- Or clone the repo: `git clone https://github.com/vedees/uimini/`
+- [Download the latest release](https://github.com/uimini/uimini/releases/latest) with pre-built CSS.
+- Or clone the repo: `git clone https://github.com/uimini/uimini/`
 - Or install with [npm](https://www.npmjs.com/): `npm install uimini`
 - Or install with [yarn](https://yarnpkg.com/): `yarn add uimini`
 
@@ -81,7 +81,7 @@ Optionally, you can build UImini from its source on Github. To do this, you'll
 need to have Node.js and npm installed. I use Gulp to build UImini.
 
 ```shell
-$ git clone https://github.com/vedees/uimini.git
+$ git clone https://github.com/uimini/uimini.git
 $ cd uimini
 $ npm install
 $ npm run build
