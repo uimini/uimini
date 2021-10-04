@@ -8,7 +8,8 @@ $ui-button-group-space: rem(14);
   align-items: center;
 
   .ui-button,
-  .ui-tag {
+  .ui-tag,
+  .ui-link {
     margin-right: $ui-button-group-space;
     &:last-child {
       margin-right: 0;
@@ -22,7 +23,8 @@ $ui-button-group-space: rem(14);
     justify-content: center;
 
     .ui-button,
-    .ui-tag {
+    .ui-tag,
+    .ui-link {
       width: 100%;
       margin-bottom: $ui-button-group-space;
       &:last-child {
@@ -33,7 +35,8 @@ $ui-button-group-space: rem(14);
 
   &.isInline {
     .ui-button,
-    .ui-tag {
+    .ui-tag,
+    .ui-link {
       margin: 0 !important;
     }
   }

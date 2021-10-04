@@ -1,4 +1,4 @@
 // reset
-import '../uitls/reset.scss'
+import '../utils/reset.scss'
 // main
 import '../uimini.scss'
