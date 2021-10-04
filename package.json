@@ -24,7 +24,8 @@
     "build:doc": "bash ./build-doc.sh",
     "test": "jest"
   },
-  "style": "dist/css/uimini.css",
+  "main": "dist/uimini.css",
+  "style": "dist/uimini.css",
   "sass": "src/uimini.scss",
   "repository": {
     "type": "git",
