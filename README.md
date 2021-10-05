@@ -73,12 +73,11 @@ Modern browsers and Internet Explorer 11 (no polyfills):
 
 ## Bugs and feature requests
 
-If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
+If your problem or idea is not addressed yet, [please open a new issue](https://github.com/uimini/uimini/issues/new).
 
 ## Build From Source
 
-Optionally, you can build UImini from its source on Github. To do this, you'll
-need to have Node.js and npm installed. I use Gulp to build UImini.
+Optionally, you can build Uimini from its source on Github.
 
 ```shell
 $ git clone https://github.com/uimini/uimini.git
