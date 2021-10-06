@@ -6,14 +6,16 @@ $ui-button-height: rem(38);
 $ui-button-padding: rem(6) rem(12);
 $ui-button-font-size: rem(16);
 
-// colors:
-$ui-button-bg: var(--ui-g-0);
+// main colors:
 $ui-button-color: inherit;
-$ui-button-default-color: var(--ui-g-200);
+$ui-button-primary-color: var(--ui-inverse-color);
+// others colors:
+$ui-button-bg: var(--ui-g-0);
+$ui-button-default-background-color: var(--ui-g-200);
 $ui-button-border-color: transparent;
 $ui-button-shadow: var(--ui-g-100);
 $ui-button-loader-bg-color: rgba(131, 131, 131, 0.9);
-$ui-button-loader-bg-inverse-color: white; // todo to vars
+$ui-button-loader-bg-inverse-color: var(--ui-inverse-color);
 
 .ui-button {
   position: relative;
@@ -46,26 +48,26 @@ $ui-button-loader-bg-inverse-color: white; // todo to vars
 
   // Buttons types:
   &.isDefault {
-    border-color: $ui-button-default-color;
+    border-color: $ui-button-default-background-color;
   }
   &.isPrimary {
     background-color: var(--ui-primary-color);
-    color: var(--ui-g-0);
+    color: $ui-button-primary-color;
   }
   &.isSecondary {
-    background-color: $ui-button-default-color;
+    background-color: $ui-button-default-background-color;
   }
   &.isDangerous {
-    color: var(--ui-g-0);
     background-color: var(--ui-danger-color);
+    color: $ui-button-primary-color;
   }
   &.isWarning {
-    color: var(--ui-g-0);
     background-color: var(--ui-warning-color);
+    color: $ui-button-primary-color;
   }
   &.isSuccess {
-    color: var(--ui-g-0);
     background-color: var(--ui-success-color);
+    color: $ui-button-primary-color;
   }
 
   // Outline
@@ -82,7 +84,7 @@ $ui-button-loader-bg-inverse-color: white; // todo to vars
       border-color: var(--ui-primary-color);
     }
     &.isSecondary {
-      border-color: $ui-button-default-color;
+      border-color: $ui-button-default-background-color;
     }
     &.isDangerous {
       color: var(--ui-danger-color);
@@ -116,7 +118,7 @@ $ui-button-loader-bg-inverse-color: white; // todo to vars
     opacity: 1;
     &:hover {
       opacity: 0.8;
-      background-color: $ui-button-default-color;
+      background-color: $ui-button-default-background-color;
     }
   }
 

@@ -2,8 +2,9 @@
    ========================================================================== */
 
 // default:
-$ui-tag-font-size: rem(14);
 $ui-tag-color: var(--ui-primary-color);
+$ui-tag-primary-color: var(--ui-inverse-color);
+$ui-tag-font-size: rem(14);
 $ui-tag-text-decoration: none;
 $ui-tag-text-hover-decoration: underline;
 // box
@@ -54,7 +55,7 @@ $ui-tag-box-background-color: var(--ui-g-100);
 
     // active status:
     &.isActive {
-      color: var(--ui-g-0);
+      color: $ui-tag-primary-color;
       background-color: $ui-tag-color;
       text-decoration: none;
     }

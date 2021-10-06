@@ -92,4 +92,4 @@ Browse the [online documentation here.](https://uimini.github.io/docs/)
 
 ### Copyright and License
 
-Code and documentation copyright 2018–2021 the [Evgenii Vedegis](https://github.com/vedees). Code released under the[MIT licensed](./LICENSE).
+Code and documentation copyright 2018–2021 the [Evgenii Vedegis](https://github.com/vedees). Code released under the [MIT licensed](./LICENSE).

@@ -4,21 +4,23 @@
 .ui-body {
   &.isDark {
     /* Main Colors */
-    --ui-primary-color: #1890ff;
-    --ui-success-color: #52c41a;
-    --ui-warning-color: #faad14;
+    --ui-primary-color: #1469b9;
+    --ui-success-color: #419c13;
+    --ui-warning-color: #af7b12;
     --ui-mark-color: #ffe58f;
-    --ui-danger-color: #f5222d;
+    --ui-danger-color: #b21820;
+
+    --ui-inverse-color: white;
 
     /* Neutral Colors */
     --ui-g-0: #141414;
     --ui-g-10: #1e2844;
-    --ui-g-100: #9b9b9b;
-    --ui-g-200: #a8a8a8;
-    --ui-g-400: #c9c9c9;
-    --ui-g-500: #cfcfcf;
-    --ui-g-900: #e4e4e4;
-    --ui-g-950: #fafafa;
+    --ui-g-100: #363636;
+    --ui-g-200: #484848;
+    --ui-g-400: #5d5d5d;
+    --ui-g-500: #7a7979;
+    --ui-g-900: #c6c6c6;
+    --ui-g-950: #efefef;
     --ui-g-999: #fdfdfd;
   }
 }
