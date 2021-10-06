@@ -12,6 +12,7 @@ $ui-select-border-radius: rem(4);
 $ui-select-bg: var(--ui-g-0);
 $ui-select-color: inherit;
 $ui-select-border-color: var(--ui-g-200);
+$ui-select-border-focus-color: var(--ui-primary-color);
 $ui-select-focus-border-color: var(--primaryColor);
 $ui-select-shadow: var(--ui-g-100);
 
@@ -48,9 +49,9 @@ $ui-select-loader-bg-color: '%231890ff';
   &::-ms-expand {
     display: none;
   }
+  // focus
   &:focus {
-    box-shadow: none;
-    outline: 0;
+    border-color: $ui-select-border-focus-color;
   }
 
   // statuses:
