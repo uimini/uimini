@@ -1,2 +1,0 @@
-// main
-import '../uimini.scss'

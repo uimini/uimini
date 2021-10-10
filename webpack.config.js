@@ -6,9 +6,8 @@ const distFolder = 'dist'
 
 module.exports = {
   entry: {
-    // since 2.0.5 using for dev only
-    uimini: path.resolve(__dirname, 'src', 'builds/default.js'),
-    uimini_no_reset: path.resolve(__dirname, 'src', 'builds/no-reset.js')
+    // since 2.0.5 webpack using for dev only
+    uimini: path.resolve(__dirname, 'src', 'builds/dev.js')
   },
   output: {
     filename: '[name].js',
