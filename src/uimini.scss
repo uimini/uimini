@@ -1,7 +1,8 @@
-/*
-  Main scss file
-  All imports is here
-  ========================================================================== */
+// ----- Main scss file -----
+// ----- All imports is here (without reset!) -----
+
+// themes
+@import './theme/_theme';
 
 // utils
 @import './utils/vars';
@@ -9,9 +10,6 @@
 
 // core styles
 @import './core';
-
-// themes
-@import './theme/_theme';
 
 // typography
 @import './typography/_typography';
