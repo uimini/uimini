@@ -30,6 +30,7 @@
     "build-cleancss": "cleancss --batch --batch-suffix '.min' dist/*.css",
     "build-cleancss-ie10": "cleancss --batch --batch-suffix '.min' dist/ie-10/*.css",
     "build:doc": "bash ./build-doc.sh",
+    "release-zip": "node ./release-zip.js",
     "deploy": "bash ./deploy.sh",
     "git": "bash ./lazy.sh",
     "test": "npm run build && npm run build-ie10",
@@ -50,16 +51,17 @@
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "clean-css-cli": "^5.4.1",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
     "node-sass": "^4.14.1",
     "postcss-cli": "^7.1.2",
     "rimraf": "^3.0.2",
-    "css-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.2",
+    "sass-loader": "10.1.1",
+    "shelljs": "^0.8.4",
     "style-loader": "^3.2.1",
     "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2",
-    "sass-loader": "10.1.1"
+    "webpack-dev-server": "^3.11.2"
   },
   "files": [
     "dist/*.css",
