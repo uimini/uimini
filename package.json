@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "webpack serve --mode development",
     "start": "webpack serve --mode development",
-    "build": "npm run build-sass && npm run build-autoprefixer && npm run build-cleancss",
+    "build": "rm -rf dist && npm run build-sass && npm run build-autoprefixer && npm run build-cleancss",
     "build-ie10": "npm run build-autoprefixer-ie10 && npm run build-cleancss-ie10",
     "build-sass": "node-sass --recursive --output-style expanded -o dist src/builds",
     "build-autoprefixer": "npm run build-autoprefixer-uimini && npm run build-autoprefixer-uimini_no_reset",
