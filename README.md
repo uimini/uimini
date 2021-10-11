@@ -22,7 +22,7 @@
 ## Features
 
 - Css only: No JavaScript need it;
-- Lightweight: Only 4kb gzip (20kb by default) with zero dependencies;
+- Lightweight: Only 4kb gzip with zero dependencies;
 - Full responsive;
 - Powerful theme customization in every detail;
 - Easy combine with any frameworks from Bootstrap.css to React.js;
@@ -31,6 +31,7 @@
 ## Table of contents
 
 - [Quick Start](https://uimini.github.io/docs/docs/quick-start.html)
+- [Download](https://uimini.github.io/docs/docs/download.html)
 - [Layout](https://uimini.github.io/docs/docs/layout.html)
 - [Colors](https://uimini.github.io/docs/docs/colors.html)
 - [Typography](https://uimini.github.io/docs/docs/typography.html)
@@ -59,13 +60,11 @@ Read the [Getting started page](https://uimini.github.io/docs/docs/quick-start.h
 
 ## Status
 
-[![npm](https://img.shields.io/npm/v/uimini.svg?style=flat-square)](https://www.npmjs.com/package/uimini) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://www.npmjs.com/package/uimini) [![issues](https://img.shields.io/github/issues/uimini/uimini?style=flat-square)](https://github.com/uimini/uimini/issues) [![size](https://img.shields.io/github/size/uimini/uimini/dist/uimini.css?label=css%20size&style=flat-square)](https://github.com/uimini/uimini/blob/master/dist/uimini.css)
+[![npm](https://img.shields.io/npm/v/uimini.svg?style=flat-square)](https://www.npmjs.com/package/uimini) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://www.npmjs.com/package/uimini) [![issues](https://img.shields.io/github/issues/uimini/uimini?style=flat-square)](https://github.com/uimini/uimini/issues) [![size](https://img.shields.io/github/size/uimini/uimini/dist/uimini.min.css?label=css%20size&style=flat-square)](https://github.com/uimini/uimini/blob/master/dist/uimini.css)
 
 ## Browser Support
 
 Uimini uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions.
-
-Modern browsers and Internet Explorer 11 (no polyfills):
 
 | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>IE / Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /></br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /></br>Opera |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
