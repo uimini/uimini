@@ -11,13 +11,6 @@ yarn build
 
 This build is optional.
 
-First add: `"browserslist": "last 3 versions",` into package.json (I'll fix it by --config option later)
-
-After run build of ie10:
-
-```bash
-# build uimini first
-yarn build
-# build uimini extra browser support
-yarn build-ie10
-```
+1. run build `yarn build`
+2. Add `"browserslist": "last 3 versions",` into package.json (I'll fix it by --config option later)
+3. Run build of ie10: `yarn build-ie10`

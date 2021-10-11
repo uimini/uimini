@@ -18,8 +18,9 @@
   "scripts": {
     "dev": "webpack serve --mode development",
     "start": "webpack serve --mode development",
-    "build": "rm -rf dist && npm run build-sass && npm run build-autoprefixer && npm run build-cleancss",
+    "build": "rm -rf dist && npm run build-sass && npm run build-autoprefixer && npm run build-cleancss && npm run build-extra-copy",
     "build-ie10": "npm run build-autoprefixer-ie10 && npm run build-cleancss-ie10",
+    "build:doc": "bash ./build-doc.sh",
     "build-sass": "node-sass --recursive --output-style expanded -o dist src/builds",
     "build-autoprefixer": "npm run build-autoprefixer-uimini && npm run build-autoprefixer-uimini_no_reset",
     "build-autoprefixer-uimini": "postcss --use autoprefixer --output dist/uimini.css dist/uimini.css",
@@ -29,9 +30,9 @@
     "build-autoprefixer-uimini_no_reset-ie-10": "postcss --use autoprefixer --output dist/ie-10/uimini_no_reset.css dist/ie-10/uimini_no_reset.css",
     "build-cleancss": "cleancss --batch --batch-suffix '.min' dist/*.css",
     "build-cleancss-ie10": "cleancss --batch --batch-suffix '.min' dist/ie-10/*.css",
-    "build:doc": "bash ./build-doc.sh",
+    "build-extra-copy": "bash ./extra-dist-copy.sh",
     "release-zip": "node ./release-zip.js",
-    "deploy": "bash ./deploy.sh",
+    "deploy-doc": "node ./deploy.sh",
     "git": "bash ./lazy.sh",
     "test": "npm run build && npm run build-ie10",
     "test:jest": "jest"
@@ -64,7 +65,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "files": [
-    "dist/*.css",
+    "dist/**/*.css",
     "src/**/*.scss"
   ]
 }

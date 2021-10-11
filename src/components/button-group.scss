@@ -6,6 +6,7 @@ $ui-button-group-space: rem(14);
 .ui-button-group {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   .ui-button,
   .ui-tag,

@@ -6,6 +6,7 @@ $ui-input-group-space: rem(16);
 .ui-input-group {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
   .ui-input,
   .ui-checkbox,

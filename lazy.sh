@@ -1,14 +1,15 @@
-# give me access:
-# cd chmod 755 git-push.sh
+#!/usr/bin/env sh
 
-# build
+# give me access:
+# cd chmod 755 name.sh
+
 # rm -rf dist
+# DO NOT USE THIS ONE
 # npm run build
 
 read -p "Did you build before commit (y/n)?" CONT
 
 if [ "$CONT" = "y" ]; then
-  # commit
   echo "Enter your message"
   read message
   git add .
