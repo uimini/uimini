@@ -4,6 +4,7 @@
 // colors
 $ui-card-border-color: var(--ui-g-200);
 $ui-card-shadow: var(--ui-g-100);
+$ui-card-animation-shadow: var(--ui-g-200);
 
 // sizes
 $ui-card-border-radius: rem(4);
@@ -19,38 +20,20 @@ $ui-card-body-padding: rem(16) rem(16);
   border: 1px solid $ui-card-border-color;
   border-radius: $ui-card-border-radius;
   box-shadow: 0 1px 2px 0 $ui-card-shadow;
+  transition: box-shadow 200ms ease, transform 200ms ease;
 
   &.isAnimated {
-    border-color: transparent;
-    box-shadow: none;
-
-    @media (min-width: $smDesktopWidth) {
-      &:hover:before,
-      &[focus-within]:before {
-        transform: scale(1.03);
-      }
-      &:focus-within:before,
-      &:hover:before {
-        transform: scale(1.03);
-      }
-    }
-
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      border-radius: $ui-card-border-radius;
-      background-color: inherit;
-      transition: transform 0.3s;
-      content: '';
+    &:hover {
+      transform: translate(4px, -4px);
+      box-shadow: -8px 8px 0 $ui-card-animation-shadow;
     }
   }
 }
 
 .ui-card-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 1 1 auto;
   padding: $ui-card-body-padding;
 }

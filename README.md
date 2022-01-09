@@ -7,7 +7,7 @@
 <h3 align="center">Uimini</h3>
 
 <p align="center">
-  Lightweight, Css only, Responsive and powerful css framework for easier web development.
+  Lightweight, css only, responsive and powerful css framework for easier web development.
   <br>
   <a href="https://uimini.github.io/docs/"><strong>Explore Uimini docs »</strong></a>
   <br>
@@ -91,4 +91,4 @@ Browse the [online documentation here.](https://uimini.github.io/docs/)
 
 ### Copyright and License
 
-Code and documentation copyright 2018–2021 the [Evgenii Vedegis](https://github.com/vedees). Code released under the [MIT licensed](./LICENSE).
+Code and documentation copyright 2018–2022 the [Evgenii Vedegis](https://github.com/vedees). Code released under the [MIT licensed](./LICENSE).
