@@ -1,8 +1,9 @@
-// entry point for webpack
+// It's a entry for webpack
+// using only for development
 
 // reset
 import '../utils/reset.scss'
 // main
-import '../uimini.scss'
+import '../uimini-core.scss'
 
-// common js can be here (by imports or inline, ect)
+// feel free to add common js here (by imports or inline)
