@@ -22,7 +22,7 @@ $ui-select-shadow: var(--ui-g-100);
   Notes:
     1. keep 0.9 with rgba cuz in other way it will convert to hex without encode `#`
     2. dark theme doesn't work cuz vars is not supported inside `url()`
-    3. solve of dark mode can be marks: https://stackoverflow.com/a/58536915
+    3. the solution for dark mode can be marks: https://stackoverflow.com/a/58536915
 */
 $ui-select-arrow-bg-color: rgba(131, 131, 131, 0.9);
 $ui-select-selected-bg-color: '%231890ff';

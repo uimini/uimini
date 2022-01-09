@@ -12,7 +12,7 @@ $ui-switch-label-margin: rem(14);
 $ui-switch-bg-disabled-color: var(--ui-g-400);
 $ui-switch-bg-enabled-color: var(--ui-primary-color);
 $ui-switch-lever-disabled-color: var(--ui-g-200);
-$ui-switch-lever-enabled-color: white;
+$ui-switch-lever-enabled-color: var(--ui-inverse-color); // should be alway white
 
 // Switch
 .ui-switch {
