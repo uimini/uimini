@@ -2,8 +2,14 @@
 
 // Main vars:
 $mainFontColor: var(--ui-g-990);
+
 // All sizes (buttons, inputs, etc.) depend on $mainFontSize property
-$mainFontSize: 18px; // px only!
+// ONLY px
+$mainFontSize: 18px;
+$smDesktopFontSize: 16px;
+$tableFontSize: 15px;
+$phoneFontSize: 14px;
+
 $mainFontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
   'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 $mainLineHeight: 1.6;

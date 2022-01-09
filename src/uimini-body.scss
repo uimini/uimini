@@ -4,16 +4,16 @@
 
 .ui-html {
   height: 100%;
-  font-size: $mainFontSize;
-  line-height: $mainLineHeight;
+  font-size: $mainFontSize !important;
+  line-height: $mainLineHeight !important;
   @media screen and (max-width: $smDesktopWidth) {
-    font-size: 16px;
+    font-size: $smDesktopFontSize;
   }
   @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
+    font-size: $tableFontSize;
   }
   @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
+    font-size: $phoneFontSize;
   }
 }
 
@@ -22,6 +22,10 @@
   height: 100%;
   margin: 0;
   padding: 0;
+  //
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  //
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   // THEME
@@ -40,6 +44,7 @@
   fill: currentcolor;
 }
 
+// mostly wrapper for react app
 .ui-app {
   position: relative;
   height: 100vh;
@@ -54,6 +59,7 @@
 }
 
 .ui-section {
+  flex-shrink: 0;
   position: relative;
   @include padding(40px 0);
   @media screen and (max-width: $smDesktopWidth) {
@@ -68,16 +74,18 @@
 }
 
 .ui-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   @include margin(0 auto);
   min-height: 100vh;
+  //
+  font-size: 1rem;
 }
 
 .ui-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  position: relative;
+  flex-grow: 1;
 }
 
 .ui-container {
