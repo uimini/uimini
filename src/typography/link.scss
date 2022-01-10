@@ -7,13 +7,21 @@ $ui-link-text-decoration: underline;
 $ui-link-text-hover-decoration: none;
 
 .ui-link {
-  color: $ui-link-color;
-  outline: none;
+  display: inline-block;
+  // ?
+  // outline: none;
   cursor: pointer;
+  color: $ui-link-color;
   transition: color 0.3s;
   text-decoration: $ui-link-text-decoration;
+
   &:hover {
     opacity: 0.9;
+    text-decoration: $ui-link-text-hover-decoration;
+  }
+
+  // helpers:
+  &.isSolid {
     text-decoration: $ui-link-text-hover-decoration;
   }
 }

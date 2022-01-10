@@ -2,8 +2,8 @@
 // using only for development
 
 // reset
-import '../utils/reset.scss'
+import '~/utils/reset.scss'
 // main
-import '../uimini-core.scss'
+import '~/uimini-core.scss'
 
 // feel free to add common js here (by imports or inline)

@@ -23,7 +23,12 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              url: false,
+              sourceMap: true,
+              importLoaders: 1,
+              modules: {
+                localIdentName: '[local]'
+              }
             }
           },
           {
@@ -37,6 +42,12 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    alias: {
+      '~': path.join(__dirname, './src')
+    },
+    extensions: ['', '.sass', '.scss', '.css', '.js', '.jsx']
   },
   plugins: [
     new HtmlWebpackPlugin({

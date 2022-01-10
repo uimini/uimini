@@ -1,11 +1,11 @@
 /*
-  Core styles:
+  Body styles:
   ========================================================================== */
 
 .ui-html {
   height: 100%;
-  font-size: $mainFontSize !important;
-  line-height: $mainLineHeight !important;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
   @media screen and (max-width: $smDesktopWidth) {
     font-size: $smDesktopFontSize;
   }
@@ -22,9 +22,6 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  //
-  font-size: $mainFontSize;
-  line-height: $mainLineHeight;
   //
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -77,10 +74,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  @include margin(0 auto);
   min-height: 100vh;
-  //
-  font-size: 1rem;
+  @include margin(0 auto);
 }
 
 .ui-content-wrapper {
