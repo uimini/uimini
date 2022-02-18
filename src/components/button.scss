@@ -28,6 +28,7 @@ $ui-button-loader-bg-inverse-color: var(--ui-inverse-color);
   height: $ui-button-height;
   padding: $ui-button-padding;
   //
+  pointer-events: auto !important;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;

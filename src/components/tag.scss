@@ -18,11 +18,13 @@ $ui-tag-box-background-color: var(--ui-g-100);
   align-items: center;
   color: $ui-tag-color;
   font-size: $ui-tag-font-size;
-  white-space: nowrap;
-  outline: none;
-  cursor: pointer;
   transition: color 0.3s;
   text-decoration: $ui-tag-text-decoration;
+  //
+  pointer-events: auto !important;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
   &:hover {
     opacity: 0.9;
     text-decoration: $ui-tag-text-hover-decoration;
