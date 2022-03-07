@@ -28,6 +28,8 @@
 - Easy combine with any frameworks from Bootstrap.css to React.js;
 - Enterprise-class UI designed for web applications.
 
+[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
+
 ## Table of contents
 
 - [Quick Start](https://uimini.github.io/docs/docs/quick-start.html)
@@ -92,3 +94,6 @@ Browse the [online documentation here.](https://uimini.github.io/docs/)
 ### Copyright and License
 
 Code and documentation copyright 2018–2022 the [Evgenii Vedegis](https://github.com/vedees). Code released under the [MIT licensed](./LICENSE).
+
+[buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
+[buymeacoffee]: https://www.buymeacoffee.com/vedegis
