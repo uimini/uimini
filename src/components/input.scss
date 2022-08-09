@@ -11,11 +11,11 @@ $ui-input-label-font-size: rem(14);
 $ui-input-text-font-size: rem(16);
 
 // colors:
-$ui-input-bg: var(--ui-g-0);
+$ui-input-bg: $g-0;
 $ui-input-color: inherit;
-$ui-input-border-color: var(--ui-g-200);
-$ui-input-border-focus-color: var(--ui-primary-color);
-$ui-input-shadow: var(--ui-g-100);
+$ui-input-shadow-color: $g-100;
+$ui-input-border-color: $g-200;
+$ui-input-border-color-focused: $primary-color;
 
 .ui-input {
   position: relative;
@@ -38,10 +38,10 @@ $ui-input-shadow: var(--ui-g-100);
     -webkit-appearance: none;
     background-color: $ui-input-bg;
     border: 1px solid $ui-input-border-color;
-    box-shadow: 0 1px 2px 0 $ui-input-shadow;
+    box-shadow: 0 1px 2px 0 $ui-input-shadow-color;
     // focus
     &:focus {
-      border-color: $ui-input-border-focus-color;
+      border-color: $ui-input-border-color-focused;
     }
   }
 

@@ -1,6 +1,7 @@
 /* Input group
   ========================================================================== */
 
+// sizes:
 $ui-input-group-space: rem(16);
 
 .ui-input-group {
@@ -13,7 +14,7 @@ $ui-input-group-space: rem(16);
   .ui-radio,
   .ui-select,
   .ui-switch {
-    margin-bottom: $ui-button-group-space;
+    margin-bottom: $ui-input-group-space;
     &:last-child {
       margin-bottom: 0;
     }
@@ -30,8 +31,8 @@ $ui-input-group-space: rem(16);
     .ui-radio,
     .ui-select,
     .ui-switch {
-      width: 100%;
-      margin-right: $ui-button-group-space;
+      // width: 100%;
+      margin-right: $ui-input-group-space;
       &:last-child {
         margin-right: 0;
       }

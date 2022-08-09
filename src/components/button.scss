@@ -8,20 +8,20 @@ $ui-button-font-size: rem(16);
 
 // main colors:
 $ui-button-color: inherit;
-$ui-button-primary-color: var(--ui-inverse-color);
+$ui-button-primary-color: $inverse-color;
 // others colors:
-$ui-button-bg: var(--ui-g-0);
-$ui-button-default-background-color: var(--ui-g-200);
+$ui-button-bg: $g-0;
+$ui-button-bg: transparent;
+$ui-button-default-bg-color: $g-200;
+$ui-button-shadow: $g-100;
 $ui-button-border-color: transparent;
-$ui-button-shadow: var(--ui-g-100);
 $ui-button-loader-bg-color: rgba(131, 131, 131, 0.9);
-$ui-button-loader-bg-inverse-color: var(--ui-inverse-color);
+$ui-button-loader-bg-inverse-color: $inverse-color;
 
 .ui-button {
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   flex-shrink: 0;
   font-weight: 400;
   line-height: 1.5;
@@ -49,25 +49,25 @@ $ui-button-loader-bg-inverse-color: var(--ui-inverse-color);
 
   // Buttons types:
   &.isDefault {
-    border-color: $ui-button-default-background-color;
+    border-color: $ui-button-default-bg-color;
   }
   &.isPrimary {
-    background-color: var(--ui-primary-color);
+    background-color: $primary-color;
     color: $ui-button-primary-color;
   }
   &.isSecondary {
-    background-color: $ui-button-default-background-color;
+    background-color: $ui-button-default-bg-color;
   }
   &.isDangerous {
-    background-color: var(--ui-danger-color);
+    background-color: $danger-color;
     color: $ui-button-primary-color;
   }
   &.isWarning {
-    background-color: var(--ui-warning-color);
+    background-color: $warning-color;
     color: $ui-button-primary-color;
   }
   &.isSuccess {
-    background-color: var(--ui-success-color);
+    background-color: $success-color;
     color: $ui-button-primary-color;
   }
 
@@ -81,29 +81,29 @@ $ui-button-loader-bg-inverse-color: var(--ui-inverse-color);
     }
 
     &.isPrimary {
-      color: var(--ui-primary-color);
-      border-color: var(--ui-primary-color);
+      color: $primary-color;
+      border-color: $primary-color;
     }
     &.isSecondary {
-      border-color: $ui-button-default-background-color;
+      border-color: $ui-button-default-bg-color;
     }
     &.isDangerous {
-      color: var(--ui-danger-color);
-      border-color: var(--ui-danger-color);
+      color: $danger-color;
+      border-color: $danger-color;
     }
     &.isWarning {
-      color: var(--ui-warning-color);
-      border-color: var(--ui-warning-color);
+      color: $warning-color;
+      border-color: $warning-color;
     }
     &.isSuccess {
-      color: var(--ui-success-color);
-      border-color: var(--ui-success-color);
+      color: $success-color;
+      border-color: $success-color;
     }
   }
 
   // helpers:
   &.isLink {
-    color: var(--ui-primary-color);
+    color: $primary-color;
     border-color: transparent;
     background: 0 0;
     box-shadow: none;
@@ -119,7 +119,7 @@ $ui-button-loader-bg-inverse-color: var(--ui-inverse-color);
     opacity: 1;
     &:hover {
       opacity: 0.8;
-      background-color: $ui-button-default-background-color;
+      background-color: $ui-button-default-bg-color;
     }
   }
 
@@ -164,4 +164,11 @@ $ui-button-loader-bg-inverse-color: var(--ui-inverse-color);
       }
     }
   }
+
+  // &.isMenu {
+  //   border-bottom: 1px solid var(--ui-g-200);
+  //   &:last-child {
+  //     border-bottom: none;
+  //   }
+  // }
 }

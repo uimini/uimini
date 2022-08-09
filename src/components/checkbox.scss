@@ -10,15 +10,16 @@ $ui-checkbox-border-radius: 0.125em;
 $ui-checkbox-label-margin: rem(14);
 
 // colors:
-$ui-checkbox-checked-color: var(--ui-primary-color);
-$ui-checkbox-border-color: var(--ui-g-200);
-$ui-checkbox-border-color-disabled: var(--ui-g-500);
-$ui-checkbox-checked-color-disabled: var(--ui-g-500);
-$ui-checkbox-shadow: var(--ui-g-100);
+$ui-checkbox-border-color: $g-200;
+$ui-checkbox-border-color-disabled: $g-500;
+$ui-checkbox-checked-color: $primary-color;
+$ui-checkbox-checked-color-disabled: $g-500;
+$ui-checkbox-before-bg-color: $g-0;
+$ui-checkbox-shadow-color: $g-100;
 
-// checkmark
+// check mark:
 $ui-checkmark-width: rem(2.2);
-$ui-checkmark-color: var(--ui-g-0);
+$ui-checkmark-color: $g-0;
 
 .ui-checkbox {
   position: relative;
@@ -31,9 +32,9 @@ $ui-checkmark-color: var(--ui-g-0);
   label {
     display: inline;
     padding-left: 1px;
+    cursor: pointer;
     clear: both;
     vertical-align: top;
-    cursor: pointer;
 
     &:not(:empty) {
       margin-left: $ui-checkbox-label-margin;
@@ -48,10 +49,10 @@ $ui-checkmark-color: var(--ui-g-0);
     &:before {
       // checkbox
       @include size($ui-checkbox-size);
-      background-color: var(--ui-g-0);
+      cursor: pointer;
+      background-color: $ui-checkbox-before-bg-color;
       border: $ui-checkbox-border-width solid $ui-checkbox-border-color;
       border-radius: $ui-checkbox-border-radius;
-      cursor: pointer;
       transition: background 0.3s;
     }
   }
@@ -62,7 +63,7 @@ $ui-checkmark-color: var(--ui-g-0);
     margin: 0;
     float: left;
     font-size: inherit;
-    box-shadow: 0 1px 2px 0 $ui-checkbox-shadow;
+    box-shadow: 0 1px 2px 0 $ui-checkbox-shadow-color;
     outline: 0;
     visibility: hidden;
 

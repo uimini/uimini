@@ -1,17 +1,20 @@
 /* Tag
-  ========================================================================== */
+   ========================================================================== */
 
 // default:
-$ui-tag-color: var(--ui-primary-color);
-$ui-tag-primary-color: var(--ui-inverse-color);
 $ui-tag-font-size: rem(14);
+$ui-tag-primary-color: $inverse-color;
 $ui-tag-text-decoration: none;
 $ui-tag-text-hover-decoration: underline;
-// box
+// default colors:
+$ui-tag-color: $primary-color;
+
+// box:
 $ui-tag-box-padding: rem(2) rem(8);
-$ui-tag-box-border-color: var(--ui-g-100);
 $ui-tag-box-border-radius: rem(3);
-$ui-tag-box-background-color: var(--ui-g-100);
+// box colors:
+$ui-tag-box-bg-color: $g-100;
+$ui-tag-box-border-color: $g-100;
 
 .ui-tag {
   display: inline-flex;
@@ -43,7 +46,7 @@ $ui-tag-box-background-color: var(--ui-g-100);
   // box View
   &.isBox {
     padding: $ui-tag-box-padding;
-    background-color: $ui-tag-box-background-color;
+    background-color: $ui-tag-box-bg-color;
     border: 1px solid $ui-tag-box-border-color;
     border-radius: $ui-tag-box-border-radius;
     color: inherit;

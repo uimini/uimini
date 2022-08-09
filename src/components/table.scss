@@ -1,19 +1,19 @@
 /* Table
-  ========================================================================== */
+   ========================================================================== */
 
 // sizes:
 $ui-table-line-height: 1.5em;
 $ui-table-td-padding: rem(14);
 
 // colors:
-$ui-table-background: transparent;
-$ui-table-hover-background: var(--ui-g-100);
-$ui-table-border-color: var(--ui-g-100);
+$ui-table-bg: transparent;
+$ui-table-bg-hover: $g-100;
+$ui-table-border-color: $g-100;
 
 .ui-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: $ui-table-background;
+  background-color: $ui-table-bg;
   line-height: $ui-table-line-height;
   transition: $defaultTransition;
   td {
@@ -39,7 +39,7 @@ $ui-table-border-color: var(--ui-g-100);
     tbody {
       tr {
         &:hover {
-          background-color: $ui-table-hover-background;
+          background-color: $ui-table-bg-hover;
         }
       }
     }

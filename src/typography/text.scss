@@ -30,7 +30,7 @@
 
   // others:
   &.isMark {
-    color: black;
+    color: var(--ui-reverse-color);
     background-color: var(--ui-mark-color);
   }
 }

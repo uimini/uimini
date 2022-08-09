@@ -1,16 +1,16 @@
 /* Radio
-  ========================================================================== */
+   ========================================================================== */
 
 // sizes:
 $ui-radio-size: 16px;
 $ui-radio-font-size: rem(16);
-$ui-radio-checked-size: $ui-radio-size / 2;
 $ui-radio-pulse-size: 2px;
+$ui-radio-checked-size: $ui-radio-size / 2;
 
 // colors:
-$ui-radio-checked-color: var(--ui-primary-color);
-$ui-radio-border-color: var(--ui-g-200);
-$ui-radio-disabled-border-color: var(--ui-g-500);
+$ui-radio-checked-color: $primary-color;
+$ui-radio-border-color: $g-200;
+$ui-radio-border-color-disabled: $g-500;
 
 .ui-radio {
   position: relative;
@@ -73,10 +73,10 @@ $ui-radio-disabled-border-color: var(--ui-g-500);
     opacity: 0.7;
 
     &:before {
-      border-color: $ui-radio-disabled-border-color !important;
+      border-color: $ui-radio-border-color-disabled !important;
     }
     &:after {
-      background-color: $ui-radio-disabled-border-color !important;
+      background-color: $ui-radio-border-color-disabled !important;
     }
   }
 }

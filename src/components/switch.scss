@@ -1,18 +1,18 @@
 /* Switch
-  ========================================================================== */
+   ========================================================================== */
 
 // size
-$ui-switch-font-size: rem(16);
+$ui-switch-size-circle: 18px;
+$ui-switch-size-font: rem(16);
 $ui-switch-width: 44px;
 $ui-switch-height: 22px;
-$ui-switch-switcher-size: 18px;
 $ui-switch-label-margin: rem(14);
 
 // colors:
-$ui-switch-bg-disabled-color: var(--ui-g-400);
-$ui-switch-bg-enabled-color: var(--ui-primary-color);
-$ui-switch-lever-disabled-color: var(--ui-g-200);
-$ui-switch-lever-enabled-color: var(--ui-inverse-color); // should be alway white
+$ui-switch-bg-disabled-color: $g-400;
+$ui-switch-bg-enabled-color: $primary-color;
+$ui-switch-lever-disabled-color: $g-200;
+$ui-switch-lever-enabled-color: $inverse-color; // should be white alway
 
 // Switch
 .ui-switch {
@@ -20,7 +20,7 @@ $ui-switch-lever-enabled-color: var(--ui-inverse-color); // should be alway whit
   display: inline-flex;
   align-items: center;
   min-height: $ui-switch-height;
-  font-size: $ui-switch-font-size;
+  font-size: $ui-switch-size-font;
   user-select: none;
 
   input {
@@ -56,7 +56,7 @@ $ui-switch-lever-enabled-color: var(--ui-inverse-color); // should be alway whit
     &:after {
       content: '';
       @include position(absolute, 2px null null 2px);
-      @include size($ui-switch-switcher-size);
+      @include size($ui-switch-size-circle);
       background-color: $ui-switch-lever-enabled-color;
       border-radius: 14px;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),

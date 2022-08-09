@@ -1,14 +1,14 @@
 /* Card
   ========================================================================== */
 
-// colors
-$ui-card-border-color: var(--ui-g-200);
-$ui-card-shadow: var(--ui-g-100);
-$ui-card-animation-shadow: var(--ui-g-200);
-
 // sizes
 $ui-card-border-radius: rem(4);
 $ui-card-body-padding: rem(16) rem(16);
+
+// colors
+$ui-card-border-color: $g-200;
+$ui-card-shadow-color: $g-100;
+$ui-card-shadow-color-animated: $g-200;
 
 .ui-card {
   position: relative;
@@ -19,13 +19,13 @@ $ui-card-body-padding: rem(16) rem(16);
   background-clip: border-box;
   border: 1px solid $ui-card-border-color;
   border-radius: $ui-card-border-radius;
-  box-shadow: 0 1px 2px 0 $ui-card-shadow;
+  box-shadow: 0 1px 2px 0 $ui-card-shadow-color;
   transition: box-shadow 200ms ease, transform 200ms ease;
 
   &.isAnimated {
     &:hover {
       transform: translate(4px, -4px);
-      box-shadow: -8px 8px 0 $ui-card-animation-shadow;
+      box-shadow: -8px 8px 0 $ui-card-shadow-color-animated;
     }
   }
 }
