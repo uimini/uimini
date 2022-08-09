@@ -1,10 +1,21 @@
 # How to build
 
+Via yarn:
+
 ```bash
-# first install
+# init
 yarn
-# build uimini
+# build
 yarn build
+```
+
+Via npm:
+
+```bash
+# init
+npm install
+# build
+npm run build
 ```
 
 ## Build uimini with extra browser support

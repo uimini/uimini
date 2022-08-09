@@ -1,0 +1,28 @@
+/* Color
+  ==========================================================================
+
+  notes:
+    - use `src/theme/*-theme.scss` to change specific color
+    - use current file to change palette
+*/
+
+// Main Colors
+$primary-color: var(--ui-primary-color);
+$success-color: var(--ui-success-color);
+$warning-color: var(--ui-warning-color);
+$mark-color: var(--ui-mark-color);
+$danger-color: var(--ui-danger-color);
+
+// Helpers
+$inverse-color: var(--ui-inverse-color);
+
+// Neutral Colors
+$g-0: var(--ui-g-0);
+$g-10: var(--ui-g-10);
+$g-100: var(--ui-g-100);
+$g-200: var(--ui-g-200);
+$g-400: var(--ui-g-400);
+$g-500: var(--ui-g-500);
+$g-900: var(--ui-g-900);
+$g-950: var(--ui-g-950);
+$g-999: var(--ui-g-999);

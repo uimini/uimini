@@ -1,14 +1,15 @@
-// ----- Core scss file -----
-// All imports is here. Without reset!
+/*
+  Core
+  ========================================================================== */
 
 // themes
 @import './theme/_theme';
 
 // utils
-@import './utils/vars';
+@import './vars/_vars';
 @import './utils/mixins/_mixins';
 
-// core styles
+// body styles
 @import './uimini-body';
 
 // typography

@@ -1,7 +1,7 @@
 /* Button group
-   ========================================================================== */
+  ========================================================================== */
 
-$ui-button-group-space: rem(14);
+$ui-button-group-space: rem(8);
 
 .ui-button-group {
   display: flex;
@@ -12,6 +12,7 @@ $ui-button-group-space: rem(14);
   .ui-tag,
   .ui-link {
     margin-right: $ui-button-group-space;
+    margin-bottom: 0;
     &:last-child {
       margin-right: 0;
     }
@@ -27,6 +28,7 @@ $ui-button-group-space: rem(14);
     .ui-tag,
     .ui-link {
       width: 100%;
+      margin-right: 0;
       margin-bottom: $ui-button-group-space;
       &:last-child {
         margin-bottom: 0;
@@ -38,18 +40,21 @@ $ui-button-group-space: rem(14);
     .ui-button,
     .ui-tag,
     .ui-link {
-      margin: 0 !important;
+      margin: 0;
     }
   }
 
   // position helpers:
-  &.isReverse {
-    flex-direction: column-reverse;
+  &.isCenter {
+    justify-content: center;
   }
   &.isRight {
     justify-content: flex-end;
   }
-  &.isCenter {
-    justify-content: center;
+  &.isLeft {
+    justify-content: flex-start;
+  }
+  &.isReverse {
+    flex-direction: column-reverse;
   }
 }

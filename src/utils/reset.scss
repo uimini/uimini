@@ -1,7 +1,6 @@
 /* Reset
-   ========================================================================== */
+  ========================================================================== */
 
-// Default
 html,
 body,
 div,
@@ -153,6 +152,41 @@ html {
   outline: 0;
 }
 
+// Controls
+textarea {
+  resize: none; // remove the resize handle on the bottom right
+  overflow: auto;
+  vertical-align: top;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+  border: none;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+
+// Table
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+// Others
 img,
 audio,
 video {
@@ -169,40 +203,4 @@ svg {
 }
 iframe {
   border: 0;
-}
-
-// From
-textarea {
-  resize: none; // remove the resize handle on the bottom right
-  overflow: auto;
-  vertical-align: top;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-}
-
-input,
-textarea,
-select,
-button {
-  outline: none;
-  border: none;
-  font-size: 100%;
-  margin: 0;
-}
-
-button,
-input {
-  line-height: normal;
-}
-
-// Table
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  padding: 0;
-  text-align: left;
 }
