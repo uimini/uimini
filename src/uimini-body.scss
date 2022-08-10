@@ -2,8 +2,11 @@
   Body
   ========================================================================== */
 
-// body vars
+// colors:
 $ui-body-color: $g-950;
+$ui-body-bg-color: var(--ui-g-0);
+
+// others:
 $ui-body-line-height: 1.6;
 $ui-body-font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji',
@@ -34,7 +37,7 @@ $ui-body-font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI',
   text-rendering: optimizeSpeed;
   // THEME
   color: $ui-body-color;
-  background-color: var(--ui-g-0);
+  background-color: $ui-body-bg-color;
 }
 
 .ui-html,

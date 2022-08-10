@@ -8,7 +8,7 @@ $ui-table-td-padding: rem(14);
 // colors:
 $ui-table-bg: transparent;
 $ui-table-bg-hover: $g-100;
-$ui-table-border-color: $g-100;
+$ui-table-border-color: $g-200;
 
 .ui-table {
   width: 100%;
@@ -16,6 +16,7 @@ $ui-table-border-color: $g-100;
   background-color: $ui-table-bg;
   line-height: $ui-table-line-height;
   transition: $defaultTransition;
+  border: 1px solid $ui-table-border-color;
   td {
     padding: $ui-table-td-padding;
     border-bottom: 1px solid $ui-table-border-color;

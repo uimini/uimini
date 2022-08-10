@@ -42,6 +42,7 @@ $ui-input-border-color-focused: $primary-color;
     // focus
     &:focus {
       border-color: $ui-input-border-color-focused;
+      outline-color: $ui-input-border-color-focused;
     }
   }
 
@@ -53,11 +54,14 @@ $ui-input-border-color-focused: $primary-color;
       padding-left: rem(4);
     }
   }
+
   // disabled status
   &.isDisabled,
-  input:disabled {
+  input:disabled,
+  &.isDisabled + label,
+  input:disabled + label {
     cursor: default;
     pointer-events: none;
-    opacity: 0.7;
+    opacity: 0.74;
   }
 }

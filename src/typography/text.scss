@@ -1,36 +1,45 @@
 /* Text
   ========================================================================== */
 
+// colors:
+$ui-text-color: var(--ui-g-990);
+$ui-text-color-primary: var(--ui-primary-color);
+$ui-text-color-secondary: var(--ui-g-400);
+//
+$ui-text-color-success: var(--ui-success-color);
+$ui-text-color-warning: var(--ui-warning-color);
+$ui-text-color-danger: var(--ui-danger-color);
+$ui-text-color-disabled: var(--ui-g-200);
+
 .ui-text {
-  color: var(--ui-g-990);
+  color: $ui-text-color;
   overflow-wrap: break-word;
 
   &.isPrimary {
-    color: var(--ui-primary-color);
+    color: $ui-text-color-primary;
   }
   &.isSecondary {
-    color: var(--ui-g-400);
+    color: $ui-text-color-secondary;
+  }
+  &.isMark {
+    color: black;
+    background-color: var(--ui-mark-color);
   }
 
   // statuses:
   &.isSuccess {
-    color: var(--ui-success-color);
+    color: $ui-text-color-success;
   }
   &.isWarning {
-    color: var(--ui-warning-color);
+    color: $ui-text-color-warning;
   }
   &.isDangerous {
-    color: var(--ui-danger-color);
+    color: $ui-text-color-danger;
   }
   &.isDisabled {
-    color: var(--ui-g-200);
     user-select: none;
     cursor: not-allowed;
-  }
-
-  // others:
-  &.isMark {
-    color: var(--ui-reverse-color);
-    background-color: var(--ui-mark-color);
+    //
+    color: $ui-text-color-disabled;
   }
 }

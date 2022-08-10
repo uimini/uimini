@@ -1,10 +1,6 @@
 /* Titles
-  ========================================================================== */
+   ========================================================================== */
 
-// color
-$ui-title-color: $g-999;
-
-// sizes
 $h1-font-size: rem(40);
 $h2-font-size: rem(32);
 $h3-font-size: rem(26);
@@ -14,11 +10,9 @@ $h5-font-size: rem(18);
 %heading {
   display: block;
   margin-top: 0;
-  color: $ui-title-color;
-  font-weight: 600;
-  font-size: 38px;
-  line-height: 1.23;
   margin-bottom: 0.5em;
+  font-weight: 700;
+  line-height: 1.23;
 }
 
 @function latLong($lat, $long) {

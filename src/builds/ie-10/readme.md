@@ -12,18 +12,18 @@ Build size with extra browser support increased by ~22% (from 19kb to 23kb)
 - Safari iOS 3.2-6.1 (2010-2013);
 - Android browser 2.1-4.3 (2009-2013).
 
-## When to use
+## When you NEED to use extra browsers support:
 
-For e-commerce, state projects etc.
+For e-commerce, state projects, etc.
 
-Summing up: for e-commerce which using jquery and polyfills it's a good solution to use uimini with extra browsers support.
+Summing up: it's a good solution for e-commerce (which using jquery or js/css polyfills) to use uimini with extra browsers support.
 
-## When NOT TO USE
+## When you DON'T NEED to use extra browsers support:
 
 For example:
 
-1. If you gonna use Vue.js 3 which not supported ie 11 then you don't need extra browser support.
-2. If you gonna use React.js + Mobx 4+ (also not supported ie 11) then you don't need extra browser support.
-3. When you using es6+ feature without bable and extra polyfills. Cause that's means you don't support old browsers then you don't need extra browser support.
+1. If you gonna use Vue.js 3 (Vue.js 3 is not supported ie 11);
+2. If you gonna use React.js + Mobx 4+ (Mobx 4 is not supported ie 11);
+3. If you want to use es6+ feature without extra polyfills or modern css.
 
-Summing up: if you using modern JavaScript (or modern css like grids) then you don't need uimini with extra browser support.
+Summing up: if you using modern JavaScript or modern css (like grids) then YOU DON'T NEED uimini with extra browser support.

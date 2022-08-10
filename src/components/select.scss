@@ -48,15 +48,28 @@ $ui-select-loader-bg-color: '%231890ff';
   &::-ms-expand {
     display: none;
   }
+
   // focus
-  &:focus {
+  &:focus,
+  select:focus {
     border-color: $ui-select-border-color-focused;
+    outline-color: $ui-select-border-color-focused;
   }
 
-  // statuses:
+  // disabled status
+  &.isDisabled,
+  select:disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.74;
+  }
+
+  // selected status
   &.isSelected {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8' stroke='#{$ui-select-selected-bg-color}' %3E %3Cpath fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 3.73926L4.15176 7 10 1'/%3E %3C/svg%3E") !important;
   }
+
+  // loading status
   &.isLoading {
     cursor: default;
     pointer-events: none;

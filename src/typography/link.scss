@@ -4,7 +4,7 @@
 // colors:
 $ui-link-color: var(--ui-primary-color);
 $ui-link-text-decoration: underline;
-$ui-link-text-hover-decoration: none;
+$ui-link-text-decoration-hover: none;
 
 .ui-link {
   display: inline-block;
@@ -17,11 +17,11 @@ $ui-link-text-hover-decoration: none;
 
   &:hover {
     opacity: 0.9;
-    text-decoration: $ui-link-text-hover-decoration;
+    text-decoration: $ui-link-text-decoration-hover;
   }
 
   // helpers:
   &.isSolid {
-    text-decoration: $ui-link-text-hover-decoration;
+    text-decoration: $ui-link-text-decoration-hover;
   }
 }
